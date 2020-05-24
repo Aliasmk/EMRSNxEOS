@@ -43,7 +43,7 @@ void route_loadParameter(OSCMessage& msg, int addressOffset){
     char tempName[P_NAME_LEN];    //Size includes level in square brackets i.e. ' [-100]', so actual max name length is P_NAME_LEN -7.
     msg.getString(0, tempName, P_NAME_LEN);
 
-    //get our first parameter - the name and the level and place it in tempName*/
+    //get our first parameter - the name and the level and place it in tempName
     
     //Here we find the element indicies of the square brackets surrounding the level. We assume square brackets aren't in the name itself.
     int levelStart = strcspn(tempName,"[");
@@ -63,22 +63,18 @@ void route_loadParameter(OSCMessage& msg, int addressOffset){
     OSC::oscState.params[index].level = atoi(tempLevel);              //convert the temp array into an integer and pass it to the parameter level.
 
     //Get the group from the second argument, an integer
-    /*int paramGroup = msg.getInt(1);
+    int paramGroup = msg.getInt(1);
     OSC::oscState.params[index].group = (PGroup)paramGroup;
-    if(index > OSC::oscState.paramGroupOffsets[paramGroup]){
-        //If this index is g
-        OSC::oscState.paramGroupOffsets[paramGroup] = index;
-    }*/
-
-    
 }
 
 OSC::OSC(){
     oscState.status = DISCONNECTED;
+    static int maxbuffsize = 0;
 }
 
 void OSC::init(){
     SLIPSerial.begin(115200);
+    Serial.setRxBufferSize(1024);   //Required to fix crashes (buffer overrun with lots of incoming messages and no filters)
     // This is a hack around an Arduino bug. It was taken from the OSC library
     // examples
     #ifdef BOARD_HAS_USB_SERIAL
@@ -86,13 +82,19 @@ void OSC::init(){
     #else
         while (!Serial);
     #endif
-    
-       // oscState.pgroup = P_TEST;
-
 }
 
 void OSC::poll(){
+    static int maxbuffsize;
+    int currentSize = Serial.available();
+    if(currentSize > maxbuffsize){
+        maxbuffsize = currentSize;
+    }   
+
+    //TODO: drop packets if serial data buffer is exceeded, rather than allow incomplete or corrupted SLIP packets through to the OSC routing functions
+
     int size = SLIPSerial.available();
+    
     if(size > 0){
         while(size--) {
             curMsg += (char)(SLIPSerial.read());
@@ -102,6 +104,7 @@ void OSC::poll(){
         parseOSCMessage(curMsg);
         curMsg = String();
     }
+
 
     long currentTime = millis();
 
@@ -164,13 +167,13 @@ void OSC::parseOSCMessage(String &msg){
     } else {
         OSCMessage oscmsg;                 
         oscmsg.fill((uint8_t*)msg.c_str(), (int)msg.length());
-
+        
         if(oscmsg.route("/eos/out/ping", route_refreshPing))
             return;
         if(oscmsg.route("/eos/out/cmd", route_getSyntaxLine))
             return;
         if(oscmsg.route("/eos/out/active/wheel", route_loadParameter)) 
-            return; 
+            return;
     }
 }
 

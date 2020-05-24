@@ -4,7 +4,7 @@
 #include <display.hpp>
 
 IO::IO() : 
-    buttonPins({PIN_BTN1, PIN_BTN2, PIN_BTN3})
+    buttonPins{PIN_BTN1, PIN_BTN2, PIN_BTN3}
 {
 
 }

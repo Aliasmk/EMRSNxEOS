@@ -45,6 +45,8 @@ void Display::tick(){
     if(currentScreen != &bootScreen) {
         if(OSC::oscState.status == DISCONNECTED){
            switchScreen(SCREEN_CONNECT);
+        } else if( OSC::oscState.status == ERROR){
+            switchScreen(SCREEN_SETTINGS);
         } else {
            switchScreen(SCREEN_MAIN);
         }

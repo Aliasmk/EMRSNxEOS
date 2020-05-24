@@ -8,7 +8,9 @@ public:
     void draw();
 
 private:
-    
+    int groupNumber;
+    int pageNumber;
+    void getParameterInfo(int group, int page, int offset, char *paramName, int *value);
 
 };
 

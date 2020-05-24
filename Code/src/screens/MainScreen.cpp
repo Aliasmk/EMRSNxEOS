@@ -22,6 +22,8 @@ void MainScreen::draw(){
         u8g2.drawStr(5 + (i-1)*64, 22, temp);
         sprintf(temp, "[%d]", OSC::oscState.params[i].level);
         u8g2.drawStr(5 + (i-1)*64, 32, temp);
+        sprintf(temp, "G: %d", (int)OSC::oscState.params[i].group);
+        u8g2.drawStr(5 + (i-1)*64, 42, temp);
         u8g2.drawLine(i*64,10,i*64,53);
     }
 
@@ -30,4 +32,8 @@ void MainScreen::draw(){
     u8g2.drawStr(0,63, OSC::oscState.syntaxLine);
 
     u8g2.sendBuffer();
+}
+
+void MainScreen::getParameterInfo(int group, int page, int offset, char *paramName, int *value){
+
 }

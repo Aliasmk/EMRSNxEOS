@@ -23,7 +23,7 @@ void loop() {
   //io.poll();
 
   //Do lower priority tasks while serial is idle
-  if(osc.isIdle()){
+  if(osc.isIdle() || OSC::oscState.status == ERROR){
     display.tick();
   }
 }
