@@ -5,6 +5,7 @@
 
 class SettingsScreen : public Screen{
 public:
+    void update();
     void draw();
 
 private:

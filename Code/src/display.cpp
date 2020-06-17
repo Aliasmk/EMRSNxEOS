@@ -52,7 +52,7 @@ void Display::tick(){
         }
     
     }
-
+    currentScreen->update();
     if(currentTime - displayState.lastRefresh > REFRESH_RATE || displayState.needsRefresh){
       currentScreen->draw();
       displayState.lastRefresh = currentTime;

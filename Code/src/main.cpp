@@ -12,15 +12,17 @@ IO io;
 OSC osc;
 Display display;
 
+IO* io_p;
+
 void setup() {
-  io.init();
+  io_p = &io;
   osc.init();
   display.init();
 }
 
 void loop() {
   osc.poll();
-  //io.poll();
+  io.tick();
 
   //Do lower priority tasks while serial is idle
   if(osc.isIdle() || OSC::oscState.status == ERROR){

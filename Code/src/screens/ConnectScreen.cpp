@@ -6,6 +6,9 @@
 
 extern U8G2_SSD1322_NHD_256X64_F_4W_HW_SPI u8g2;
 
+void ConnectScreen::update(){
+    ;
+}
 
 void ConnectScreen::draw(){
     u8g2.clearBuffer();

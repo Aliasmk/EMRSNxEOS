@@ -2,10 +2,30 @@
 
 #include <screens/MainScreen.hpp>
 #include <osc.hpp>
+#include <io.hpp>
 
 extern U8G2_SSD1322_NHD_256X64_F_4W_HW_SPI u8g2;
+extern IO io;
+
 
 String groupNames[] = {"None/Test", "Intensity", "Focus", "Color", "Image", "Form", "Custom"};
+
+MainScreen::MainScreen(){
+    clicked = false;
+    held = false;
+}
+
+void MainScreen::update(){
+    if(io.buttonDown(BTN_ENC2)){
+        clicked = true;
+    } else {
+        clicked = false;
+    }
+
+    if(io.buttonHeld(BTN_ENC2, 2000)){
+        held = true;
+    }
+}
 
 void MainScreen::draw(){
     u8g2.clearBuffer();
@@ -25,6 +45,13 @@ void MainScreen::draw(){
         sprintf(temp, "G: %d", (int)OSC::oscState.params[i].group);
         u8g2.drawStr(5 + (i-1)*64, 42, temp);
         u8g2.drawLine(i*64,10,i*64,53);
+    }
+
+    if(clicked){
+        u8g2.drawStr(100,8, "CLICKED");
+    }
+    if(held){
+        u8g2.drawStr(160,8, "HELD");
     }
 
     u8g2.drawLine(0,53,255,53);

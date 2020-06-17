@@ -5,6 +5,7 @@
 
 class ConnectScreen : public Screen{
 public:
+    void update();
     void draw();
 
 private:

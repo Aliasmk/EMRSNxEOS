@@ -6,6 +6,10 @@
 
 extern U8G2_SSD1322_NHD_256X64_F_4W_HW_SPI u8g2;
 
+void BootScreen::update(){
+    ;
+}
+
 void BootScreen::draw(){  
     u8g2.clearBuffer();
     /*long time = millis();
