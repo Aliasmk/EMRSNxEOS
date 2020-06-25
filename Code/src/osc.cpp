@@ -34,6 +34,8 @@ void route_refreshPing(OSCMessage& msg, int addressOffset){
     OSC::oscState.lastPingTimeRX = millis();
 }
 
+
+
 void route_loadParameter(OSCMessage& msg, int addressOffset){
     char indexChar[4]; //size 4 to accomodate 3 digits and the /0 null terminator.
     msg.getAddress(indexChar, addressOffset+1,4); //get the parameter number from the last digits in the address +1 because of the leading / after wheel
@@ -50,9 +52,9 @@ void route_loadParameter(OSCMessage& msg, int addressOffset){
     int levelEnd = strcspn(tempName,"]");
     //http://www.cplusplus.com/reference/cstring/strcspn/
 
-    //The name of the channel is all the text up until the first [ symbol, which is at index levelStart. Subtract 1 from this index to remove the space after the
-    strncpy(OSC::oscState.params[index].name, tempName, levelStart-1);
-    OSC::oscState.params[index].name[levelStart-1] = '\0';
+    //The name of the channel is all the text up until the first [ symbol, which is at index levelStart. Subtract 2 from this index to remove the 2 spaces after the name
+    strncpy(OSC::oscState.params[index].name, tempName, levelStart-2);
+    OSC::oscState.params[index].name[levelStart-2] = '\0';
 
     //Here we extract the level from the rest of the string
     int charsToCopy = levelEnd-levelStart-1;            //get the number of chars to copy
@@ -65,6 +67,14 @@ void route_loadParameter(OSCMessage& msg, int addressOffset){
     //Get the group from the second argument, an integer
     int paramGroup = msg.getInt(1);
     OSC::oscState.params[index].group = (PGroup)paramGroup;
+
+    //Count the number of active parameters by looping through the param array and incrementing the count for named parameters (eos unloads parameters by sending empty strings)
+    OSC::oscState.fixture.numParams = 0;
+    for(int i = 0; i < N_PARAMS; i++){
+        if(OSC::oscState.params[i].name[0] != '\0'){
+            OSC::oscState.fixture.numParams++;
+        }
+    }
 }
 
 OSC::OSC(){
@@ -203,6 +213,9 @@ void OSC::sendPing(){
     oscState.lastPingTimeTX = millis();
 }
 
-/**************** ROUTES ****************/
+
+Parameter* OSC::getParameterInfo(int group, int offset){
+  //  for(int i = 0; i < oscState.params)
+}
 
 

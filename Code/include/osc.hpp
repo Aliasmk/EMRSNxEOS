@@ -22,11 +22,12 @@ typedef struct Fixture{
   int level;
   char name[F_NAME_LEN];
   int startingChannel;
+  int numParams;
 
 } Fixture;
 
-typedef struct Parameter{                 //32-bit
-  char name[P_NAME_LEN];            //name of parameter, max of 32 characters (8-bit)
+typedef struct Parameter{         //32-bit
+  char name[P_NAME_LEN];          //name of parameter, max of 32 characters (8-bit)
   int level;
   PGroup group;                   //which group the parameter belongs to, of type pgroup (enum) (16-bit)
   int offset;                     //increments with each new parameter in a group
@@ -36,8 +37,8 @@ typedef struct Parameter{                 //32-bit
 typedef struct OSCState{
     char syntaxLine[128];
     char lastCommand[128];
-    Parameter params[N_PARAMS];
     Fixture fixture;
+    Parameter params[N_PARAMS];
     long lastDataTime;
     long lastPingTimeRX;
     long lastPingTimeTX;
@@ -64,7 +65,7 @@ public:
     void sendHandshake();
     void sendPing();
 
-
+    Parameter* getParameterInfo(int group, int offset);
     static OSCState oscState;
 
 

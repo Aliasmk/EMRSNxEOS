@@ -15,11 +15,16 @@ public:
     void draw();
 
 private:
+    void nextPage();
+    void nextGroup();
+
     int groupNumber;
     int pageNumber;
-    void getParameterInfo(int group, int page, int offset, char *paramName, int *value);
-    bool clicked;
-    bool held;
+    int maxPages;
+
+    int tick;
+
+    void getParameterInfo();
     ParamView params[4];
 };
 
