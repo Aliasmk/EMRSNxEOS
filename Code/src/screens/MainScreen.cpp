@@ -3,11 +3,13 @@
 #include <screens/MainScreen.hpp>
 #include <osc.hpp>
 #include <io.hpp>
+#include <encoder.hpp>
 
 extern U8G2_SSD1322_NHD_256X64_F_4W_HW_SPI u8g2;
 extern IO io;
 extern OSC osc;
-
+extern Encoder encoder;
+// TODO: This system may benefit from a Model View Presenter design pattern if the number of useful pages increases in the future.
 
 String groupNames[] = {"None/Test", "Intensity", "Focus", "Color", "Image", "Form", "Custom"};
 
@@ -16,6 +18,7 @@ MainScreen::MainScreen() : params{0} {
     maxPages = 1;
     groupNumber = 1;
     tick = 0;
+    encTicks = 0;
 }
 
 void MainScreen::update(){
@@ -26,6 +29,8 @@ void MainScreen::update(){
     if(io.buttonClicked(BTN_ENC4)){
         nextPage();
     }
+
+    encTicks += encoder.getEncoderDelta(ENC1);
 
     if(tick % 15 == 0){
         getParameterInfo();
@@ -55,7 +60,7 @@ void MainScreen::draw(){
     char temp[64];
     u8g2.setFont(u8g2_font_profont11_tf);
 
-    sprintf(temp, "Group: %s, Page %d/%d, Params: %d", groupNames[groupNumber].c_str(), pageNumber, maxPages, OSC::oscState.fixture.numParams);
+    sprintf(temp, "Group: %s, Page %d/%d, Ticks: %d", groupNames[groupNumber].c_str(), pageNumber, maxPages, encTicks);
     u8g2.drawStr(0,8, temp);
     u8g2.drawLine(0,10,255,10);
 
@@ -77,17 +82,22 @@ void MainScreen::draw(){
 
 void MainScreen::getParameterInfo(){
     // When called, scan through the list of osc parameters and populate this screen with the four corresponding to the requested group and page
+
+    // Calculate the number of parameters in the requested group 
     int paramsInGroup = 0;
     for(int i = 0; i < N_PARAMS; i++){
         if(OSC::oscState.params[i].group == (PGroup)groupNumber){
             paramsInGroup++;
         }
     }
+
+    // Calculate the max number of pages in the requested group
     maxPages = ceil(paramsInGroup / 4.0);
     if(pageNumber > maxPages){
         pageNumber = 1;
     }
     
+    // Run through the list of parameters and pick up parameters in the requested group, after an offset (dictated by the page number)
     int offset = (pageNumber-1) * 4;
     int paramsMatched = 0;
     for(int i = 0; i < 4; i++){

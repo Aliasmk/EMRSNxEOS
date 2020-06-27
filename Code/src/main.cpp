@@ -6,16 +6,16 @@
 #include <io.hpp>
 #include <osc.hpp>
 #include <display.hpp>
+#include <encoder.hpp>
 
 
 IO io;
+Encoder encoder;
 OSC osc;
 Display display;
 
-IO* io_p;
 
 void setup() {
-  io_p = &io;
   osc.init();
   display.init();
 }
@@ -23,6 +23,7 @@ void setup() {
 void loop() {
   osc.poll();
   io.tick();
+  encoder.tick();
 
   //Do lower priority tasks while serial is idle
   if(osc.isIdle() || OSC::oscState.status == ERROR){

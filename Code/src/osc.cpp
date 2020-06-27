@@ -187,17 +187,6 @@ void OSC::parseOSCMessage(String &msg){
     }
 }
 
-void OSC::sendOSCMessage(const String &address, int nparams, float values){
-    OSCMessage msg(address.c_str());
-    for(int i = 0; i < nparams; i++){
-        msg.add(values);
-        msg.add(0.5f);
-    }
-    SLIPSerial.beginPacket();
-    msg.send(SLIPSerial);
-    SLIPSerial.endPacket();
-}
-
 void OSC::sendHandshake(){
     SLIPSerial.beginPacket();
     SLIPSerial.write((const uint8_t*)HANDSHAKE_REPLY.c_str(), (size_t)HANDSHAKE_REPLY.length());
@@ -214,8 +203,14 @@ void OSC::sendPing(){
 }
 
 
-Parameter* OSC::getParameterInfo(int group, int offset){
-  //  for(int i = 0; i < oscState.params)
+void OSC::sendWheelMove(int wheelNumber, int delta){
+    char wheelCommand[32];
+    snprintf(wheelCommand, 32, "eos/active/wheel/%d", wheelNumber);
+    OSCMessage wheel(wheelCommand);
+    wheel.add(delta);
+    SLIPSerial.beginPacket();
+    wheel.send(SLIPSerial);
+    SLIPSerial.endPacket();
 }
 
 

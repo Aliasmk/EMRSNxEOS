@@ -24,6 +24,8 @@ private:
 
     int tick;
 
+    int encTicks; //TEMP
+
     void getParameterInfo();
     ParamView params[4];
 };

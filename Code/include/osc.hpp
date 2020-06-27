@@ -60,12 +60,12 @@ public:
     void setConnectionState(ConnectionStatus status);
 
     void parseOSCMessage(String &msg);
-    void sendOSCMessage(const String &address, int nparams, float values);
 
     void sendHandshake();
     void sendPing();
 
-    Parameter* getParameterInfo(int group, int offset);
+    void sendWheelMove(int wheelNumber, int delta);
+
     static OSCState oscState;
 
 
