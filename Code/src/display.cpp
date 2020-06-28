@@ -19,8 +19,13 @@ U8G2_SSD1322_NHD_256X64_F_4W_HW_SPI u8g2(U8G2_R0, PIN_OLED_CS, PIN_OLED_DC, PIN_
 
 
 
-Display::Display(){
-
+Display::Display() : 
+    TARGET_REFRESH_RATE_MICROS(50000), 
+    DRAW_TILE_WIDTH(4), 
+    DRAW_TILE_HEIGHT(1) {
+    pinMode(16, OUTPUT);
+    pinMode(26, OUTPUT);    
+    drawCall = 0;
 }
 
 void Display::init(){
@@ -31,17 +36,21 @@ void Display::init(){
     u8g2.setDrawColor(1);
     
     switchScreen(SCREEN_BOOT);
-    startTime = millis();
+    startTime = micros();
 }
 
 void Display::tick(){
-    displayState.tickNum++;
-    long currentTime = millis();
+    static int numDrawCalls = (NUM_TILES / (DRAW_TILE_WIDTH * DRAW_TILE_HEIGHT));
+    static int drawRate = (int)(TARGET_REFRESH_RATE_MICROS / (float)numDrawCalls); 
 
-    if(currentScreen == &bootScreen && currentTime-startTime > 3000){
-        switchScreen(SCREEN_CONNECT);
+    displayState.tickNum++;
+    long currentTime = micros();
+
+    if(currentScreen == &bootScreen && currentTime-startTime > SPLASH_DISPLAY_TIME_MICROS){
+        switchScreen(SCREEN_MAIN);
     } 
     
+    /*
     if(currentScreen != &bootScreen) {
         if(OSC::oscState.status == DISCONNECTED){
            switchScreen(SCREEN_CONNECT);
@@ -51,13 +60,31 @@ void Display::tick(){
            switchScreen(SCREEN_MAIN);
         }
     
-    }
+    }*/
+      
     currentScreen->update();
-    if(currentTime - displayState.lastRefresh > REFRESH_RATE || displayState.needsRefresh){
-      currentScreen->draw();
-      displayState.lastRefresh = currentTime;
-      displayState.needsRefresh = false;
+      
+    if(currentTime - displayState.lastRefresh > drawRate){
+        int tx = DRAW_TILE_WIDTH * (drawCall % (TILES_X / DRAW_TILE_WIDTH ));
+        int ty = DRAW_TILE_HEIGHT * (drawCall / (TILES_X / DRAW_TILE_WIDTH));
+
+        digitalWrite(26, HIGH);
+        u8g2.updateDisplayArea(tx,ty,DRAW_TILE_WIDTH,DRAW_TILE_HEIGHT);
+        digitalWrite(26, LOW);
+
+        drawCall = drawCall + 1;
+        if(drawCall > numDrawCalls){
+            drawCall = 0;
+            u8g2.clearBuffer();
+            digitalWrite(16, HIGH);
+            currentScreen->draw();
+            digitalWrite(16, LOW);   
+            displayState.needsRefresh = false;
+        }
+
+        displayState.lastRefresh = currentTime;
     }
+   
 }
 
 void Display::changeBrightness(int b){

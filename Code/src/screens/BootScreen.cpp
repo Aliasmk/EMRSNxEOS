@@ -11,7 +11,6 @@ void BootScreen::update(){
 }
 
 void BootScreen::draw(){  
-    u8g2.clearBuffer();
     /*long time = millis();
     displayState.needsRefresh = true;
     static int translate = -20;
@@ -36,5 +35,4 @@ void BootScreen::draw(){
         displayState.currentScreen = SCREEN_CONNECT;
         clearEnabled = true;
     }*/
-      u8g2.sendBuffer();
 }

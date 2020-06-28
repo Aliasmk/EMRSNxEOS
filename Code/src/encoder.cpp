@@ -22,22 +22,30 @@ Encoder::Encoder(){
         thisEnc->lastStateB = true;
         thisEnc->delta = 0;
     }
+
+    ignoreNext = false;
 }
 
 void Encoder::tick(){
+   
     getEncoderStates();
-
+    
     for(int i = 0; i < NUM_ENCODERS; i++){
         EncoderState* thisEnc = &encStates[i];
-        
-        uint8_t oldState = stateToValue(thisEnc->lastStateA, thisEnc->lastStateB);
-        uint8_t newState = stateToValue(thisEnc->currentStateA, thisEnc->currentStateB);
-
-        int delta = encoderMatrix[oldState][newState];
-        if(delta != ENC_INVALID){
-            thisEnc->delta += delta;
-        }
+        int delta = 0;
+        if(thisEnc->lastStateA != thisEnc->currentStateA){
+           if(!ignoreNext){ // workaround for our encoder firing two pulses per 'click'
+            if(thisEnc->lastStateA == thisEnc->lastStateB){
+                delta = -1;
+            } else {
+                delta = 1;
+            }
+           }
+           ignoreNext = !ignoreNext;
+        } 
+        thisEnc->delta += delta;
     }
+   
 }
 
 int Encoder::getEncoderDelta(EncoderEnum encIndex){

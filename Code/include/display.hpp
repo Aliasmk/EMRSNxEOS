@@ -1,7 +1,11 @@
 #ifndef DISPLAY_H
 #define DISPLAY_H
 
-#define REFRESH_RATE 50
+
+#define SPLASH_DISPLAY_TIME_MICROS 3000000
+#define NUM_TILES 256
+#define TILES_X 32
+#define TILES_Y 8
 
 #include <osc.hpp>
 #include <screen.hpp>
@@ -36,10 +40,17 @@ public:
 private: 
     void draw();
     
+    int drawCall;
     long startTime;
     bool clearEnabled;
 
     Screen *currentScreen;
+
+    
+    const int TARGET_REFRESH_RATE_MICROS;
+    // TILE WIDTH AND HEIGHT MUST BE POWER OF TWO
+    const int DRAW_TILE_WIDTH;
+    const int DRAW_TILE_HEIGHT; 
 
     BootScreen bootScreen;
     ConnectScreen connectScreen;

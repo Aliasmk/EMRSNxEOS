@@ -43,6 +43,7 @@ public:
 private:
     void getEncoderStates();
     EncoderState encStates[NUM_ENCODERS];
+    bool ignoreNext;
 
     uint8_t stateToValue(bool channelA, bool channelB);
 

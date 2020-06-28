@@ -11,10 +11,10 @@ void ConnectScreen::update(){
 }
 
 void ConnectScreen::draw(){
-    u8g2.clearBuffer();
+    
     char temp[64];
     u8g2.setFont(u8g2_font_profont15_tf);
-            
+    
     char dots[4];
     int nDots = ((int)(Display::displayState.tickNum / 100000) % 4);
     for(int i = 0; i < nDots; i++){
@@ -24,7 +24,5 @@ void ConnectScreen::draw(){
     
     sprintf(temp, "Connecting to EOS%s", dots);
     u8g2.drawStr(0,16,temp);
-    u8g2.sendBuffer();
-
 
 }

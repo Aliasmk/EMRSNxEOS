@@ -24,8 +24,8 @@ void loop() {
   osc.poll();
   io.tick();
   encoder.tick();
-
-  //Do lower priority tasks while serial is idle
+  
+  //Do blocking tasks while serial is idle
   if(osc.isIdle() || OSC::oscState.status == ERROR){
     display.tick();
   }

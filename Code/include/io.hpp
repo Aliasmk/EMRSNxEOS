@@ -8,8 +8,8 @@
 
 #define BTN_ACTIVE_HIGH
 
-#define DEBOUNCE_TIME_MIN_MS 100
-#define CLICK_TIME_MAX_MS 500
+#define DEBOUNCE_TIME_MIN_MS 50
+#define CLICK_TIME_MAX_MS 750
 
 typedef enum Button{
     BTN_ENC1,

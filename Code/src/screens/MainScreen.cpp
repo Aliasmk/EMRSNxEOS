@@ -55,8 +55,6 @@ void MainScreen::nextGroup(){
 }
 
 void MainScreen::draw(){
-    u8g2.clearBuffer();
-
     char temp[64];
     u8g2.setFont(u8g2_font_profont11_tf);
 
@@ -76,8 +74,6 @@ void MainScreen::draw(){
 
     u8g2.drawLine(0,53,255,53);
     u8g2.drawStr(0,63, OSC::oscState.syntaxLine);
-
-    u8g2.sendBuffer();
 }
 
 void MainScreen::getParameterInfo(){

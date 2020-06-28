@@ -10,10 +10,6 @@ void SettingsScreen::update(){
 
 }
 
-void SettingsScreen::draw(){
-    u8g2.clearBuffer();
-    
+void SettingsScreen::draw(){  
     u8g2.drawStr(0,63, "ERROR: SERIAL EXCEEDED BUFFER");
-
-    u8g2.sendBuffer();
 }
