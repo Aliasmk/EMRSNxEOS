@@ -30,7 +30,11 @@ void MainScreen::update(){
         nextPage();
     }
 
-    encTicks += encoder.getEncoderDelta(ENC1);
+    int enc = encoder.getEncoderDelta(ENC1);
+    if(enc != 0){
+        osc.sendWheelMove(params[0].index, enc);
+    }
+    
 
     if(tick % 15 == 0){
         getParameterInfo();
@@ -55,6 +59,8 @@ void MainScreen::nextGroup(){
 }
 
 void MainScreen::draw(){
+    
+    
     char temp[64];
     u8g2.setFont(u8g2_font_profont11_tf);
 
@@ -105,6 +111,7 @@ void MainScreen::getParameterInfo(){
                 if(paramsMatched > offset){
                     strcpy(params[i].title, OSC::oscState.params[j].name);
                     params[i].level = OSC::oscState.params[j].level;
+                    params[i].index = j;
                     offset++;
                     break;
                 }

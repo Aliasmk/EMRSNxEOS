@@ -10,8 +10,8 @@
 #define P_NAME_LEN (uint8_t)64
 #define N_PARAMS 128
 #define DATA_WAIT_TIME 5 //ms
-#define PING_RATE 1000 //ms
-#define PING_TIMEOUT 5000 //ms
+#define PING_RATE 2500 //ms
+#define PING_TIMEOUT 7500 //ms
 
 enum PGroup{ P_TEST = 0, INTENS = 1, FOCUS = 2, COLOR = 3, IMAGE = 4, FORM = 5, CUSTOM = 6, NUM_GROUPS = 7 }; //order derived from EOS param outputs
 

@@ -205,9 +205,9 @@ void OSC::sendPing(){
 
 void OSC::sendWheelMove(int wheelNumber, int delta){
     char wheelCommand[32];
-    snprintf(wheelCommand, 32, "eos/active/wheel/%d", wheelNumber);
+    snprintf(wheelCommand, 32, "/eos/active/wheel/%d", wheelNumber);
     OSCMessage wheel(wheelCommand);
-    wheel.add(delta);
+    wheel.add((float)delta);
     SLIPSerial.beginPacket();
     wheel.send(SLIPSerial);
     SLIPSerial.endPacket();

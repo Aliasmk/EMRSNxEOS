@@ -6,6 +6,7 @@
 typedef struct ParamView{
     char title[32];
     int level;
+    int index;
 } ParamView;
 
 class MainScreen : public Screen{
