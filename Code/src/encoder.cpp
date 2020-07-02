@@ -21,30 +21,58 @@ Encoder::Encoder(){
         thisEnc->lastStateA = true;
         thisEnc->lastStateB = true;
         thisEnc->delta = 0;
+        
     }
 
-    ignoreNext = false;
+    lastCheckTimeMillis = 0;
 }
 
 void Encoder::tick(){
-   
+    int now = millis();
+
+    if(now - lastCheckTimeMillis < MIN_ENC_PERIOD_MILLIS){
+        return;
+    }
+    
+    digitalWrite(26, HIGH);
     getEncoderStates();
     
     for(int i = 0; i < NUM_ENCODERS; i++){
         EncoderState* thisEnc = &encStates[i];
         int delta = 0;
-        if(thisEnc->lastStateA != thisEnc->currentStateA){
-           if(!ignoreNext){ // workaround for our encoder firing two pulses per 'click'
-            if(thisEnc->lastStateA == thisEnc->lastStateB){
+        if(thisEnc->lastStateA != thisEnc->currentStateA && thisEnc->currentStateA == false){
+            
+            /*if(thisEnc->lastStateA == thisEnc->lastStateB){
                 delta = -1;
             } else {
                 delta = 1;
+            }*/
+
+            if(thisEnc->currentStateB == false){
+                delta = 1;
+            } else {
+                delta = -1;
             }
-           }
-           ignoreNext = !ignoreNext;
-        } 
+
+        }
         thisEnc->delta += delta;
+        
+        
+        //if((now - thisEnc->lastChangeTimeMillis) > MIN_ENC_PERIOD_MILLIS){
+        /*   
+            int oldState = stateToValue(thisEnc->lastStateA, thisEnc->lastStateB);
+            int newState = stateToValue(thisEnc->currentStateA, thisEnc->currentStateB);
+
+            delta = encoderMatrix[oldState][newState];
+            if(delta != ENC_INVALID && delta != 0){
+                thisEnc->delta += delta;          
+            }
+        */
+            
+    //}
     }
+    digitalWrite(26, LOW);
+    lastCheckTimeMillis = now;
    
 }
 

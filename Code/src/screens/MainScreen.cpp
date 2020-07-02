@@ -10,6 +10,7 @@ extern IO io;
 extern OSC osc;
 extern Encoder encoder;
 // TODO: This system may benefit from a Model View Presenter design pattern if the number of useful pages increases in the future.
+// TODO: The display doesn't need to be constantly redraw. If this object can accept event notifications such as when parameters get update or the syntax line is changed, we only need to redraw in those cases.
 
 String groupNames[] = {"None/Test", "Intensity", "Focus", "Color", "Image", "Form", "Custom"};
 
@@ -18,21 +19,37 @@ MainScreen::MainScreen() : params{0} {
     maxPages = 1;
     groupNumber = 1;
     tick = 0;
-    encTicks = 0;
+    activeParameter = 0;
 }
 
 void MainScreen::update(){
+    if(OSC::oscState.status != CONNECTED){
+        return; // Nothing to do if we aren't connected to EOS
+    }
+    
     if(io.buttonClicked(BTN_ENC2)){
+        activeParameter = 0;
         nextGroup();
     }
     
-    if(io.buttonClicked(BTN_ENC4)){
-        nextPage();
+    if(io.buttonClicked(BTN_ENC3)){
+        activeParameter++;
+        if(activeParameter+1 >= itemsOnPage){
+            activeParameter = 0;
+            nextPage();
+        } 
     }
 
-    int enc = encoder.getEncoderDelta(ENC1);
+    if(io.buttonClicked(BTN_ENC4)){
+        params[activeParameter].coarse = !params[activeParameter].coarse;
+    }
+
+    int enc = encoder.getEncoderDelta(ENC4);
     if(enc != 0){
-        osc.sendWheelMove(params[0].index, enc);
+        if(params[activeParameter].coarse){
+            enc *= 4;
+        }
+        osc.sendWheelMove(params[activeParameter].index, enc);
     }
     
 
@@ -48,6 +65,7 @@ void MainScreen::nextPage(){
     if(pageNumber > maxPages){
        pageNumber = 1;
     }
+    setAllWheelsFine();
 }
 
 void MainScreen::nextGroup(){
@@ -56,30 +74,62 @@ void MainScreen::nextGroup(){
         groupNumber = 1;
     }
     pageNumber = 1;
+    setAllWheelsFine();
 }
 
 void MainScreen::draw(){
-    
-    
-    char temp[64];
     u8g2.setFont(u8g2_font_profont11_tf);
+    drawTopBar();
+    drawMiddle();
+    drawBottomBar();
+}
 
-    sprintf(temp, "Group: %s, Page %d/%d, Ticks: %d", groupNames[groupNumber].c_str(), pageNumber, maxPages, encTicks);
+void MainScreen::drawTopBar(){
+    char temp[64];
+    if(OSC::oscState.status == CONNECTED){
+        sprintf(temp, "Group: %s, Page %d/%d", groupNames[groupNumber].c_str(), pageNumber, maxPages);
+    } else {
+        strncpy(temp, "EOS DISCONNECTED", 64);
+    }
+    
     u8g2.drawStr(0,8, temp);
     u8g2.drawLine(0,10,255,10);
+}
 
+void MainScreen::drawMiddle(){
+    char temp[64];
+    itemsOnPage = 0;
     for(int i = 0; i<=4; i++){
         if(params[i].title[0] != '\0'){
+            itemsOnPage++;
             sprintf(temp, "%.9s", params[i].title);
-            u8g2.drawStr(5 + (i)*64, 22, temp);
-            sprintf(temp, "[%d]", params[i].level);
-            u8g2.drawStr(5 + (i)*64, 32, temp);
+            u8g2.drawStr(7 + (i)*64, 22, temp);
+            sprintf(temp, "%c [%d] ", (params[i].coarse ? 'C' : 'F'), params[i].level);
+            u8g2.drawStr(7 + (i)*64, 32, temp);
+            if(i == activeParameter){
+                u8g2.drawLine(i*64 + 2, 13, i*64 + 2, 35);
+                u8g2.drawLine(i*64 + 3, 13, i*64 + 3, 35);
+            }
         }
         u8g2.drawLine((i+1)*64,10,(i+1)*64,53);
     }
-
     u8g2.drawLine(0,53,255,53);
+}
+
+void MainScreen::drawBottomBar(){
     u8g2.drawStr(0,63, OSC::oscState.syntaxLine);
+}
+
+void MainScreen::setAllWheelsFine(){
+    for(int i = 0; i < 4; i++){
+        params[i].coarse = false;
+    }
+}
+
+void MainScreen::setAllWheelsCoarse(){
+    for(int i = 0; i < 4; i++){
+        params[i].coarse = true;
+    }
 }
 
 void MainScreen::getParameterInfo(){

@@ -68,9 +68,9 @@ void Display::tick(){
         int tx = DRAW_TILE_WIDTH * (drawCall % (TILES_X / DRAW_TILE_WIDTH ));
         int ty = DRAW_TILE_HEIGHT * (drawCall / (TILES_X / DRAW_TILE_WIDTH));
 
-        digitalWrite(26, HIGH);
+        
         u8g2.updateDisplayArea(tx,ty,DRAW_TILE_WIDTH,DRAW_TILE_HEIGHT);
-        digitalWrite(26, LOW);
+        
 
         drawCall = drawCall + 1;
         if(drawCall > numDrawCalls){
