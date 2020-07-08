@@ -36,20 +36,15 @@ void IO::tick(){
             // Button state has changed
             
             if((now - btnStatus[i].timeSwitched) > DEBOUNCE_TIME_MIN_MS){
-                //Serial.print(F("[IO]\tChange in Button "));
-                //Serial.print(i);
-                //Serial.print(F(" - "));
                 // State change probably wasn't a bounce
                 
                 if(currentButtonState == LOW){
                     // Button has been released
                     btnStatus[i].holdLock = false;
                     
-                    //Serial.print(F("released "));
                     if((now - btnStatus[i].timeSwitched) < CLICK_TIME_MAX_MS){
                         // Button was clicked
                         btnStatus[i].clicked = true;
-                        //Serial.print(F("(click)"));
                     } else {
                         //Serial.print(F("(held "));
                         //Serial.print(now - btnStatus[i].timeSwitched);
@@ -57,11 +52,8 @@ void IO::tick(){
                     }
                 } else {
                     // Button has been pressed
-                    //Serial.print(F("pressed"));
                     btnStatus[i].clicked = false;
                 }
-
-                //Serial.println();
 
                 // Store this state change information
                 btnStatus[i].lastState = currentButtonState;
@@ -77,11 +69,9 @@ void IO::tick(){
 
 bool IO::buttonHeld(Button btn, int delay){
     long now = millis();
+    // Check if the button was held longer than the delay, the button is currently not pressed, and we haven't tested for this hold before.
     if((now - btnStatus[(int)btn].timeSwitched) > delay && btnStatus[(int)btn].lastState == HIGH && btnStatus[(int)btn].holdLock == false){
-        //Serial.print(F("[IO]\tButton held longer than requested delay ("));
-        //Serial.print(delay);
-        //Serial.println(F(" ms)"));
-        btnStatus[(int)btn].holdLock = true;
+        btnStatus[(int)btn].holdLock = true;    // Set the hold lock so that we don't trigger multiple times in different places while the button stays held
         return true;
     } else {
         return false;
@@ -89,6 +79,7 @@ bool IO::buttonHeld(Button btn, int delay){
 }
 
 bool IO::buttonClicked(Button btn){
+    // Check if the button was clicked and there is no hold lock in place
     if(btnStatus[(int)btn].clicked == true && btnStatus[(int)btn].holdLock == false){
         btnStatus[(int)btn].clicked = false;
         return true;
@@ -98,6 +89,7 @@ bool IO::buttonClicked(Button btn){
 }
 
 bool IO::buttonDown(Button btn){
+    // Return true if the button is currently pressed
     if(btnStatus[(int)btn].lastState == HIGH){
         return true;
     } else {
@@ -106,6 +98,7 @@ bool IO::buttonDown(Button btn){
 }
 
 bool IO::buttonUp(Button btn){
+    // Return true if the button is currently not pressed
     if(btnStatus[(int)btn].lastState == LOW){
         return true;
     } else {

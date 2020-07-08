@@ -9,7 +9,7 @@ extern U8G2_SSD1322_NHD_256X64_F_4W_HW_SPI u8g2;
 extern IO io;
 extern OSC osc;
 extern Encoder encoder;
-// TODO: This system may benefit from a Model View Presenter design pattern if the number of useful pages increases in the future.
+
 // TODO: The display doesn't need to be constantly redraw. If this object can accept event notifications such as when parameters get update or the syntax line is changed, we only need to redraw in those cases.
 
 String groupNames[] = {"None/Test", "Intensity", "Focus", "Color", "Image", "Form", "Custom"};
@@ -20,6 +20,7 @@ MainScreen::MainScreen() : params{0} {
     groupNumber = 1;
     tick = 0;
     activeParameter = 0;
+    setAllWheelsCoarse();
 }
 
 void MainScreen::update(){
@@ -65,7 +66,7 @@ void MainScreen::nextPage(){
     if(pageNumber > maxPages){
        pageNumber = 1;
     }
-    setAllWheelsFine();
+    setAllWheelsCoarse();
 }
 
 void MainScreen::nextGroup(){
@@ -74,7 +75,7 @@ void MainScreen::nextGroup(){
         groupNumber = 1;
     }
     pageNumber = 1;
-    setAllWheelsFine();
+    setAllWheelsCoarse();
 }
 
 void MainScreen::draw(){
@@ -87,12 +88,16 @@ void MainScreen::draw(){
 void MainScreen::drawTopBar(){
     char temp[64];
     if(OSC::oscState.status == CONNECTED){
-        sprintf(temp, "Group: %s, Page %d/%d", groupNames[groupNumber].c_str(), pageNumber, maxPages);
+        sprintf(temp, "%s", groupNames[groupNumber].c_str());
+        u8g2.drawStr(128-u8g2.getUTF8Width(temp)/2, 8, temp);
+        sprintf(temp, "%d/%d", pageNumber, maxPages);  
+        u8g2.drawStr(255-u8g2.getUTF8Width(temp), 8, temp);
     } else {
         strncpy(temp, "EOS DISCONNECTED", 64);
+        u8g2.drawStr(0, 8, temp);
     }
     
-    u8g2.drawStr(0,8, temp);
+    
     u8g2.drawLine(0,10,255,10);
 }
 
@@ -103,12 +108,14 @@ void MainScreen::drawMiddle(){
         if(params[i].title[0] != '\0'){
             itemsOnPage++;
             sprintf(temp, "%.9s", params[i].title);
-            u8g2.drawStr(7 + (i)*64, 22, temp);
-            sprintf(temp, "%c [%d] ", (params[i].coarse ? 'C' : 'F'), params[i].level);
+            u8g2.drawStr(9 + (i)*64, 22, temp);
+            sprintf(temp, "[%d] ", params[i].level);
             u8g2.drawStr(7 + (i)*64, 32, temp);
             if(i == activeParameter){
-                u8g2.drawLine(i*64 + 2, 13, i*64 + 2, 35);
-                u8g2.drawLine(i*64 + 3, 13, i*64 + 3, 35);
+                u8g2.drawLine(i*64 + 4, 13, i*64 + 4, 35);
+                u8g2.drawLine(i*64 + 5, 13, i*64 + 5, 35);
+                sprintf(temp, "%c", params[i].coarse ? 'C' : 'F');
+                u8g2.drawStr(i*64 + 4, 45, temp);
             }
         }
         u8g2.drawLine((i+1)*64,10,(i+1)*64,53);

@@ -2,19 +2,18 @@
 
 #include "Arduino.h"
 
-// Encoders can be sampled without interrupts, as long as the sample rate is four times the tick rate expected. 
-// (https://electronics.stackexchange.com/questions/121564/encoder-sampling-rate-realization)
-
-// Quadrature Decoding inspired from https://cdn.sparkfun.com/datasheets/Robotics/How%20to%20use%20a%20quadrature%20encoder.pdf
-
 // Note: Clockwise = +'ve delta
 
 Encoder::Encoder(){
+    // Initialize each encoder in our list
     for(int i = 0; i < NUM_ENCODERS; i++){
-        EncoderState* thisEnc = &encStates[i];
+        EncoderState* thisEnc = &encStates[i]; // For readability
+
+        // Set the encoder pins to input. Redundant because pins are inputs by default, but assert anyways.
         pinMode(encoderMap[thisEnc->enc].pinA, INPUT);
         pinMode(encoderMap[thisEnc->enc].pinB, INPUT);
         
+        // Set encoder object details to initial values
         thisEnc->enc = (EncoderEnum)i;
         thisEnc->currentStateA = true;
         thisEnc->currentStateB = true;
@@ -30,67 +29,43 @@ Encoder::Encoder(){
 void Encoder::tick(){
     int now = millis();
 
+    // We only care about sampling once every couple of milliseconds. The tick function is called much faster
+    // If we aren't ready to sample, just return out of the function.
     if(now - lastCheckTimeMillis < MIN_ENC_PERIOD_MILLIS){
         return;
     }
-    
-    digitalWrite(26, HIGH);
+
     getEncoderStates();
     
+    // Check the state changes for each encoder in our list
     for(int i = 0; i < NUM_ENCODERS; i++){
-        EncoderState* thisEnc = &encStates[i];
-        int delta = 0;
+        EncoderState* thisEnc = &encStates[i];  // For readability, store the address of the current encoder state object.
+
+        // Because the encoder changes state four times per 'click', we only care about picking up one of the transitions.
+        // Check for a transition of A from high to low. 
         if(thisEnc->lastStateA != thisEnc->currentStateA && thisEnc->currentStateA == false){
-            
-            /*if(thisEnc->lastStateA == thisEnc->lastStateB){
-                delta = -1;
-            } else {
-                delta = 1;
-            }*/
-
+            // If during the transition, B is low, we've turned clockwise, otherwise we've turned counterclockwise.
             if(thisEnc->currentStateB == false){
-                delta = 1;
+                thisEnc->delta += 1;
             } else {
-                delta = -1;
+                thisEnc->delta += -1;
             }
-
         }
-        thisEnc->delta += delta;
-        
-        
-        //if((now - thisEnc->lastChangeTimeMillis) > MIN_ENC_PERIOD_MILLIS){
-        /*   
-            int oldState = stateToValue(thisEnc->lastStateA, thisEnc->lastStateB);
-            int newState = stateToValue(thisEnc->currentStateA, thisEnc->currentStateB);
-
-            delta = encoderMatrix[oldState][newState];
-            if(delta != ENC_INVALID && delta != 0){
-                thisEnc->delta += delta;          
-            }
-        */
-            
-    //}
     }
-    digitalWrite(26, LOW);
+
     lastCheckTimeMillis = now;
    
 }
 
+// Returns the delta of the encoder rotation since the last time this function was called
 int Encoder::getEncoderDelta(EncoderEnum encIndex){
     int delta = encStates[encIndex].delta;
-    encStates[encIndex].delta = 0;
+    encStates[encIndex].delta = 0;  // Reset the delta after it's been read
     return delta;
 }
 
-uint8_t Encoder::stateToValue(bool channelA, bool channelB){
-    uint8_t state = 0;
-    state |= (channelA == true ? 0x2 : 0x0);
-    state |= (channelB == true ? 0x1 : 0x0);
-    return state;
-}
-
 void Encoder::getEncoderStates(){
-    // In the future, this function will get values from i2c (from the IO expander).
+    // In the future, this function will get values from the IO expander or a multiplexer.
     for(int i = 0; i < NUM_ENCODERS; i++){
         EncoderState* thisEnc = &encStates[i];
         

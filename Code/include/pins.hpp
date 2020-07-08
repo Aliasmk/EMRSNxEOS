@@ -3,6 +3,10 @@
 
 #define UNDEFINED_PIN 99
 
+#define PIN_OLED_CS 17
+#define PIN_OLED_DC 2
+#define PIN_OLED_RESET 32
+
 #define PIN_ENCBTN1 UNDEFINED_PIN
 #define PIN_ENCBTN2 22
 #define PIN_ENCBTN3 21

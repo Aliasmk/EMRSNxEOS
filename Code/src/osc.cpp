@@ -23,15 +23,16 @@ const String HANDSHAKE_REPLY = "OK";
 OSCState OSC::oscState {0};
 
 void route_getSyntaxLine(OSCMessage& msg, int addressOffset){
-    msg.getString(0, OSC::oscState.syntaxLine, 128);
+    msg.getString(0, OSC::oscState.syntaxLine, 128);    // Store the syntax line data in the syntax line string in oscState
 }
 
 void route_refreshPing(OSCMessage& msg, int addressOffset){
+    // When we get a ping back, we know we are connected. 
     if(OSC::oscState.status == DISCONNECTED){
         OSC::oscState.status = CONNECTED;
         //bReconnection = true;
     }
-    OSC::oscState.lastPingTimeRX = millis();
+    OSC::oscState.lastPingTimeRX = millis();    // Store the time the ping was received
 }
 
 
@@ -62,7 +63,7 @@ void route_loadParameter(OSCMessage& msg, int addressOffset){
     char* levelStartChar = &tempName[levelStart+1];     //create a pointer to the element in tempName that begins the number
     strncpy(tempLevel, levelStartChar, charsToCopy);    //string copy from that element for as many elements to copy, into our temp array
     
-    OSC::oscState.params[index].level = atoi(tempLevel);              //convert the temp array into an integer and pass it to the parameter level.
+    OSC::oscState.params[index].level = atoi(tempLevel);    //convert the temp array into an integer and pass it to the parameter level.
 
     //Get the group from the second argument, an integer
     int paramGroup = msg.getInt(1);
@@ -84,7 +85,7 @@ OSC::OSC(){
 
 void OSC::init(){
     SLIPSerial.begin(115200);
-    Serial.setRxBufferSize(1024);   //Required to fix crashes (buffer overrun with lots of incoming messages and no filters)
+    Serial.setRxBufferSize(1024);   //Required to fix crashes due to buffer overrun with lots of incoming messages and no filters
     // This is a hack around an Arduino bug. It was taken from the OSC library
     // examples
     #ifdef BOARD_HAS_USB_SERIAL
@@ -101,7 +102,7 @@ void OSC::poll(){
         maxbuffsize = currentSize;
     }   
 
-    //TODO: drop packets if serial data buffer is exceeded, rather than allow incomplete or corrupted SLIP packets through to the OSC routing functions
+    //TODO: drop packets if serial data buffer is exceeded or corrupted, rather than allow incomplete or corrupted SLIP packets through to the OSC routing functions
 
     int size = SLIPSerial.available();
     

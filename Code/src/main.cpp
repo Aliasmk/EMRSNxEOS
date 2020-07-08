@@ -25,7 +25,7 @@ void loop() {
   io.tick();
   encoder.tick();
   
-  //Do blocking tasks while serial is idle
+  //Do potentially long-running tasks while serial is idle so we don't miss data
   if(osc.isIdle() || OSC::oscState.status == ERROR){
     display.tick();
   }
