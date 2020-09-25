@@ -1,0 +1,71 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATmega:ATmega328P-PU U?
+U 1 1 5F4AC6E4
+P 2950 3800
+F 0 "U?" H 2306 3846 50  0000 R CNN
+F 1 "ATmega328P-PU" H 2306 3755 50  0000 R CNN
+F 2 "Package_DIP:DIP-28_W7.62mm" H 2950 3800 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 2950 3800 50  0001 C CNN
+	1    2950 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Rotary_Encoder_Switch SW?
+U 1 1 5F4AD5D0
+P 7350 2850
+F 0 "SW?" H 7350 3217 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 7350 3126 50  0000 C CNN
+F 2 "" H 7200 3010 50  0001 C CNN
+F 3 "~" H 7350 3110 50  0001 C CNN
+	1    7350 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Rotary_Encoder_Switch SW?
+U 1 1 5F4ADE7E
+P 7350 3400
+F 0 "SW?" H 7350 3767 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 7350 3676 50  0000 C CNN
+F 2 "" H 7200 3560 50  0001 C CNN
+F 3 "~" H 7350 3660 50  0001 C CNN
+	1    7350 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Rotary_Encoder_Switch SW?
+U 1 1 5F4AE642
+P 7350 3900
+F 0 "SW?" H 7350 4267 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 7350 4176 50  0000 C CNN
+F 2 "" H 7200 4060 50  0001 C CNN
+F 3 "~" H 7350 4160 50  0001 C CNN
+	1    7350 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Rotary_Encoder_Switch SW?
+U 1 1 5F4AEDE5
+P 7350 4400
+F 0 "SW?" H 7350 4767 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 7350 4676 50  0000 C CNN
+F 2 "" H 7200 4560 50  0001 C CNN
+F 3 "~" H 7350 4660 50  0001 C CNN
+	1    7350 4400
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

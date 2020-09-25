@@ -1,0 +1,184 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATmega:ATmega328P-PU U?
+U 1 1 5F4AC6E4
+P 2950 3800
+F 0 "U?" H 2306 3846 50  0000 R CNN
+F 1 "ATmega328P-PU" H 2306 3755 50  0000 R CNN
+F 2 "Package_DIP:DIP-28_W7.62mm" H 2950 3800 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 2950 3800 50  0001 C CNN
+	1    2950 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Rotary_Encoder_Switch SW?
+U 1 1 5F4AD5D0
+P 7350 2850
+F 0 "SW?" H 7500 2600 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 7550 3100 50  0000 C CNN
+F 2 "" H 7200 3010 50  0001 C CNN
+F 3 "~" H 7350 3110 50  0001 C CNN
+	1    7350 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F4BA790
+P 6500 2450
+F 0 "R?" H 6350 2500 50  0000 L CNN
+F 1 "10k" H 6300 2400 50  0000 L CNN
+F 2 "" V 6430 2450 50  0001 C CNN
+F 3 "~" H 6500 2450 50  0001 C CNN
+	1    6500 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F4BAFF8
+P 6750 2450
+F 0 "R?" H 6820 2496 50  0000 L CNN
+F 1 "10k" H 6820 2405 50  0000 L CNN
+F 2 "" V 6680 2450 50  0001 C CNN
+F 3 "~" H 6750 2450 50  0001 C CNN
+	1    6750 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F4BB3AC
+P 6200 2750
+F 0 "R?" V 6100 2750 50  0000 C CNN
+F 1 "10K" V 6200 2750 50  0000 C CNN
+F 2 "" V 6130 2750 50  0001 C CNN
+F 3 "~" H 6200 2750 50  0001 C CNN
+	1    6200 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F4BBCFE
+P 6200 2950
+F 0 "R?" V 6100 2950 50  0000 C CNN
+F 1 "10K" V 6200 2950 50  0000 C CNN
+F 2 "" V 6130 2950 50  0001 C CNN
+F 3 "~" H 6200 2950 50  0001 C CNN
+	1    6200 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F4BC46E
+P 5600 3250
+F 0 "C?" H 5715 3296 50  0000 L CNN
+F 1 "10n" H 5715 3205 50  0000 L CNN
+F 2 "" H 5638 3100 50  0001 C CNN
+F 3 "~" H 5600 3250 50  0001 C CNN
+	1    5600 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F4BCCDE
+P 5950 3250
+F 0 "C?" H 6065 3296 50  0000 L CNN
+F 1 "10n" H 6065 3205 50  0000 L CNN
+F 2 "" H 5988 3100 50  0001 C CNN
+F 3 "~" H 5950 3250 50  0001 C CNN
+	1    5950 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 2950 6500 2950
+Wire Wire Line
+	5600 2950 5600 3100
+Connection ~ 6500 2950
+Wire Wire Line
+	6500 2950 6350 2950
+Wire Wire Line
+	6500 2950 6500 2600
+Wire Wire Line
+	7050 2750 6750 2750
+Wire Wire Line
+	6750 2600 6750 2750
+Connection ~ 6750 2750
+Wire Wire Line
+	6750 2750 6350 2750
+Wire Wire Line
+	5950 3100 5950 2750
+Wire Wire Line
+	5600 3400 5600 3500
+Wire Wire Line
+	5950 3500 5950 3400
+Wire Wire Line
+	6500 2300 6500 2200
+Wire Wire Line
+	6750 2300 6750 2200
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F4BE04C
+P 6500 2200
+F 0 "#PWR?" H 6500 2050 50  0001 C CNN
+F 1 "+3V3" H 6515 2373 50  0000 C CNN
+F 2 "" H 6500 2200 50  0001 C CNN
+F 3 "" H 6500 2200 50  0001 C CNN
+	1    6500 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F4BE4F7
+P 6750 2200
+F 0 "#PWR?" H 6750 2050 50  0001 C CNN
+F 1 "+3V3" H 6765 2373 50  0000 C CNN
+F 2 "" H 6750 2200 50  0001 C CNN
+F 3 "" H 6750 2200 50  0001 C CNN
+	1    6750 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F4BE9E0
+P 5600 3500
+F 0 "#PWR?" H 5600 3250 50  0001 C CNN
+F 1 "GND" H 5605 3327 50  0000 C CNN
+F 2 "" H 5600 3500 50  0001 C CNN
+F 3 "" H 5600 3500 50  0001 C CNN
+	1    5600 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F4BEF75
+P 5950 3500
+F 0 "#PWR?" H 5950 3250 50  0001 C CNN
+F 1 "GND" H 5955 3327 50  0000 C CNN
+F 2 "" H 5950 3500 50  0001 C CNN
+F 3 "" H 5950 3500 50  0001 C CNN
+	1    5950 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 2750 5950 2750
+Wire Wire Line
+	5500 2750 5950 2750
+Connection ~ 5950 2750
+Wire Wire Line
+	5600 2950 5500 2950
+Wire Wire Line
+	6050 2950 5600 2950
+Connection ~ 5600 2950
+$EndSCHEMATC
