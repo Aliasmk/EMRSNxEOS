@@ -3,13 +3,13 @@
 #define TEST
 #define VERSION "0.1"
 
-#include <io.hpp>
+#include <button.hpp>
 #include <osc.hpp>
 #include <display.hpp>
 #include <console_wifi.hpp>
 
 
-IO io;
+Button btn;
 OSC osc;
 Display display;
 ConsoleWiFi wifi;
@@ -22,7 +22,7 @@ void setup() {
 
 void loop() {
   osc.poll();
-  io.tick();
+  btn.tick();
   
   //Do potentially long-running tasks while serial is idle so we don't miss data
   if(osc.isIdle() || OSC::oscState.status == ERROR){

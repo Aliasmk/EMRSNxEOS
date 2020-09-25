@@ -2,10 +2,10 @@
 
 #include <screens/MainScreen.hpp>
 #include <osc.hpp>
-#include <io.hpp>
+#include <button.hpp>
 
 extern U8G2_SSD1322_NHD_256X64_F_4W_HW_SPI u8g2;
-extern IO io;
+extern Button btn;
 extern OSC osc;
 
 // TODO: The display doesn't need to be constantly redraw. If this object can accept event notifications such as when parameters get update or the syntax line is changed, we only need to redraw in those cases.
@@ -26,12 +26,12 @@ void MainScreen::update(){
         return; // Nothing to do if we aren't connected to EOS
     }
     
-    if(io.buttonClicked(BTN_ENC2)){
+    if(btn.buttonClicked(BTN_ENC2)){
         activeParameter = 0;
         nextGroup();
     }
     
-    if(io.buttonClicked(BTN_ENC3)){
+    if(btn.buttonClicked(BTN_ENC3)){
         activeParameter++;
         if(activeParameter+1 >= itemsOnPage){
             activeParameter = 0;
@@ -39,7 +39,7 @@ void MainScreen::update(){
         } 
     }
 
-    if(io.buttonClicked(BTN_ENC4)){
+    if(btn.buttonClicked(BTN_ENC4)){
         params[activeParameter].coarse = !params[activeParameter].coarse;
     }
 

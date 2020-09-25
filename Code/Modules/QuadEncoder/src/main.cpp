@@ -1,5 +1,6 @@
 #include <Arduino.h>
 
+#include "fader.hpp"
 #include "encoder.hpp"
 #include "Wire.h"
 
@@ -13,6 +14,7 @@ void receiveEvent(int numBytes);
 */
 
 Encoder encoder;
+Fader fader;
 
 void setup() {
   Wire.begin(I2C_ADDRESS);                // join i2c bus with address #4
@@ -38,7 +40,9 @@ void receiveEvent(int numBytes)
     addr = Wire.read(); // receive address
     if(addr == 0){
       Wire.write(NUM_ENCODERS); 
-    } else if(addr > NUM_ENCODERS) {
+    } else if(addr == 1){
+      Wire.write(NUM_FADERS);
+    } else if(addr > 1 + NUM_ENCODERS + NUM_FADERS) {
       Wire.write(0);
     } else {
       signed int delta = encoder.getEncoderDelta((EncoderEnum)addr);

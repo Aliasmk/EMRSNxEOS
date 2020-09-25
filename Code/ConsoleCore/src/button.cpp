@@ -1,10 +1,10 @@
 #include <Arduino.h>
 
-#include "io.hpp"
+#include "button.hpp"
 
 // NOTE: Assumes buttons ACTIVE HIGH
 
-IO::IO(){
+Button::Button(){
     
     pinMode(PIN_ENCBTN1, INPUT);
     pinMode(PIN_ENCBTN2, INPUT);
@@ -12,7 +12,7 @@ IO::IO(){
     pinMode(PIN_ENCBTN4, INPUT);
 
     for(int i = 0; i < NUM_BUTTONS; i++){
-        btnStatus[i].btn = (Button)i;
+        btnStatus[i].btn = (ButtonEnum)i;
         btnStatus[i].clicked = false;
         btnStatus[i].lastState = LOW; //Buttons start out low
         btnStatus[i].timeSwitched = 0;
@@ -21,14 +21,14 @@ IO::IO(){
 
 }
 
-void IO::tick(){
+void Button::tick(){
     long now = millis();
     
     // Poll the states of each button in the button list
     for(int i = 0; i < NUM_BUTTONS; i++){
         
     
-        int buttonPin = getPin((Button)i);
+        int buttonPin = getPin((ButtonEnum)i);
         bool currentButtonState = digitalRead(buttonPin);
         
         // Check for state changes
@@ -67,7 +67,7 @@ void IO::tick(){
 
 }
 
-bool IO::buttonHeld(Button btn, int delay){
+bool Button::buttonHeld(ButtonEnum btn, int delay){
     long now = millis();
     // Check if the button was held longer than the delay, the button is currently not pressed, and we haven't tested for this hold before.
     if((now - btnStatus[(int)btn].timeSwitched) > delay && btnStatus[(int)btn].lastState == HIGH && btnStatus[(int)btn].holdLock == false){
@@ -78,7 +78,7 @@ bool IO::buttonHeld(Button btn, int delay){
     }
 }
 
-bool IO::buttonClicked(Button btn){
+bool Button::buttonClicked(ButtonEnum btn){
     // Check if the button was clicked and there is no hold lock in place
     if(btnStatus[(int)btn].clicked == true && btnStatus[(int)btn].holdLock == false){
         btnStatus[(int)btn].clicked = false;
@@ -88,7 +88,7 @@ bool IO::buttonClicked(Button btn){
     }
 }
 
-bool IO::buttonDown(Button btn){
+bool Button::buttonDown(ButtonEnum btn){
     // Return true if the button is currently pressed
     if(btnStatus[(int)btn].lastState == HIGH){
         return true;
@@ -97,7 +97,7 @@ bool IO::buttonDown(Button btn){
     }
 }
 
-bool IO::buttonUp(Button btn){
+bool Button::buttonUp(ButtonEnum btn){
     // Return true if the button is currently not pressed
     if(btnStatus[(int)btn].lastState == LOW){
         return true;
@@ -106,7 +106,7 @@ bool IO::buttonUp(Button btn){
     }
 }
 
-uint8_t IO::getPin(Button btn){
+uint8_t Button::getPin(ButtonEnum btn){
     for(int i = 0; i < NUM_BUTTONS; i++){
         if(btnMap[i].btn == btn){
             return btnMap[i].pin;
@@ -115,7 +115,7 @@ uint8_t IO::getPin(Button btn){
     return 0;
 }
 
-ButtonStatus* IO::getButtonStatus(Button btn){
+ButtonStatus* Button::getButtonStatus(ButtonEnum btn){
     for(int i = 0; i < NUM_BUTTONS; i++){
         if(btnStatus[i].btn == btn){
             return &btnStatus[i];
