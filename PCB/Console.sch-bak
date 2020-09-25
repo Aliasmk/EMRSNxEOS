@@ -1,12 +1,12 @@
 EESchema Schematic File Version 4
 EELAYER 30 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr USLetter 11000 8500
 encoding utf-8
-Sheet 1 6
-Title ""
+Sheet 1 8
+Title "EMRSNxEOS Console"
 Date ""
-Rev ""
+Rev "A"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -14,33 +14,260 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 5050 2600 1950 1100
+S 4400 3150 1950 1100
 U 5F4A9D3D
 F0 "Core" 50
 F1 "Core.sch" 50
+F2 "SDA" B R 6350 3500 79 
+F3 "SCL" B R 6350 3600 79 
+F4 "TXD0" O L 4400 3500 79 
+F5 "RXD0" I L 4400 3600 79 
+F6 "SUSPEND_SENSE" B L 4400 3900 79 
+F7 "BTN_INT" B R 6350 3800 79 
+F8 "LED_PWM" B R 6350 3900 79 
 $EndSheet
 $Sheet
-S 7500 2600 1250 1100
-U 5F4A9D8D
-F0 "Keypad" 50
-F1 "Keypad.sch" 50
-$EndSheet
-$Sheet
-S 3250 2600 1300 1100
-U 5F4A9E3C
-F0 "Sliders" 50
-F1 "Sliders.sch" 50
-$EndSheet
-$Sheet
-S 5050 1750 1950 450 
+S 6900 3150 1450 1100
 U 5F4A9E86
-F0 "Sheet5F4A9E85" 50
+F0 "Peripherals" 50
 F1 "QuadEncoder.sch" 50
+F2 "SDA" I L 6900 3500 79 
+F3 "SCL" I L 6900 3600 79 
+F4 "BTN_PRESSED" I L 6900 3800 79 
 $EndSheet
 $Sheet
-S 5050 4150 1950 750 
-U 5F4A9ECD
-F0 "Power" 50
-F1 "Power.sch" 50
+S 2400 3150 1400 1100
+U 5FF26B81
+F0 "USB Hub and Serial Converter" 50
+F1 "USB.sch" 50
+F2 "SUSPEND_SENSE" I R 3800 3900 79 
+F3 "TXD" I R 3800 3600 79 
+F4 "RXD" I R 3800 3500 79 
 $EndSheet
+$Comp
+L MK_Library:AP2114-HA U?
+U 1 1 60B66856
+P 6150 5300
+AR Path="/5F4A9ECD/60B66856" Ref="U?"  Part="1" 
+AR Path="/60B66856" Ref="U1"  Part="1" 
+F 0 "U1" H 6150 5565 50  0000 C CNN
+F 1 "AP2114HA-3.3TRG1" H 6150 5474 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223-3_TabPin2" H 6150 5300 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/AP2114.pdf" H 6150 5300 50  0001 C CNN
+	1    6150 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60B6685C
+P 7000 5600
+AR Path="/5F4A9ECD/60B6685C" Ref="C?"  Part="1" 
+AR Path="/60B6685C" Ref="C3"  Part="1" 
+F 0 "C3" H 7115 5646 50  0000 L CNN
+F 1 "4.7uF" H 7115 5555 50  0000 L CNN
+F 2 "" H 7038 5450 50  0001 C CNN
+F 3 "~" H 7000 5600 50  0001 C CNN
+	1    7000 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 5300 7000 5450
+Wire Wire Line
+	7000 5750 7000 5900
+$Comp
+L Device:C C?
+U 1 1 60B66864
+P 5400 5600
+AR Path="/5F4A9ECD/60B66864" Ref="C?"  Part="1" 
+AR Path="/60B66864" Ref="C2"  Part="1" 
+F 0 "C2" H 5515 5646 50  0000 L CNN
+F 1 "4.7uF" H 5515 5555 50  0000 L CNN
+F 2 "" H 5438 5450 50  0001 C CNN
+F 3 "~" H 5400 5600 50  0001 C CNN
+	1    5400 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 5300 5600 5300
+Wire Wire Line
+	5400 5750 5400 5900
+$Comp
+L power:GND #PWR?
+U 1 1 60B6686C
+P 5400 5900
+AR Path="/5F4A9ECD/60B6686C" Ref="#PWR?"  Part="1" 
+AR Path="/60B6686C" Ref="#PWR0101"  Part="1" 
+F 0 "#PWR0101" H 5400 5650 50  0001 C CNN
+F 1 "GND" H 5405 5727 50  0000 C CNN
+F 2 "" H 5400 5900 50  0001 C CNN
+F 3 "" H 5400 5900 50  0001 C CNN
+	1    5400 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60B66872
+P 6150 5900
+AR Path="/5F4A9ECD/60B66872" Ref="#PWR?"  Part="1" 
+AR Path="/60B66872" Ref="#PWR0102"  Part="1" 
+F 0 "#PWR0102" H 6150 5650 50  0001 C CNN
+F 1 "GND" H 6155 5727 50  0000 C CNN
+F 2 "" H 6150 5900 50  0001 C CNN
+F 3 "" H 6150 5900 50  0001 C CNN
+	1    6150 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60B66878
+P 7000 5900
+AR Path="/5F4A9ECD/60B66878" Ref="#PWR?"  Part="1" 
+AR Path="/60B66878" Ref="#PWR0103"  Part="1" 
+F 0 "#PWR0103" H 7000 5650 50  0001 C CNN
+F 1 "GND" H 7005 5727 50  0000 C CNN
+F 2 "" H 7000 5900 50  0001 C CNN
+F 3 "" H 7000 5900 50  0001 C CNN
+	1    7000 5900
+	1    0    0    -1  
+$EndComp
+Connection ~ 5400 5300
+$Comp
+L power:+5V #PWR?
+U 1 1 60B6687F
+P 5400 5300
+AR Path="/5F4A9ECD/60B6687F" Ref="#PWR?"  Part="1" 
+AR Path="/60B6687F" Ref="#PWR0104"  Part="1" 
+F 0 "#PWR0104" H 5400 5150 50  0001 C CNN
+F 1 "+5V" H 5415 5473 50  0000 C CNN
+F 2 "" H 5400 5300 50  0001 C CNN
+F 3 "" H 5400 5300 50  0001 C CNN
+	1    5400 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 60B66885
+P 7000 5300
+AR Path="/5F4A9ECD/60B66885" Ref="#PWR?"  Part="1" 
+AR Path="/60B66885" Ref="#PWR0105"  Part="1" 
+F 0 "#PWR0105" H 7000 5150 50  0001 C CNN
+F 1 "+3V3" H 7015 5473 50  0000 C CNN
+F 2 "" H 7000 5300 50  0001 C CNN
+F 3 "" H 7000 5300 50  0001 C CNN
+	1    7000 5300
+	1    0    0    -1  
+$EndComp
+Connection ~ 7000 5300
+Wire Wire Line
+	5400 5450 5400 5300
+Wire Wire Line
+	4300 5300 4700 5300
+NoConn ~ 4300 5400
+$Comp
+L power:GND #PWR?
+U 1 1 60B6688F
+P 4400 5900
+AR Path="/5F4A9ECD/60B6688F" Ref="#PWR?"  Part="1" 
+AR Path="/60B6688F" Ref="#PWR0106"  Part="1" 
+F 0 "#PWR0106" H 4400 5650 50  0001 C CNN
+F 1 "GND" H 4405 5727 50  0000 C CNN
+F 2 "" H 4400 5900 50  0001 C CNN
+F 3 "" H 4400 5900 50  0001 C CNN
+	1    4400 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 5500 4400 5900
+Wire Wire Line
+	4300 5500 4400 5500
+$Comp
+L Connector:Barrel_Jack_Switch J?
+U 1 1 60B66897
+P 4000 5400
+AR Path="/5F4A9ECD/60B66897" Ref="J?"  Part="1" 
+AR Path="/60B66897" Ref="J1"  Part="1" 
+F 0 "J1" H 4057 5717 50  0000 C CNN
+F 1 "Barrel_Jack_Switch" H 4057 5626 50  0000 C CNN
+F 2 "" H 4050 5360 50  0001 C CNN
+F 3 "~" H 4050 5360 50  0001 C CNN
+	1    4000 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60B6689D
+P 4700 5600
+AR Path="/5F4A9ECD/60B6689D" Ref="C?"  Part="1" 
+AR Path="/60B6689D" Ref="C1"  Part="1" 
+F 0 "C1" H 4815 5646 50  0000 L CNN
+F 1 "0.1uF" H 4815 5555 50  0000 L CNN
+F 2 "" H 4738 5450 50  0001 C CNN
+F 3 "~" H 4700 5600 50  0001 C CNN
+	1    4700 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 5450 4700 5300
+Connection ~ 4700 5300
+Wire Wire Line
+	4700 5300 5100 5300
+Wire Wire Line
+	4700 5750 4700 5900
+$Comp
+L power:GND #PWR?
+U 1 1 60B668A7
+P 4700 5900
+AR Path="/5F4A9ECD/60B668A7" Ref="#PWR?"  Part="1" 
+AR Path="/60B668A7" Ref="#PWR0107"  Part="1" 
+F 0 "#PWR0107" H 4700 5650 50  0001 C CNN
+F 1 "GND" H 4705 5727 50  0000 C CNN
+F 2 "" H 4700 5900 50  0001 C CNN
+F 3 "" H 4700 5900 50  0001 C CNN
+	1    4700 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 5750 6150 5900
+Wire Wire Line
+	6700 5300 7000 5300
+Wire Wire Line
+	3800 3500 4400 3500
+Wire Wire Line
+	4400 3600 3800 3600
+Wire Wire Line
+	3800 3900 4400 3900
+Wire Wire Line
+	6350 3500 6900 3500
+Wire Wire Line
+	6350 3600 6900 3600
+Wire Wire Line
+	6350 3800 6900 3800
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 60E200AA
+P 5100 5300
+F 0 "#FLG0101" H 5100 5375 50  0001 C CNN
+F 1 "PWR_FLAG" H 5100 5473 50  0000 C CNN
+F 2 "" H 5100 5300 50  0001 C CNN
+F 3 "~" H 5100 5300 50  0001 C CNN
+	1    5100 5300
+	1    0    0    -1  
+$EndComp
+Connection ~ 5100 5300
+Wire Wire Line
+	5100 5300 5400 5300
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 60E2106D
+P 7000 5300
+F 0 "#FLG0102" H 7000 5375 50  0001 C CNN
+F 1 "PWR_FLAG" V 7000 5428 50  0000 L CNN
+F 2 "" H 7000 5300 50  0001 C CNN
+F 3 "~" H 7000 5300 50  0001 C CNN
+	1    7000 5300
+	0    1    1    0   
+$EndComp
+NoConn ~ 6350 3900
+Text Notes 3450 5900 0    79   Italic 0
+Power Input:\n5V, 1.5A DC
 $EndSCHEMATC

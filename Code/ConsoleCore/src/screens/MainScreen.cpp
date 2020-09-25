@@ -3,12 +3,10 @@
 #include <screens/MainScreen.hpp>
 #include <osc.hpp>
 #include <io.hpp>
-#include <encoder.hpp>
 
 extern U8G2_SSD1322_NHD_256X64_F_4W_HW_SPI u8g2;
 extern IO io;
 extern OSC osc;
-extern Encoder encoder;
 
 // TODO: The display doesn't need to be constantly redraw. If this object can accept event notifications such as when parameters get update or the syntax line is changed, we only need to redraw in those cases.
 
@@ -45,7 +43,7 @@ void MainScreen::update(){
         params[activeParameter].coarse = !params[activeParameter].coarse;
     }
 
-    int enc = encoder.getEncoderDelta(ENC4);
+    int enc = 0;//encoder.getEncoderDelta(ENC4);
     if(enc != 0){
         if(params[activeParameter].coarse){
             enc *= 4;

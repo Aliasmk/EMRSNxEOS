@@ -11,9 +11,9 @@
 // Note: this class does not handle encoder pushbuttons, only the quadrature sampling and decoding.
 
 typedef enum EncoderEnum{
-  //  ENC1,
-  //  ENC2,
-  //  ENC3,
+    ENC1,
+    ENC2,
+    ENC3,
     ENC4,
     NUM_ENCODERS
 } EncoderEnum;
@@ -50,10 +50,10 @@ private:
     uint8_t stateToValue(bool channelA, bool channelB);
 
     EncoderMapItem encoderMap[NUM_ENCODERS] = {
+        {ENC1, PIN_ENC1A, PIN_ENC1B},
+        {ENC2, PIN_ENC2A, PIN_ENC2B},
+        {ENC3, PIN_ENC3A, PIN_ENC3B},
         {ENC4, PIN_ENC4A, PIN_ENC4B}
-    //    {ENC2, PIN_ENC2A, PIN_ENC2B},
-    //    {ENC3, PIN_ENC3A, PIN_ENC3B},
-    //    {ENC4, PIN_ENC4A, PIN_ENC4B}
     };
 
     const int encoderMatrix[4][4] = {
