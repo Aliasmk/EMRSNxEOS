@@ -176,4 +176,37 @@ F 3 "~" H 5800 7750 50  0001 C CNN
 	1    5800 7750
 	1    0    0    -1  
 $EndComp
+$Comp
+L Graphic:Logo_Open_Hardware_Small #LOGO1
+U 1 1 5FB483D2
+P 800 7700
+F 0 "#LOGO1" H 800 7975 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 800 7475 50  0001 C CNN
+F 2 "" H 800 7700 50  0001 C CNN
+F 3 "~" H 800 7700 50  0001 C CNN
+	1    800  7700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H10
+U 1 1 5FB48A85
+P 5800 7500
+F 0 "H10" H 5900 7546 50  0000 L CNN
+F 1 "MountingHole" H 5900 7455 50  0000 L CNN
+F 2 "Symbol:OSHW-Logo_5.7x6mm_SilkScreen" H 5800 7500 50  0001 C CNN
+F 3 "~" H 5800 7500 50  0001 C CNN
+	1    5800 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H11
+U 1 1 5FB1B00A
+P 5800 7250
+F 0 "H11" H 5900 7296 50  0000 L CNN
+F 1 "MountingHole" H 5900 7205 50  0000 L CNN
+F 2 "Symbol:KiCad-Logo2_5mm_SilkScreen" H 5800 7250 50  0001 C CNN
+F 3 "~" H 5800 7250 50  0001 C CNN
+	1    5800 7250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

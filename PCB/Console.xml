@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>C:\Users\Michael\Git\EMRSNxEOS\PCB\Console.sch</source>
-    <date>2020-10-03 11:40:08 PM</date>
+    <date>2020-12-23 8:58:29 AM</date>
     <tool>Eeschema (5.1.7)-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -17,20 +17,7 @@
         <comment number="4" value=""/>
       </title_block>
     </sheet>
-    <sheet number="2" name="/Core/" tstamps="/5F4A9D3D/">
-      <title_block>
-        <title>EMRSNxEOS Console: MCU and Screen</title>
-        <company/>
-        <rev>A</rev>
-        <date/>
-        <source>Core.sch</source>
-        <comment number="1" value=""/>
-        <comment number="2" value=""/>
-        <comment number="3" value=""/>
-        <comment number="4" value=""/>
-      </title_block>
-    </sheet>
-    <sheet number="3" name="/Peripherals/" tstamps="/5F4A9E86/">
+    <sheet number="2" name="/Peripherals/" tstamps="/5F4A9E86/">
       <title_block>
         <title>EMRSNxEOS Console: Peripherals</title>
         <company/>
@@ -43,7 +30,7 @@
         <comment number="4" value=""/>
       </title_block>
     </sheet>
-    <sheet number="4" name="/Peripherals/Encoder 2/" tstamps="/5F4A9E86/5F64E1A9/">
+    <sheet number="3" name="/Peripherals/Encoder 2/" tstamps="/5F4A9E86/5F64E1A9/">
       <title_block>
         <title>EMRSNxEOS Console</title>
         <company/>
@@ -56,7 +43,7 @@
         <comment number="4" value=""/>
       </title_block>
     </sheet>
-    <sheet number="5" name="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/">
+    <sheet number="4" name="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/">
       <title_block>
         <title>EMRSNxEOS Console</title>
         <company/>
@@ -69,7 +56,7 @@
         <comment number="4" value=""/>
       </title_block>
     </sheet>
-    <sheet number="6" name="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/">
+    <sheet number="5" name="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/">
       <title_block>
         <title>EMRSNxEOS Console</title>
         <company/>
@@ -82,7 +69,7 @@
         <comment number="4" value=""/>
       </title_block>
     </sheet>
-    <sheet number="7" name="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/">
+    <sheet number="6" name="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/">
       <title_block>
         <title>EMRSNxEOS Console</title>
         <company/>
@@ -95,7 +82,7 @@
         <comment number="4" value=""/>
       </title_block>
     </sheet>
-    <sheet number="8" name="/USB Hub and Serial Converter/" tstamps="/5FF26B81/">
+    <sheet number="7" name="/USB Hub and Serial Converter/" tstamps="/5FF26B81/">
       <title_block>
         <title/>
         <company/>
@@ -108,295 +95,136 @@
         <comment number="4" value=""/>
       </title_block>
     </sheet>
+    <sheet number="8" name="/Power/" tstamps="/5F8CC9DA/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Power.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="9" name="/Core/" tstamps="/5F4A9D3D/">
+      <title_block>
+        <title>EMRSNxEOS Console: MCU and Screen</title>
+        <company/>
+        <rev>A</rev>
+        <date/>
+        <source>Core.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
   </design>
   <components>
-    <comp ref="U1">
-      <value>AP2114HA-3.3TRG1</value>
-      <footprint>TO_SOT_Packages_SMD:SOT-223-3_TabPin2</footprint>
-      <datasheet>https://www.diodes.com/assets/Datasheets/AP2114.pdf</datasheet>
-      <fields>
-        <field name="Digikey">AP2114HA-3.3TRG1</field>
-        <field name="MPN">AP2114HA-3.3TRG1DICT-ND</field>
-        <field name="Manufacturer">Diodes Inc.</field>
-      </fields>
-      <libsource lib="MK_Library" part="AP2114-HA" description="1A LOW NOISE CMOS LDO REGULATOR"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>60B66856</tstamp>
-    </comp>
-    <comp ref="C3">
-      <value>4.7uF</value>
-      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+    <comp ref="H1">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_2.7mm_M2.5</footprint>
       <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">1276-1055-1-ND</field>
-        <field name="MPN">CL31B475KAHNNNE</field>
-        <field name="Manufacturer">Samsung</field>
-      </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>60B6685C</tstamp>
+      <tstamp>5FC92215</tstamp>
     </comp>
-    <comp ref="C2">
-      <value>4.7uF</value>
-      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+    <comp ref="H2">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_2.7mm_M2.5</footprint>
       <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">1276-1055-1-ND</field>
-        <field name="MPN">CL31B475KAHNNNE</field>
-        <field name="Manufacturer">Samsung</field>
-      </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>60B66864</tstamp>
+      <tstamp>5FC93F4B</tstamp>
     </comp>
-    <comp ref="J1">
-      <value>Barrel_Jack_Switch</value>
-      <footprint>Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal</footprint>
+    <comp ref="H3">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_2.7mm_M2.5</footprint>
       <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">CP-063BH-ND</field>
-        <field name="MPN">PJ-063BH</field>
-        <field name="Manufacturer">CUI Devices</field>
-      </fields>
-      <libsource lib="Connector" part="Barrel_Jack_Switch" description="DC Barrel Jack with an internal switch"/>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>60B66897</tstamp>
+      <tstamp>5FC94093</tstamp>
+    </comp>
+    <comp ref="H4">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_2.7mm_M2.5</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FC941C5</tstamp>
+    </comp>
+    <comp ref="H5">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_2.7mm_M2.5</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FC942EB</tstamp>
+    </comp>
+    <comp ref="H6">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_2.7mm_M2.5</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FC944A5</tstamp>
+    </comp>
+    <comp ref="H7">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_2.7mm_M2.5</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FC965CB</tstamp>
+    </comp>
+    <comp ref="H8">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_2.7mm_M2.5</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FC965D1</tstamp>
+    </comp>
+    <comp ref="H9">
+      <value>MountingHole</value>
+      <footprint>EMRSNxEOS:Ghost</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FD728FC</tstamp>
+    </comp>
+    <comp ref="H10">
+      <value>MountingHole</value>
+      <footprint>Symbol:OSHW-Logo_5.7x6mm_SilkScreen</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FB48A85</tstamp>
+    </comp>
+    <comp ref="H11">
+      <value>MountingHole</value>
+      <footprint>Symbol:KiCad-Logo2_5mm_SilkScreen</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FB1B00A</tstamp>
     </comp>
     <comp ref="C1">
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">311-4046-1-ND</field>
-        <field name="MPN">CC0603KRX5R9BB104</field>
-        <field name="Manufacturer">Yageo</field>
-      </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>60B6689D</tstamp>
-    </comp>
-    <comp ref="U2">
-      <value>ESP32-WROOM-32</value>
-      <footprint>RF_Module:ESP32-WROOM-32</footprint>
-      <datasheet>https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf</datasheet>
-      <fields>
-        <field name="Digikey">1904-1028-1-ND</field>
-        <field name="MPN">ESP32-WROOM-32U (16MB)</field>
-        <field name="Manufacturer">Espressif Systems</field>
-      </fields>
-      <libsource lib="RF_Module" part="ESP32-WROOM-32" description="RF Module, ESP32-D0WDQ6 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 2.7-3.6V, onboard antenna, SMD"/>
-      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
-      <tstamp>5F4AA2FD</tstamp>
-    </comp>
-    <comp ref="U3">
-      <value>NHD-3.12-25664UCW2</value>
-      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x20_P2.54mm_Vertical</footprint>
-      <datasheet>https://www.newhavendisplay.com/specs/NHD-3.12-25664UCW2.pdf</datasheet>
-      <fields>
-        <field name="Digikey">NHD-3.12-25664UCW2-ND</field>
-        <field name="MPN">NHD-3.12-25664UCW2</field>
-        <field name="Manufacturer">Newhaven Display Intl</field>
-      </fields>
-      <libsource lib="MK_Library" part="NHD-3.12-25664UCW2" description="256x64 Graphic OLED Display Module"/>
-      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
-      <tstamp>5F68DB1D</tstamp>
-    </comp>
-    <comp ref="C6">
-      <value>1uF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">1276-1102-1-ND</field>
-        <field name="MPN">CL10A105KA8NNNC</field>
-        <field name="Manufacturer">Samsung</field>
-      </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
-      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
-      <tstamp>5F693104</tstamp>
-    </comp>
-    <comp ref="JP1">
-      <value>BS1_Sel</value>
-      <footprint>Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm</footprint>
-      <datasheet>~</datasheet>
-      <libsource lib="Jumper" part="SolderJumper_2_Open" description="Solder Jumper, 2-pole, open"/>
-      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
-      <tstamp>5F697E21</tstamp>
-    </comp>
-    <comp ref="JP2">
-      <value>BS2_Sel</value>
-      <footprint>Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm</footprint>
-      <datasheet>~</datasheet>
-      <libsource lib="Jumper" part="SolderJumper_2_Open" description="Solder Jumper, 2-pole, open"/>
-      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
-      <tstamp>5F699BEC</tstamp>
-    </comp>
-    <comp ref="R2">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
-      <tstamp>5F69E6BA</tstamp>
-    </comp>
-    <comp ref="R3">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
-      <tstamp>5F69EA40</tstamp>
-    </comp>
-    <comp ref="SW1">
-      <value>SW_Push</value>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">CKN12330-1-ND</field>
-        <field name="MPN">PTS636 SK25F SMTR LFS</field>
-        <field name="Manufacturer">C&amp;K</field>
-      </fields>
-      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
-      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
-      <tstamp>5F7058E1</tstamp>
-    </comp>
-    <comp ref="C4">
-      <value>22uF</value>
-      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">1276-6687-1-ND</field>
-        <field name="MPN">CL21A226KQCLRNC</field>
-        <field name="Manufacturer">Samsung</field>
-      </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
-      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
-      <tstamp>5F70A8FF</tstamp>
-    </comp>
-    <comp ref="J2">
-      <value>Programming Header</value>
-      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">2057-PH1-04-UA-ND</field>
-        <field name="MPN">PH1-04-UA</field>
-        <field name="Manufacturer">Adam Tech</field>
-      </fields>
-      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
-      <tstamp>5FC9AD65</tstamp>
-    </comp>
-    <comp ref="R1">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
-      <tstamp>5FE00792</tstamp>
-    </comp>
-    <comp ref="C5">
-      <value>0.1uF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">311-4046-1-ND</field>
-        <field name="MPN">CC0603KRX5R9BB104</field>
-        <field name="Manufacturer">Yageo</field>
-      </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
-      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
-      <tstamp>5FE20368</tstamp>
-    </comp>
-    <comp ref="C40">
-      <value>0.1uF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">311-4046-1-ND</field>
-        <field name="MPN">CC0603KRX5R9BB104</field>
-        <field name="Manufacturer">Yageo</field>
-      </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
-      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
-      <tstamp>60E8FB55</tstamp>
-    </comp>
-    <comp ref="SW12">
-      <value>SW_Push</value>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">CKN12330-1-ND</field>
-        <field name="MPN">PTS636 SK25F SMTR LFS</field>
-        <field name="Manufacturer">C&amp;K</field>
-      </fields>
-      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
-      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
-      <tstamp>60E9D7FF</tstamp>
-    </comp>
-    <comp ref="C7">
-      <value>0.1uF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">311-4046-1-ND</field>
-        <field name="MPN">CC0603KRX5R9BB104</field>
-        <field name="Manufacturer">Yageo</field>
+        <field name="Digikey">587-1243-1-ND</field>
+        <field name="MPN">UMK107B7104KA-T</field>
+        <field name="Manufacturer">Taiyo Yuden</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F60B548</tstamp>
     </comp>
-    <comp ref="Y1">
-      <value>16MHz</value>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">GC1200050CT-ND</field>
-        <field name="MPN">GC1200050</field>
-        <field name="Manufacturer">Diodes Inc.</field>
-      </fields>
-      <libsource lib="Device" part="Crystal_Small" description="Two pin crystal, small symbol"/>
-      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
-      <tstamp>5F61103A</tstamp>
-    </comp>
-    <comp ref="C9">
-      <value>12pF</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">1292-1251-1-ND</field>
-        <field name="MPN">0402N120J250CT</field>
-        <field name="Manufacturer">Walsin</field>
-      </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
-      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
-      <tstamp>5F6128AB</tstamp>
-    </comp>
-    <comp ref="C10">
-      <value>12pF</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">1292-1251-1-ND</field>
-        <field name="MPN">0402N120J250CT</field>
-        <field name="Manufacturer">Walsin</field>
-      </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
-      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
-      <tstamp>5F6134C1</tstamp>
-    </comp>
-    <comp ref="R5">
+    <comp ref="R2">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -409,7 +237,7 @@
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F61C0E4</tstamp>
     </comp>
-    <comp ref="JP3">
+    <comp ref="JP1">
       <value>SolderJumper_2_Open</value>
       <footprint>Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm</footprint>
       <datasheet>~</datasheet>
@@ -417,7 +245,7 @@
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F61D71A</tstamp>
     </comp>
-    <comp ref="R4">
+    <comp ref="R1">
       <value>270R</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -431,7 +259,7 @@
       <tstamp>5F62A42D</tstamp>
     </comp>
     <comp ref="D1">
-      <value>LED</value>
+      <value>LED_Green</value>
       <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
@@ -443,7 +271,7 @@
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F62C583</tstamp>
     </comp>
-    <comp ref="C8">
+    <comp ref="C2">
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
@@ -456,7 +284,7 @@
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F639141</tstamp>
     </comp>
-    <comp ref="J3">
+    <comp ref="J1">
       <value>Programming Header</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
@@ -469,7 +297,7 @@
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F6C3A6A</tstamp>
     </comp>
-    <comp ref="J4">
+    <comp ref="J2">
       <value>UART</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
@@ -479,10 +307,11 @@
     </comp>
     <comp ref="RV3">
       <value>R_POT</value>
+      <footprint>EMRSNxEOS:SliderHeader</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">PTA4553-2015CPB103-ND</field>
-        <field name="MPN">PTA4553-2015CPB103</field>
+        <field name="Digikey">PTA4553-2210CIB103-ND</field>
+        <field name="MPN">PTA4553-2210CIB103</field>
         <field name="Manufacturer">Bourns Inc.</field>
       </fields>
       <libsource lib="Device" part="R_POT" description="Potentiometer"/>
@@ -491,10 +320,11 @@
     </comp>
     <comp ref="RV2">
       <value>R_POT</value>
+      <footprint>EMRSNxEOS:SliderHeader</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">PTA4553-2015CPB103-ND</field>
-        <field name="MPN">PTA4553-2015CPB103</field>
+        <field name="Digikey">PTA4553-2210CIB103-ND</field>
+        <field name="MPN">PTA4553-2210CIB103</field>
         <field name="Manufacturer">Bourns Inc.</field>
       </fields>
       <libsource lib="Device" part="R_POT" description="Potentiometer"/>
@@ -503,30 +333,18 @@
     </comp>
     <comp ref="RV1">
       <value>R_POT</value>
+      <footprint>EMRSNxEOS:SliderHeader</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">PTA4553-2015CPB103-ND</field>
-        <field name="MPN">PTA4553-2015CPB103</field>
+        <field name="Digikey">PTA4553-2210CIB103-ND</field>
+        <field name="MPN">PTA4553-2210CIB103</field>
         <field name="Manufacturer">Bourns Inc.</field>
       </fields>
       <libsource lib="Device" part="R_POT" description="Potentiometer"/>
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F72BFEA</tstamp>
     </comp>
-    <comp ref="R6">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
-      <tstamp>5F73A260</tstamp>
-    </comp>
-    <comp ref="R8">
+    <comp ref="R3">
       <value>270R</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -539,7 +357,7 @@
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F73A266</tstamp>
     </comp>
-    <comp ref="SW2">
+    <comp ref="SW1">
       <value>SW_Push_LED</value>
       <footprint>MK_Library:SW_Cherry_MX_Single_LED</footprint>
       <datasheet>~</datasheet>
@@ -552,20 +370,7 @@
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F73A26C</tstamp>
     </comp>
-    <comp ref="R10">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
-      <tstamp>5F73A28C</tstamp>
-    </comp>
-    <comp ref="R12">
+    <comp ref="R5">
       <value>270R</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -578,7 +383,7 @@
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F73A292</tstamp>
     </comp>
-    <comp ref="SW4">
+    <comp ref="SW3">
       <value>SW_Push_LED</value>
       <footprint>MK_Library:SW_Cherry_MX_Single_LED</footprint>
       <datasheet>~</datasheet>
@@ -591,20 +396,7 @@
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F73A298</tstamp>
     </comp>
-    <comp ref="R14">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
-      <tstamp>5F73A2B8</tstamp>
-    </comp>
-    <comp ref="R16">
+    <comp ref="R7">
       <value>270R</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -617,7 +409,7 @@
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F73A2BE</tstamp>
     </comp>
-    <comp ref="SW6">
+    <comp ref="SW5">
       <value>SW_Push_LED</value>
       <footprint>MK_Library:SW_Cherry_MX_Single_LED</footprint>
       <datasheet>~</datasheet>
@@ -630,20 +422,7 @@
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F73A2C4</tstamp>
     </comp>
-    <comp ref="R7">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
-      <tstamp>5F73A2E4</tstamp>
-    </comp>
-    <comp ref="R9">
+    <comp ref="R4">
       <value>270R</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -656,7 +435,7 @@
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F73A2EA</tstamp>
     </comp>
-    <comp ref="SW3">
+    <comp ref="SW2">
       <value>SW_Push_LED</value>
       <footprint>MK_Library:SW_Cherry_MX_Single_LED</footprint>
       <datasheet>~</datasheet>
@@ -669,20 +448,7 @@
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F73A2F0</tstamp>
     </comp>
-    <comp ref="R11">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
-      <tstamp>5F73A310</tstamp>
-    </comp>
-    <comp ref="R13">
+    <comp ref="R6">
       <value>270R</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -695,7 +461,7 @@
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F73A316</tstamp>
     </comp>
-    <comp ref="SW5">
+    <comp ref="SW4">
       <value>SW_Push_LED</value>
       <footprint>MK_Library:SW_Cherry_MX_Single_LED</footprint>
       <datasheet>~</datasheet>
@@ -708,20 +474,7 @@
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F73A31C</tstamp>
     </comp>
-    <comp ref="R15">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
-      <tstamp>5F73A33C</tstamp>
-    </comp>
-    <comp ref="R17">
+    <comp ref="R8">
       <value>270R</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -734,7 +487,7 @@
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F73A342</tstamp>
     </comp>
-    <comp ref="SW7">
+    <comp ref="SW6">
       <value>SW_Push_LED</value>
       <footprint>MK_Library:SW_Cherry_MX_Single_LED</footprint>
       <datasheet>~</datasheet>
@@ -747,7 +500,7 @@
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F73A348</tstamp>
     </comp>
-    <comp ref="U5">
+    <comp ref="U2">
       <value>MCP23017_SO</value>
       <footprint>Package_SO:SOIC-28W_7.5x17.9mm_P1.27mm</footprint>
       <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf</datasheet>
@@ -760,7 +513,7 @@
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F8EFCB0</tstamp>
     </comp>
-    <comp ref="C11">
+    <comp ref="C5">
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
@@ -773,9 +526,9 @@
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F97EA9E</tstamp>
     </comp>
-    <comp ref="U4">
+    <comp ref="U1">
       <value>ATmega328P-PU</value>
-      <footprint>Package_DIP:DIP-28_W7.62mm</footprint>
+      <footprint>Package_QFP:TQFP-32_7x7mm_P0.8mm</footprint>
       <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf</datasheet>
       <fields>
         <field name="Digikey">ATMEGA328PB-AU-ND</field>
@@ -794,79 +547,67 @@
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>60B610D3</tstamp>
     </comp>
-    <comp ref="D5">
-      <value>LED_Green</value>
+    <comp ref="D2">
+      <value>LED_CoolWhite</value>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">67-1059-ND</field>
+        <field name="Digikey">1616-GBL7IW60D-CW-ND</field>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
       <tstamp>5F770747</tstamp>
     </comp>
-    <comp ref="D7">
-      <value>LED_Orange</value>
+    <comp ref="D4">
+      <value>LED_CoolWhite</value>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">67-1074-ND</field>
+        <field name="Digikey">1616-GBL7IW60D-CW-ND</field>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
-      <tstamp>5F771AE3</tstamp>
-    </comp>
-    <comp ref="D9">
-      <value>LED_Red</value>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">67-1647-ND</field>
-      </fields>
-      <libsource lib="Device" part="LED" description="Light emitting diode"/>
-      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
-      <tstamp>5F771EAB</tstamp>
-    </comp>
-    <comp ref="D10">
-      <value>LED_Green</value>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">67-1059-ND</field>
-      </fields>
-      <libsource lib="Device" part="LED" description="Light emitting diode"/>
-      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
-      <tstamp>5F772272</tstamp>
-    </comp>
-    <comp ref="D8">
-      <value>LED_Blue</value>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">67-1747-ND</field>
-      </fields>
-      <libsource lib="Device" part="LED" description="Light emitting diode"/>
-      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
-      <tstamp>5F7727F6</tstamp>
+      <tstamp>5FA8C0AF</tstamp>
     </comp>
     <comp ref="D6">
-      <value>LED_Red</value>
+      <value>LED_CoolWhite</value>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">67-1647-ND</field>
+        <field name="Digikey">1616-GBL7IW60D-CW-ND</field>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
       <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
-      <tstamp>5F772C63</tstamp>
+      <tstamp>5FA944D3</tstamp>
     </comp>
-    <comp ref="SW8">
-      <value>Rotary_Encoder_Switch</value>
+    <comp ref="D3">
+      <value>LED_CoolWhite</value>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">PEC12R-4222F-S0024-ND</field>
-        <field name="MPN">PEC12R-4222F-S0024</field>
-        <field name="Manufacturer">Bourns Inc.</field>
+        <field name="Digikey">1616-GBL7IW60D-CW-ND</field>
       </fields>
-      <libsource lib="Device" part="Rotary_Encoder_Switch" description="Rotary encoder, dual channel, incremental quadrate outputs, with switch"/>
-      <sheetpath names="/Peripherals/Encoder 2/" tstamps="/5F4A9E86/5F64E1A9/"/>
-      <tstamp>5F69EEA5</tstamp>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
+      <tstamp>5FAA60A0</tstamp>
     </comp>
-    <comp ref="R22">
+    <comp ref="D5">
+      <value>LED_CoolWhite</value>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">1616-GBL7IW60D-CW-ND</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
+      <tstamp>5FAA60A9</tstamp>
+    </comp>
+    <comp ref="D7">
+      <value>LED_CoolWhite</value>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">1616-GBL7IW60D-CW-ND</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
+      <tstamp>5FAA60B2</tstamp>
+    </comp>
+    <comp ref="R34">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -876,23 +617,125 @@
         <field name="Manufacturer">Stackpole</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/Encoder 2/" tstamps="/5F4A9E86/5F64E1A9/"/>
-      <tstamp>5F69F9D6</tstamp>
+      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
+      <tstamp>5FF22364</tstamp>
     </comp>
-    <comp ref="R23">
-      <value>1k</value>
+    <comp ref="R36">
+      <value>10k</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">311-1KLBCT-ND</field>
-        <field name="MPN">AC0402FR-071KL</field>
-        <field name="Manufacturer">Yageo</field>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/Encoder 2/" tstamps="/5F4A9E86/5F64E1A9/"/>
-      <tstamp>5F6A2307</tstamp>
+      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
+      <tstamp>5FF22D66</tstamp>
     </comp>
-    <comp ref="C14">
+    <comp ref="R38">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
+      <tstamp>5FF33002</tstamp>
+    </comp>
+    <comp ref="R39">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
+      <tstamp>5FF3B272</tstamp>
+    </comp>
+    <comp ref="R37">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
+      <tstamp>5FF43192</tstamp>
+    </comp>
+    <comp ref="R35">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
+      <tstamp>5FF4B352</tstamp>
+    </comp>
+    <comp ref="Y1">
+      <value>16MHz</value>
+      <footprint>MK_Library:ECS-120-12-36-AGN</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">XC2622CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="Crystal_GND2_Small" description="Three pin crystal, GND on pin 2, small symbol"/>
+      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
+      <tstamp>5F884439</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>20p</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">478-11758-1-ND</field>
+        <field name="MPN">04023U200JAT2A</field>
+        <field name="Manufacturer">AVX</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
+      <tstamp>5F8C0E2D</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>20p</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">478-11758-1-ND</field>
+        <field name="MPN">04023U200JAT2A</field>
+        <field name="Manufacturer">AVX</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/Peripherals/" tstamps="/5F4A9E86/"/>
+      <tstamp>5F8C97EE</tstamp>
+    </comp>
+    <comp ref="SW7">
+      <value>Rotary_Encoder_Switch</value>
+      <footprint>EMRSNxEOS:PEC12RHeader</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">PEC11R-4220F-S0012-ND</field>
+        <field name="MPN">PEC11R-4220F-S0012</field>
+        <field name="Manufacturer">Bourns Inc.</field>
+      </fields>
+      <libsource lib="Device" part="Rotary_Encoder_Switch" description="Rotary encoder, dual channel, incremental quadrate outputs, with switch"/>
+      <sheetpath names="/Peripherals/Encoder 2/" tstamps="/5F4A9E86/5F64E1A9/"/>
+      <tstamp>5F69EEA5</tstamp>
+    </comp>
+    <comp ref="C8">
       <value>10n</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -905,33 +748,33 @@
       <sheetpath names="/Peripherals/Encoder 2/" tstamps="/5F4A9E86/5F64E1A9/"/>
       <tstamp>5F6A38A0</tstamp>
     </comp>
-    <comp ref="R21">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+    <comp ref="C6">
+      <value>10n</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
+        <field name="Digikey">311-1677-1-ND</field>
+        <field name="MPN">CC0402JRX7R8BB103</field>
+        <field name="Manufacturer">Yageo</field>
       </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/Peripherals/Encoder 2/" tstamps="/5F4A9E86/5F64E1A9/"/>
-      <tstamp>5F6A8F9F</tstamp>
+      <tstamp>5F6B8BDC</tstamp>
     </comp>
-    <comp ref="R20">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+    <comp ref="C7">
+      <value>10n</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
+        <field name="Digikey">311-1677-1-ND</field>
+        <field name="MPN">CC0402JRX7R8BB103</field>
+        <field name="Manufacturer">Yageo</field>
       </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/Peripherals/Encoder 2/" tstamps="/5F4A9E86/5F64E1A9/"/>
-      <tstamp>5F6AA2F5</tstamp>
+      <tstamp>5F6B95E0</tstamp>
     </comp>
-    <comp ref="R18">
+    <comp ref="R40">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -942,9 +785,9 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Peripherals/Encoder 2/" tstamps="/5F4A9E86/5F64E1A9/"/>
-      <tstamp>5F6AAE65</tstamp>
+      <tstamp>5FF1EA9B</tstamp>
     </comp>
-    <comp ref="R19">
+    <comp ref="R41">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -955,7 +798,215 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Peripherals/Encoder 2/" tstamps="/5F4A9E86/5F64E1A9/"/>
-      <tstamp>5F6AB98A</tstamp>
+      <tstamp>5FF1F393</tstamp>
+    </comp>
+    <comp ref="R42">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/Encoder 2/" tstamps="/5F4A9E86/5F64E1A9/"/>
+      <tstamp>5FF1F59B</tstamp>
+    </comp>
+    <comp ref="R43">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/Encoder 2/" tstamps="/5F4A9E86/5F64E1A9/"/>
+      <tstamp>5FF1F8A9</tstamp>
+    </comp>
+    <comp ref="R44">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/Encoder 2/" tstamps="/5F4A9E86/5F64E1A9/"/>
+      <tstamp>5FF1FAB4</tstamp>
+    </comp>
+    <comp ref="R45">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/Encoder 2/" tstamps="/5F4A9E86/5F64E1A9/"/>
+      <tstamp>5FF1FD2A</tstamp>
+    </comp>
+    <comp ref="SW8">
+      <value>Rotary_Encoder_Switch</value>
+      <footprint>EMRSNxEOS:PEC12RHeader</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">PEC11R-4220F-S0012-ND</field>
+        <field name="MPN">PEC11R-4220F-S0012</field>
+        <field name="Manufacturer">Bourns Inc.</field>
+      </fields>
+      <libsource lib="Device" part="Rotary_Encoder_Switch" description="Rotary encoder, dual channel, incremental quadrate outputs, with switch"/>
+      <sheetpath names="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/"/>
+      <tstamp>5F69EEA5</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>10n</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">311-1677-1-ND</field>
+        <field name="MPN">CC0402JRX7R8BB103</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/"/>
+      <tstamp>5F6A38A0</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>10n</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">311-1677-1-ND</field>
+        <field name="MPN">CC0402JRX7R8BB103</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/"/>
+      <tstamp>5F6B8BDC</tstamp>
+    </comp>
+    <comp ref="C10">
+      <value>10n</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">311-1677-1-ND</field>
+        <field name="MPN">CC0402JRX7R8BB103</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/"/>
+      <tstamp>5F6B95E0</tstamp>
+    </comp>
+    <comp ref="R46">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/"/>
+      <tstamp>5FF1EA9B</tstamp>
+    </comp>
+    <comp ref="R47">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/"/>
+      <tstamp>5FF1F393</tstamp>
+    </comp>
+    <comp ref="R48">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/"/>
+      <tstamp>5FF1F59B</tstamp>
+    </comp>
+    <comp ref="R49">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/"/>
+      <tstamp>5FF1F8A9</tstamp>
+    </comp>
+    <comp ref="R50">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/"/>
+      <tstamp>5FF1FAB4</tstamp>
+    </comp>
+    <comp ref="R51">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/"/>
+      <tstamp>5FF1FD2A</tstamp>
+    </comp>
+    <comp ref="SW9">
+      <value>Rotary_Encoder_Switch</value>
+      <footprint>EMRSNxEOS:PEC12RHeader</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">PEC11R-4220F-S0012-ND</field>
+        <field name="MPN">PEC11R-4220F-S0012</field>
+        <field name="Manufacturer">Bourns Inc.</field>
+      </fields>
+      <libsource lib="Device" part="Rotary_Encoder_Switch" description="Rotary encoder, dual channel, incremental quadrate outputs, with switch"/>
+      <sheetpath names="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/"/>
+      <tstamp>5F69EEA5</tstamp>
+    </comp>
+    <comp ref="C14">
+      <value>10n</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">311-1677-1-ND</field>
+        <field name="MPN">CC0402JRX7R8BB103</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/"/>
+      <tstamp>5F6A38A0</tstamp>
     </comp>
     <comp ref="C12">
       <value>10n</value>
@@ -967,7 +1018,7 @@
         <field name="Manufacturer">Yageo</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <sheetpath names="/Peripherals/Encoder 2/" tstamps="/5F4A9E86/5F64E1A9/"/>
+      <sheetpath names="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/"/>
       <tstamp>5F6B8BDC</tstamp>
     </comp>
     <comp ref="C13">
@@ -980,22 +1031,10 @@
         <field name="Manufacturer">Yageo</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <sheetpath names="/Peripherals/Encoder 2/" tstamps="/5F4A9E86/5F64E1A9/"/>
+      <sheetpath names="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/"/>
       <tstamp>5F6B95E0</tstamp>
     </comp>
-    <comp ref="SW9">
-      <value>Rotary_Encoder_Switch</value>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">PEC12R-4222F-S0024-ND</field>
-        <field name="MPN">PEC12R-4222F-S0024</field>
-        <field name="Manufacturer">Bourns Inc.</field>
-      </fields>
-      <libsource lib="Device" part="Rotary_Encoder_Switch" description="Rotary encoder, dual channel, incremental quadrate outputs, with switch"/>
-      <sheetpath names="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/"/>
-      <tstamp>5F69EEA5</tstamp>
-    </comp>
-    <comp ref="R28">
+    <comp ref="R52">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -1005,21 +1044,86 @@
         <field name="Manufacturer">Stackpole</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/"/>
-      <tstamp>5F69F9D6</tstamp>
+      <sheetpath names="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/"/>
+      <tstamp>5FF1EA9B</tstamp>
     </comp>
-    <comp ref="R29">
-      <value>1k</value>
+    <comp ref="R53">
+      <value>10k</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">311-1KLBCT-ND</field>
-        <field name="MPN">AC0402FR-071KL</field>
-        <field name="Manufacturer">Yageo</field>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/"/>
-      <tstamp>5F6A2307</tstamp>
+      <sheetpath names="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/"/>
+      <tstamp>5FF1F393</tstamp>
+    </comp>
+    <comp ref="R54">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/"/>
+      <tstamp>5FF1F59B</tstamp>
+    </comp>
+    <comp ref="R55">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/"/>
+      <tstamp>5FF1F8A9</tstamp>
+    </comp>
+    <comp ref="R56">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/"/>
+      <tstamp>5FF1FAB4</tstamp>
+    </comp>
+    <comp ref="R57">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/"/>
+      <tstamp>5FF1FD2A</tstamp>
+    </comp>
+    <comp ref="SW10">
+      <value>Rotary_Encoder_Switch</value>
+      <footprint>EMRSNxEOS:PEC12RHeader</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">PEC11R-4220F-S0012-ND</field>
+        <field name="MPN">PEC11R-4220F-S0012</field>
+        <field name="Manufacturer">Bourns Inc.</field>
+      </fields>
+      <libsource lib="Device" part="Rotary_Encoder_Switch" description="Rotary encoder, dual channel, incremental quadrate outputs, with switch"/>
+      <sheetpath names="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/"/>
+      <tstamp>5F69EEA5</tstamp>
     </comp>
     <comp ref="C17">
       <value>10n</value>
@@ -1031,60 +1135,8 @@
         <field name="Manufacturer">Yageo</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <sheetpath names="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/"/>
+      <sheetpath names="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/"/>
       <tstamp>5F6A38A0</tstamp>
-    </comp>
-    <comp ref="R27">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/"/>
-      <tstamp>5F6A8F9F</tstamp>
-    </comp>
-    <comp ref="R26">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/"/>
-      <tstamp>5F6AA2F5</tstamp>
-    </comp>
-    <comp ref="R24">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/"/>
-      <tstamp>5F6AAE65</tstamp>
-    </comp>
-    <comp ref="R25">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/"/>
-      <tstamp>5F6AB98A</tstamp>
     </comp>
     <comp ref="C15">
       <value>10n</value>
@@ -1096,7 +1148,7 @@
         <field name="Manufacturer">Yageo</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <sheetpath names="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/"/>
+      <sheetpath names="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/"/>
       <tstamp>5F6B8BDC</tstamp>
     </comp>
     <comp ref="C16">
@@ -1109,281 +1161,101 @@
         <field name="Manufacturer">Yageo</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <sheetpath names="/Peripherals/Encoder 3/" tstamps="/5F4A9E86/5F64E559/"/>
-      <tstamp>5F6B95E0</tstamp>
-    </comp>
-    <comp ref="SW10">
-      <value>Rotary_Encoder_Switch</value>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">PEC12R-4222F-S0024-ND</field>
-        <field name="MPN">PEC12R-4222F-S0024</field>
-        <field name="Manufacturer">Bourns Inc.</field>
-      </fields>
-      <libsource lib="Device" part="Rotary_Encoder_Switch" description="Rotary encoder, dual channel, incremental quadrate outputs, with switch"/>
-      <sheetpath names="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/"/>
-      <tstamp>5F69EEA5</tstamp>
-    </comp>
-    <comp ref="R34">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/"/>
-      <tstamp>5F69F9D6</tstamp>
-    </comp>
-    <comp ref="R35">
-      <value>1k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">311-1KLBCT-ND</field>
-        <field name="MPN">AC0402FR-071KL</field>
-        <field name="Manufacturer">Yageo</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/"/>
-      <tstamp>5F6A2307</tstamp>
-    </comp>
-    <comp ref="C20">
-      <value>10n</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">311-1677-1-ND</field>
-        <field name="MPN">CC0402JRX7R8BB103</field>
-        <field name="Manufacturer">Yageo</field>
-      </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <sheetpath names="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/"/>
-      <tstamp>5F6A38A0</tstamp>
-    </comp>
-    <comp ref="R33">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/"/>
-      <tstamp>5F6A8F9F</tstamp>
-    </comp>
-    <comp ref="R32">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/"/>
-      <tstamp>5F6AA2F5</tstamp>
-    </comp>
-    <comp ref="R30">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/"/>
-      <tstamp>5F6AAE65</tstamp>
-    </comp>
-    <comp ref="R31">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/"/>
-      <tstamp>5F6AB98A</tstamp>
-    </comp>
-    <comp ref="C18">
-      <value>10n</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">311-1677-1-ND</field>
-        <field name="MPN">CC0402JRX7R8BB103</field>
-        <field name="Manufacturer">Yageo</field>
-      </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <sheetpath names="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/"/>
-      <tstamp>5F6B8BDC</tstamp>
-    </comp>
-    <comp ref="C19">
-      <value>10n</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">311-1677-1-ND</field>
-        <field name="MPN">CC0402JRX7R8BB103</field>
-        <field name="Manufacturer">Yageo</field>
-      </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <sheetpath names="/Peripherals/Encoder 4/" tstamps="/5F4A9E86/5F64E7E9/"/>
-      <tstamp>5F6B95E0</tstamp>
-    </comp>
-    <comp ref="SW11">
-      <value>Rotary_Encoder_Switch</value>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">PEC12R-4222F-S0024-ND</field>
-        <field name="MPN">PEC12R-4222F-S0024</field>
-        <field name="Manufacturer">Bourns Inc.</field>
-      </fields>
-      <libsource lib="Device" part="Rotary_Encoder_Switch" description="Rotary encoder, dual channel, incremental quadrate outputs, with switch"/>
-      <sheetpath names="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/"/>
-      <tstamp>5F69EEA5</tstamp>
-    </comp>
-    <comp ref="R40">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/"/>
-      <tstamp>5F69F9D6</tstamp>
-    </comp>
-    <comp ref="R41">
-      <value>1k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">311-1KLBCT-ND</field>
-        <field name="MPN">AC0402FR-071KL</field>
-        <field name="Manufacturer">Yageo</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/"/>
-      <tstamp>5F6A2307</tstamp>
-    </comp>
-    <comp ref="C23">
-      <value>10n</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">311-1677-1-ND</field>
-        <field name="MPN">CC0402JRX7R8BB103</field>
-        <field name="Manufacturer">Yageo</field>
-      </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <sheetpath names="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/"/>
-      <tstamp>5F6A38A0</tstamp>
-    </comp>
-    <comp ref="R39">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/"/>
-      <tstamp>5F6A8F9F</tstamp>
-    </comp>
-    <comp ref="R38">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/"/>
-      <tstamp>5F6AA2F5</tstamp>
-    </comp>
-    <comp ref="R36">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/"/>
-      <tstamp>5F6AAE65</tstamp>
-    </comp>
-    <comp ref="R37">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/"/>
-      <tstamp>5F6AB98A</tstamp>
-    </comp>
-    <comp ref="C21">
-      <value>10n</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">311-1677-1-ND</field>
-        <field name="MPN">CC0402JRX7R8BB103</field>
-        <field name="Manufacturer">Yageo</field>
-      </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <sheetpath names="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/"/>
-      <tstamp>5F6B8BDC</tstamp>
-    </comp>
-    <comp ref="C22">
-      <value>10n</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">311-1677-1-ND</field>
-        <field name="MPN">CC0402JRX7R8BB103</field>
-        <field name="Manufacturer">Yageo</field>
-      </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/"/>
       <tstamp>5F6B95E0</tstamp>
     </comp>
-    <comp ref="C35">
+    <comp ref="R58">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/"/>
+      <tstamp>5FF1EA9B</tstamp>
+    </comp>
+    <comp ref="R59">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/"/>
+      <tstamp>5FF1F393</tstamp>
+    </comp>
+    <comp ref="R60">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/"/>
+      <tstamp>5FF1F59B</tstamp>
+    </comp>
+    <comp ref="R61">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/"/>
+      <tstamp>5FF1F8A9</tstamp>
+    </comp>
+    <comp ref="R62">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/"/>
+      <tstamp>5FF1FAB4</tstamp>
+    </comp>
+    <comp ref="R63">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Peripherals/Encoder 1/" tstamps="/5F4A9E86/5F6DDF02/"/>
+      <tstamp>5FF1FD2A</tstamp>
+    </comp>
+    <comp ref="C29">
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">311-4046-1-ND</field>
-        <field name="MPN">CC0603KRX5R9BB104</field>
-        <field name="Manufacturer">Yageo</field>
+        <field name="Digikey">587-1243-1-ND</field>
+        <field name="MPN">UMK107B7104KA-T</field>
+        <field name="Manufacturer">Taiyo Yuden</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>5FF59714</tstamp>
     </comp>
-    <comp ref="C34">
+    <comp ref="C28">
       <value>4.7uF</value>
       <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
       <datasheet>~</datasheet>
@@ -1396,7 +1268,7 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>5FF5972D</tstamp>
     </comp>
-    <comp ref="R52">
+    <comp ref="R15">
       <value>22.1k</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -1409,7 +1281,7 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>5FF59771</tstamp>
     </comp>
-    <comp ref="R53">
+    <comp ref="R16">
       <value>47.5k</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -1422,7 +1294,7 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>5FF59777</tstamp>
     </comp>
-    <comp ref="R54">
+    <comp ref="R17">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -1435,19 +1307,7 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>5FF5978F</tstamp>
     </comp>
-    <comp ref="Y2">
-      <value>12MHz</value>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">1908-J49SML-A-G-G-K-12M0CT-ND</field>
-        <field name="MPN">J49SML-A-G-G-K-12M0</field>
-        <field name="Manufacturer">Jauch Quartz</field>
-      </fields>
-      <libsource lib="Device" part="Crystal_Small" description="Two pin crystal, small symbol"/>
-      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
-      <tstamp>5FFF3239</tstamp>
-    </comp>
-    <comp ref="C25">
+    <comp ref="C19">
       <value>20p</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -1460,7 +1320,7 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>5FFF3D32</tstamp>
     </comp>
-    <comp ref="C24">
+    <comp ref="C18">
       <value>20p</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -1473,8 +1333,9 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>5FFF46B7</tstamp>
     </comp>
-    <comp ref="U6">
+    <comp ref="U3">
       <value>CY7C65632-28LTXC</value>
+      <footprint>Package_DFN_QFN:QFN-28-1EP_5x5mm_P0.5mm_EP3.35x3.35mm</footprint>
       <datasheet>https://www.cypress.com/file/114101/download</datasheet>
       <fields>
         <field name="Digikey">CY7C65632-28LTXC-ND</field>
@@ -1485,18 +1346,11 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>5FFC6948</tstamp>
     </comp>
-    <comp ref="FL5">
-      <value>EMI_Filter_CommonMode</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="EMI_Filter_CommonMode" description="EMI 2-inductor common mode filter"/>
-      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
-      <tstamp>600438E9</tstamp>
-    </comp>
-    <comp ref="J8">
+    <comp ref="J6">
       <value>USB_A</value>
+      <footprint>Connector_PinHeader_1.27mm:PinHeader_1x05_P1.27mm_Vertical</footprint>
       <datasheet> ~</datasheet>
       <fields>
-        <field name="Digikey">2057-USB-A-S-VT-ND</field>
         <field name="MPN">USB-A-S-VT</field>
         <field name="Manufacturer">Adam Tech</field>
       </fields>
@@ -1504,128 +1358,100 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>600438EF</tstamp>
     </comp>
-    <comp ref="C36">
-      <value>120uF</value>
-      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">732-8511-1-ND</field>
-        <field name="MPN">865080545012</field>
-        <field name="Manufacturer">Würth Elektronik</field>
-      </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
-      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
-      <tstamp>60049088</tstamp>
-    </comp>
-    <comp ref="C38">
-      <value>0.1uF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">311-4046-1-ND</field>
-        <field name="MPN">CC0603KRX5R9BB104</field>
-        <field name="Manufacturer">Yageo</field>
-      </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
-      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
-      <tstamp>600497B2</tstamp>
-    </comp>
-    <comp ref="FL4">
-      <value>EMI_Filter_CommonMode</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="EMI_Filter_CommonMode" description="EMI 2-inductor common mode filter"/>
-      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
-      <tstamp>600658B6</tstamp>
-    </comp>
-    <comp ref="J9">
-      <value>USB_A</value>
-      <datasheet> ~</datasheet>
-      <fields>
-        <field name="Digikey">2057-USB-A-S-RA-ND</field>
-        <field name="MPN">USB-A-S-RA</field>
-        <field name="Manufacturer">Adam Tech</field>
-      </fields>
-      <libsource lib="Connector" part="USB_A" description="USB Type A connector"/>
-      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
-      <tstamp>600658BC</tstamp>
-    </comp>
-    <comp ref="C37">
-      <value>120uF</value>
-      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">732-8511-1-ND</field>
-        <field name="MPN">865080545012</field>
-        <field name="Manufacturer">Würth Elektronik</field>
-      </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
-      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
-      <tstamp>600658D6</tstamp>
-    </comp>
-    <comp ref="C39">
-      <value>0.1uF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">311-4046-1-ND</field>
-        <field name="MPN">CC0603KRX5R9BB104</field>
-        <field name="Manufacturer">Yageo</field>
-      </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
-      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
-      <tstamp>600658DC</tstamp>
-    </comp>
-    <comp ref="FL3">
-      <value>EMI_Filter_CommonMode</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="EMI_Filter_CommonMode" description="EMI 2-inductor common mode filter"/>
-      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
-      <tstamp>6008172A</tstamp>
-    </comp>
     <comp ref="C30">
       <value>120uF</value>
-      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <footprint>Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="Digikey">732-8511-1-ND</field>
         <field name="MPN">865080545012</field>
         <field name="Manufacturer">Würth Elektronik</field>
       </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="Device" part="CP_Small" description="Polarized capacitor, small symbol"/>
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
-      <tstamp>6008173C</tstamp>
+      <tstamp>60049088</tstamp>
     </comp>
     <comp ref="C32">
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">311-4046-1-ND</field>
-        <field name="MPN">CC0603KRX5R9BB104</field>
-        <field name="Manufacturer">Yageo</field>
+        <field name="Digikey">587-1243-1-ND</field>
+        <field name="MPN">UMK107B7104KA-T</field>
+        <field name="Manufacturer">Taiyo Yuden</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
+      <tstamp>600497B2</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>USB_A</value>
+      <footprint>Connector_USB:USB_A_Molex_67643_Horizontal</footprint>
+      <datasheet> ~</datasheet>
+      <fields>
+        <field name="Digikey">WM14667-ND</field>
+        <field name="MPN">0676433910</field>
+        <field name="Manufacturer">Molex</field>
+      </fields>
+      <libsource lib="Connector" part="USB_A" description="USB Type A connector"/>
+      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
+      <tstamp>600658BC</tstamp>
+    </comp>
+    <comp ref="C31">
+      <value>120uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">732-8511-1-ND</field>
+        <field name="MPN">865080545012</field>
+        <field name="Manufacturer">Würth Elektronik</field>
+      </fields>
+      <libsource lib="Device" part="CP_Small" description="Polarized capacitor, small symbol"/>
+      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
+      <tstamp>600658D6</tstamp>
+    </comp>
+    <comp ref="C33">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">587-1243-1-ND</field>
+        <field name="MPN">UMK107B7104KA-T</field>
+        <field name="Manufacturer">Taiyo Yuden</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
+      <tstamp>600658DC</tstamp>
+    </comp>
+    <comp ref="C24">
+      <value>120uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">732-8511-1-ND</field>
+        <field name="MPN">865080545012</field>
+        <field name="Manufacturer">Würth Elektronik</field>
+      </fields>
+      <libsource lib="Device" part="CP_Small" description="Polarized capacitor, small symbol"/>
+      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
+      <tstamp>6008173C</tstamp>
+    </comp>
+    <comp ref="C26">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">587-1243-1-ND</field>
+        <field name="MPN">UMK107B7104KA-T</field>
+        <field name="Manufacturer">Taiyo Yuden</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>60081742</tstamp>
     </comp>
-    <comp ref="FL2">
-      <value>EMI_Filter_CommonMode</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="EMI_Filter_CommonMode" description="EMI 2-inductor common mode filter"/>
-      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
-      <tstamp>6008175C</tstamp>
-    </comp>
-    <comp ref="J7">
-      <value>To Keyboard</value>
-      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
-      <datasheet>~</datasheet>
-      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
-      <tstamp>600A918A</tstamp>
-    </comp>
-    <comp ref="U8">
+    <comp ref="U5">
       <value>MIC2027-2BM </value>
-      <footprint>Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm</footprint>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
       <datasheet>https://ww1.microchip.com/downloads/en/DeviceDoc/mic2027.pdf</datasheet>
       <fields>
         <field name="Digikey">576-2138-ND</field>
@@ -1636,66 +1462,14 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>5F6E9563</tstamp>
     </comp>
-    <comp ref="R46">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
-      <tstamp>5F7E141B</tstamp>
-    </comp>
-    <comp ref="R49">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
-      <tstamp>5F7E28FC</tstamp>
-    </comp>
-    <comp ref="R50">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
-      <tstamp>5F7E2BDB</tstamp>
-    </comp>
-    <comp ref="R51">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
-        <field name="MPN">RMCF0402FT10K0</field>
-        <field name="Manufacturer">Stackpole</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
-      <tstamp>5F7E2F5B</tstamp>
-    </comp>
-    <comp ref="C29">
+    <comp ref="C23">
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">311-4046-1-ND</field>
-        <field name="MPN">CC0603KRX5R9BB104</field>
-        <field name="Manufacturer">Yageo</field>
+        <field name="Digikey">587-1243-1-ND</field>
+        <field name="MPN">UMK107B7104KA-T</field>
+        <field name="Manufacturer">Taiyo Yuden</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
@@ -1779,7 +1553,7 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>5FB8F610</tstamp>
     </comp>
-    <comp ref="J5">
+    <comp ref="J3">
       <value>USB_B</value>
       <footprint>Connector_USB:USB_B_OST_USB-B1HSxx_Horizontal</footprint>
       <datasheet> ~</datasheet>
@@ -1792,34 +1566,27 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>5FC21E19</tstamp>
     </comp>
-    <comp ref="FL1">
-      <value>EMI_Filter_CommonMode</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="EMI_Filter_CommonMode" description="EMI 2-inductor common mode filter"/>
-      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
-      <tstamp>5FC238C8</tstamp>
-    </comp>
-    <comp ref="C27">
+    <comp ref="C21">
       <value>120uF</value>
-      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <footprint>Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="Digikey">732-8511-1-ND</field>
         <field name="MPN">865080545012</field>
         <field name="Manufacturer">Würth Elektronik</field>
       </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="Device" part="CP_Small" description="Polarized capacitor, small symbol"/>
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>5FC3EA4F</tstamp>
     </comp>
-    <comp ref="C28">
+    <comp ref="C22">
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">311-4046-1-ND</field>
-        <field name="MPN">CC0603KRX5R9BB104</field>
-        <field name="Manufacturer">Yageo</field>
+        <field name="Digikey">587-1243-1-ND</field>
+        <field name="MPN">UMK107B7104KA-T</field>
+        <field name="Manufacturer">Taiyo Yuden</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
@@ -1851,12 +1618,12 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>5FC3EA76</tstamp>
     </comp>
-    <comp ref="R43">
+    <comp ref="R10">
       <value>100k</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">YAG3515CT-ND</field>
+        <field name="Digikey">RMCF0402FT100KCT-ND</field>
         <field name="MPN">AC0402JR-07100KL</field>
         <field name="Manufacturer">Yageo</field>
       </fields>
@@ -1864,7 +1631,7 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>5FCABD19</tstamp>
     </comp>
-    <comp ref="R44">
+    <comp ref="R11">
       <value>650R</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -1877,7 +1644,7 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>5FCB9B7C</tstamp>
     </comp>
-    <comp ref="U7">
+    <comp ref="U4">
       <value>24LC02</value>
       <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
       <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/21709c.pdf</datasheet>
@@ -1890,7 +1657,7 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>5FD32655</tstamp>
     </comp>
-    <comp ref="R48">
+    <comp ref="R14">
       <value>DNP</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -1898,7 +1665,7 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>5FDB954E</tstamp>
     </comp>
-    <comp ref="R45">
+    <comp ref="R12">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -1911,7 +1678,7 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>5FE16AB5</tstamp>
     </comp>
-    <comp ref="R47">
+    <comp ref="R13">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -1924,20 +1691,20 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>5FE1715D</tstamp>
     </comp>
-    <comp ref="C26">
+    <comp ref="C20">
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">311-4046-1-ND</field>
-        <field name="MPN">CC0603KRX5R9BB104</field>
-        <field name="Manufacturer">Yageo</field>
+        <field name="Digikey">587-1243-1-ND</field>
+        <field name="MPN">UMK107B7104KA-T</field>
+        <field name="Manufacturer">Taiyo Yuden</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>5FE58B2F</tstamp>
     </comp>
-    <comp ref="R42">
+    <comp ref="R9">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -1966,7 +1733,7 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>60040BB4</tstamp>
     </comp>
-    <comp ref="D2">
+    <comp ref="D8">
       <value>SP0503BAHT</value>
       <footprint>Package_TO_SOT_SMD:SOT-143</footprint>
       <datasheet>http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/documents/data%20sheets/sp05xxba.pdf</datasheet>
@@ -1979,8 +1746,9 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>6028DC32</tstamp>
     </comp>
-    <comp ref="U9">
+    <comp ref="U6">
       <value>CP2102N-A02-GQFN20</value>
+      <footprint>Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm</footprint>
       <fields>
         <field name="Digikey">336-5885-ND</field>
         <field name="MPN">CP2102N-A02</field>
@@ -1990,7 +1758,7 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>6030F0A7</tstamp>
     </comp>
-    <comp ref="R57">
+    <comp ref="R20">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -2003,7 +1771,7 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>606AD23C</tstamp>
     </comp>
-    <comp ref="R55">
+    <comp ref="R18">
       <value>270R</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -2016,7 +1784,7 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>606E3FDE</tstamp>
     </comp>
-    <comp ref="R56">
+    <comp ref="R19">
       <value>270R</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
@@ -2029,8 +1797,8 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>606E4A0E</tstamp>
     </comp>
-    <comp ref="D3">
-      <value>LED</value>
+    <comp ref="D10">
+      <value>LED_Orange</value>
       <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
@@ -2042,8 +1810,8 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>60708338</tstamp>
     </comp>
-    <comp ref="D4">
-      <value>LED</value>
+    <comp ref="D11">
+      <value>LED_Orange</value>
       <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
@@ -2055,39 +1823,40 @@
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>6071AF16</tstamp>
     </comp>
-    <comp ref="J6">
+    <comp ref="J4">
       <value>USB_A</value>
+      <footprint>Connector_USB:USB_A_Molex_67643_Horizontal</footprint>
       <datasheet> ~</datasheet>
       <fields>
-        <field name="Digikey">2057-USB-A-S-VT-ND</field>
-        <field name="MPN">USB-A-S-VT</field>
-        <field name="Manufacturer">Adam Tech</field>
+        <field name="Digikey">WM14667-ND</field>
+        <field name="MPN">0676433910</field>
+        <field name="Manufacturer">Molex</field>
       </fields>
       <libsource lib="Connector" part="USB_A" description="USB Type A connector"/>
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>60B6F3FC</tstamp>
     </comp>
-    <comp ref="C31">
+    <comp ref="C25">
       <value>120uF</value>
-      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <footprint>Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="Digikey">732-8511-1-ND</field>
         <field name="MPN">865080545012</field>
         <field name="Manufacturer">Würth Elektronik</field>
       </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="Device" part="CP_Small" description="Polarized capacitor, small symbol"/>
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>60B7885F</tstamp>
     </comp>
-    <comp ref="C33">
+    <comp ref="C27">
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">311-4046-1-ND</field>
-        <field name="MPN">CC0603KRX5R9BB104</field>
-        <field name="Manufacturer">Yageo</field>
+        <field name="Digikey">587-1243-1-ND</field>
+        <field name="MPN">UMK107B7104KA-T</field>
+        <field name="Manufacturer">Taiyo Yuden</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
@@ -2118,6 +1887,607 @@
       <libsource lib="Device" part="Ferrite_Bead_Small" description="Ferrite bead, small symbol"/>
       <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
       <tstamp>60B78886</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>USB_A</value>
+      <footprint>Connector_PinHeader_1.27mm:PinHeader_1x05_P1.27mm_Vertical</footprint>
+      <datasheet> ~</datasheet>
+      <fields>
+        <field name="MPN">USB-A-S-VT</field>
+        <field name="Manufacturer">Adam Tech</field>
+      </fields>
+      <libsource lib="Connector" part="USB_A" description="USB Type A connector"/>
+      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
+      <tstamp>5F970720</tstamp>
+    </comp>
+    <comp ref="D9">
+      <value>DT1240A-08LP3810</value>
+      <footprint>Package_DFN_QFN:UDFN-9_1.0x3.8mm_P0.5mm</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/DT1240A-08LP3810.pdf</datasheet>
+      <fields>
+        <field name="Digikey">DT1240A-08LP3810-7DICT-ND</field>
+      </fields>
+      <libsource lib="Power_Protection" part="DT1240A-08LP3810" description="Low Capacitance TVS Diode Array, 3.3V Standoff, 8 Channels, UDFN-9"/>
+      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
+      <tstamp>5FBC9E44</tstamp>
+    </comp>
+    <comp ref="R64">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
+      <tstamp>5FF687D5</tstamp>
+    </comp>
+    <comp ref="R65">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
+      <tstamp>5FF68ED6</tstamp>
+    </comp>
+    <comp ref="R66">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
+      <tstamp>5FFA159D</tstamp>
+    </comp>
+    <comp ref="R67">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
+      <tstamp>5FFB3CCB</tstamp>
+    </comp>
+    <comp ref="Y2">
+      <value>12MHz</value>
+      <footprint>MK_Library:ECS-120-12-36-AGN</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">XC2710CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="Crystal_GND2_Small" description="Three pin crystal, GND on pin 2, small symbol"/>
+      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
+      <tstamp>5F8906C4</tstamp>
+    </comp>
+    <comp ref="R32">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/USB Hub and Serial Converter/" tstamps="/5FF26B81/"/>
+      <tstamp>5FB5FE6E</tstamp>
+    </comp>
+    <comp ref="U8">
+      <value>AP2114HA-3.3TRG1</value>
+      <footprint>Package_TO_SOT_SMD:SOT-223-3_TabPin2</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/AP2114.pdf</datasheet>
+      <fields>
+        <field name="Digikey">AP2114HA-3.3TRG1</field>
+        <field name="MPN">AP2114HA-3.3TRG1DICT-ND</field>
+        <field name="Manufacturer">Diodes Inc.</field>
+      </fields>
+      <libsource lib="MK_Library" part="AP2114-HA" description="1A LOW NOISE CMOS LDO REGULATOR"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5F8D37EF</tstamp>
+    </comp>
+    <comp ref="C38">
+      <value>4.7uF</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">1276-1055-1-ND</field>
+        <field name="MPN">CL31B475KAHNNNE</field>
+        <field name="Manufacturer">Samsung</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5F8D37F8</tstamp>
+    </comp>
+    <comp ref="C35">
+      <value>4.7uF</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">1276-1055-1-ND</field>
+        <field name="MPN">CL31B475KAHNNNE</field>
+        <field name="Manufacturer">Samsung</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5F8D3803</tstamp>
+    </comp>
+    <comp ref="J8">
+      <value>Barrel_Jack_Switch</value>
+      <footprint>Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">CP-102AH-ND</field>
+        <field name="MPN">PJ-102AH</field>
+        <field name="Manufacturer">CUI Devices</field>
+      </fields>
+      <libsource lib="Connector" part="Barrel_Jack_Switch" description="DC Barrel Jack with an internal switch"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5F8D3837</tstamp>
+    </comp>
+    <comp ref="C34">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">587-1243-1-ND</field>
+        <field name="MPN">UMK107B7104KA-T</field>
+        <field name="Manufacturer">Taiyo Yuden</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5F8D3840</tstamp>
+    </comp>
+    <comp ref="D12">
+      <value>DDZ5V6BSF-7</value>
+      <footprint>Diode_SMD:D_SOD-323F</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">DDZ5V6BSF-7DICT-ND</field>
+      </fields>
+      <libsource lib="Device" part="D_Zener" description="Zener diode"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5F8D385A</tstamp>
+    </comp>
+    <comp ref="R22">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT1K00CT-ND</field>
+        <field name="MPN">RMCF0402FT1K00</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5F8D3860</tstamp>
+    </comp>
+    <comp ref="D14">
+      <value>S4SRP</value>
+      <footprint>Diode_SMD:D_SMB_Modified</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">S4SCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="Q_SCR_KAG" description="Silicon controlled rectifier, cathode/anode/gate"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5F8D3870</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>FDN338P</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://www.onsemi.com/pub/Collateral/FDN338P-D.pdf</datasheet>
+      <fields>
+        <field name="Digikey">FDN338PCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="Q_PMOS_GSD" description="P-MOSFET transistor, gate/source/drain"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5F8D3895</tstamp>
+    </comp>
+    <comp ref="R23">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT4K70CT-ND</field>
+        <field name="MPN">RMCF0402FT4K70</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5F8D389B</tstamp>
+    </comp>
+    <comp ref="R21">
+      <value>510k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT510KCT-ND</field>
+        <field name="MPN">RMCF0402FT510K</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5F8D38A1</tstamp>
+    </comp>
+    <comp ref="C36">
+      <value>4.7uF</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">1276-1055-1-ND</field>
+        <field name="MPN">CL31B475KAHNNNE</field>
+        <field name="Manufacturer">Samsung</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5F8D38C1</tstamp>
+    </comp>
+    <comp ref="U7">
+      <value>DMP1005UFDF</value>
+      <footprint>Package_DFN_QFN:Diodes_UDFN2020-6_Type-F</footprint>
+      <fields>
+        <field name="Digikey">DMP1005UFDF-7DICT-ND</field>
+      </fields>
+      <libsource lib="MK_Library" part="DMP1005UFDF" description=""/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5F8D38D7</tstamp>
+    </comp>
+    <comp ref="R27">
+      <value>0R</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402ZT0R00CT-ND</field>
+        <field name="MPN">RMCF0402ZT0R00</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5F8D38EA</tstamp>
+    </comp>
+    <comp ref="R28">
+      <value>DNP</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5F8D38F0</tstamp>
+    </comp>
+    <comp ref="Q3">
+      <value>FDN338P</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://www.onsemi.com/pub/Collateral/FDN338P-D.pdf</datasheet>
+      <fields>
+        <field name="Digikey">FDN338PCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="Q_PMOS_GSD" description="P-MOSFET transistor, gate/source/drain"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5F8D3900</tstamp>
+    </comp>
+    <comp ref="R29">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT1K00CT-ND</field>
+        <field name="MPN">RMCF0402FT1K00</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5F8D390E</tstamp>
+    </comp>
+    <comp ref="Q2">
+      <value>MMBT3904</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/MMBT3904.pdf</datasheet>
+      <fields>
+        <field name="Digikey">1727-4044-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="Q_NPN_BCE" description="NPN transistor, base/collector/emitter"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5F8D3919</tstamp>
+    </comp>
+    <comp ref="R30">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT1K00CT-ND</field>
+        <field name="MPN">RMCF0402FT1K00</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5F8D3925</tstamp>
+    </comp>
+    <comp ref="R24">
+      <value>270R</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">311-270JRCT-ND</field>
+        <field name="MPN">RC0402JR-07270RL</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5FB959DB</tstamp>
+    </comp>
+    <comp ref="D13">
+      <value>LED_Red</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">160-1447-1-ND</field>
+        <field name="MPN">LTST-C191KRKT</field>
+        <field name="Manufacturer">Lite-On Inc.</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5FB9701E</tstamp>
+    </comp>
+    <comp ref="R25">
+      <value>270R</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">311-270JRCT-ND</field>
+        <field name="MPN">RC0402JR-07270RL</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5FB9945A</tstamp>
+    </comp>
+    <comp ref="D15">
+      <value>LED_Green</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">160-1446-1-ND</field>
+        <field name="MPN">LTST-C191KGKT</field>
+        <field name="Manufacturer">Lite-On Inc.</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5FB99466</tstamp>
+    </comp>
+    <comp ref="R26">
+      <value>270R</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">311-270JRCT-ND</field>
+        <field name="MPN">RC0402JR-07270RL</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5FB9BB45</tstamp>
+    </comp>
+    <comp ref="D16">
+      <value>LED_Blue</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">160-1647-1-ND</field>
+        <field name="MPN">LTST-C191TBKT</field>
+        <field name="Manufacturer">Lite-On Inc.</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5FB9BB51</tstamp>
+    </comp>
+    <comp ref="C37">
+      <value>10uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">732-865081745005CT-ND</field>
+        <field name="MPN">865081745005</field>
+        <field name="Manufacturer">Würth Elektronik</field>
+      </fields>
+      <libsource lib="Device" part="CP_Small" description="Polarized capacitor, small symbol"/>
+      <sheetpath names="/Power/" tstamps="/5F8CC9DA/"/>
+      <tstamp>5FBAEF90</tstamp>
+    </comp>
+    <comp ref="U9">
+      <value>ESP32-WROOM-32</value>
+      <footprint>RF_Module:ESP32-WROOM-32</footprint>
+      <datasheet>https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf</datasheet>
+      <fields>
+        <field name="Digikey">1904-1028-1-ND</field>
+        <field name="MPN">ESP32-WROOM-32U (16MB)</field>
+        <field name="Manufacturer">Espressif Systems</field>
+      </fields>
+      <libsource lib="RF_Module" part="ESP32-WROOM-32" description="RF Module, ESP32-D0WDQ6 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 2.7-3.6V, onboard antenna, SMD"/>
+      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
+      <tstamp>5F4AA2FD</tstamp>
+    </comp>
+    <comp ref="C42">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">1276-1102-1-ND</field>
+        <field name="MPN">CL10A105KA8NNNC</field>
+        <field name="Manufacturer">Samsung</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
+      <tstamp>5F693104</tstamp>
+    </comp>
+    <comp ref="SW12">
+      <value>SW_Push</value>
+      <footprint>MK_Library:PTS636 SK25F SMTR LFS</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">CKN12330-1-ND</field>
+        <field name="MPN">PTS636 SK25F SMTR LFS</field>
+        <field name="Manufacturer">C&amp;K</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
+      <tstamp>5F7058E1</tstamp>
+    </comp>
+    <comp ref="C39">
+      <value>22uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">1276-6687-1-ND</field>
+        <field name="MPN">CL21A226KQCLRNC</field>
+        <field name="Manufacturer">Samsung</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
+      <tstamp>5F70A8FF</tstamp>
+    </comp>
+    <comp ref="J9">
+      <value>Programming Header</value>
+      <footprint>Connector_PinSocket_1.27mm:PinSocket_1x04_P1.27mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2057-PH1-04-UA-ND</field>
+        <field name="MPN">PH1-04-UA</field>
+        <field name="Manufacturer">Adam Tech</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
+      <tstamp>5FC9AD65</tstamp>
+    </comp>
+    <comp ref="R31">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
+      <tstamp>5FE00792</tstamp>
+    </comp>
+    <comp ref="C40">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">587-1243-1-ND</field>
+        <field name="MPN">UMK107B7104KA-T</field>
+        <field name="Manufacturer">Taiyo Yuden</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
+      <tstamp>5FE20368</tstamp>
+    </comp>
+    <comp ref="C41">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">587-1243-1-ND</field>
+        <field name="MPN">UMK107B7104KA-T</field>
+        <field name="Manufacturer">Taiyo Yuden</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
+      <tstamp>60E8FB55</tstamp>
+    </comp>
+    <comp ref="SW11">
+      <value>SW_Push</value>
+      <footprint>MK_Library:PTS636 SK25F SMTR LFS</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">CKN12330-1-ND</field>
+        <field name="MPN">PTS636 SK25F SMTR LFS</field>
+        <field name="Manufacturer">C&amp;K</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
+      <tstamp>60E9D7FF</tstamp>
+    </comp>
+    <comp ref="U10">
+      <value>NHD-3.12-25664UCW2</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x20_P2.54mm_Vertical</footprint>
+      <datasheet>https://www.newhavendisplay.com/specs/NHD-3.12-25664UCW2.pdf</datasheet>
+      <fields>
+        <field name="Digikey">NHD-3.12-25664UCW2-ND</field>
+        <field name="MPN">NHD-3.12-25664UCW2</field>
+        <field name="Manufacturer">Newhaven Display Intl</field>
+      </fields>
+      <libsource lib="MK_Library" part="NHD-3.12-25664UCW2" description="256x64 Graphic OLED Display Module"/>
+      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
+      <tstamp>5F68DB1D</tstamp>
+    </comp>
+    <comp ref="R33">
+      <value>270R</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">311-270JRCT-ND</field>
+        <field name="MPN">RC0402JR-07270RL</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
+      <tstamp>5FB56CC1</tstamp>
+    </comp>
+    <comp ref="D17">
+      <value>LED_Green</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">160-1446-1-ND</field>
+        <field name="MPN">LTST-C191KGKT</field>
+        <field name="Manufacturer">Lite-On Inc.</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
+      <tstamp>5FB56CCD</tstamp>
+    </comp>
+    <comp ref="R68">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
+      <tstamp>5FB663F5</tstamp>
+    </comp>
+    <comp ref="R69">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT10K0CT-ND</field>
+        <field name="MPN">RMCF0402FT10K0</field>
+        <field name="Manufacturer">Stackpole</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Core/" tstamps="/5F4A9D3D/"/>
+      <tstamp>5FB6686A</tstamp>
     </comp>
   </components>
   <libparts>
@@ -2254,6 +2624,21 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Device" part="CP_Small">
+      <description>Polarized capacitor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Device" part="C_Small">
       <description>Unpolarized capacitor, small symbol</description>
       <docs>~</docs>
@@ -2269,40 +2654,38 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Device" part="Crystal_Small">
-      <description>Two pin crystal, small symbol</description>
+    <libpart lib="Device" part="Crystal_GND2_Small">
+      <description>Three pin crystal, GND on pin 2, small symbol</description>
       <docs>~</docs>
       <footprints>
         <fp>Crystal*</fp>
       </footprints>
       <fields>
         <field name="Reference">Y</field>
-        <field name="Value">Crystal_Small</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-        <pin num="2" name="2" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="EMI_Filter_LL">
-      <aliases>
-        <alias>EMI_Filter_CommonMode</alias>
-      </aliases>
-      <description>EMI 2-inductor filter</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>L_*</fp>
-        <fp>L_CommonMode*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">FL</field>
-        <field name="Value">EMI_Filter_LL</field>
+        <field name="Value">Crystal_GND2_Small</field>
       </fields>
       <pins>
         <pin num="1" name="1" type="passive"/>
         <pin num="2" name="2" type="passive"/>
         <pin num="3" name="3" type="passive"/>
-        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Zener">
+      <description>Zener diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Zener</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Device" part="Ferrite_Bead_Small">
@@ -2337,6 +2720,45 @@
       <pins>
         <pin num="1" name="K" type="passive"/>
         <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Q_NPN_BCE">
+      <description>NPN transistor, base/collector/emitter</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_NPN_BCE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Q_PMOS_GSD">
+      <description>P-MOSFET transistor, gate/source/drain</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_PMOS_GSD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Q_SCR_KAG">
+      <description>Silicon controlled rectifier, cathode/anode/gate</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">Q_SCR_KAG</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+        <pin num="3" name="G" type="input"/>
       </pins>
     </libpart>
     <libpart lib="Device" part="R">
@@ -2587,6 +3009,20 @@
         <pin num="PAD" name="GND" type="power_in"/>
       </pins>
     </libpart>
+    <libpart lib="MK_Library" part="DMP1005UFDF">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">DMP1005UFDF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="D" type="passive"/>
+        <pin num="2" name="D" type="passive"/>
+        <pin num="3" name="G" type="input"/>
+        <pin num="4" name="S" type="passive"/>
+        <pin num="5" name="D" type="passive"/>
+        <pin num="6" name="D" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="MK_Library" part="MIC2027">
       <description>Quad USB Power Distribution Switch</description>
       <docs>https://ww1.microchip.com/downloads/en/DeviceDoc/mic2027.pdf</docs>
@@ -2644,6 +3080,17 @@
         <pin num="20" name="BS2" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Mechanical" part="MountingHole">
+      <description>Mounting Hole without connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole</field>
+      </fields>
+    </libpart>
     <libpart lib="Memory_EEPROM" part="24LC16">
       <aliases>
         <alias>24LC02</alias>
@@ -2681,6 +3128,35 @@
         <pin num="6" name="SCL" type="input"/>
         <pin num="7" name="WP" type="input"/>
         <pin num="8" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Power_Protection" part="RCLAMP3328P">
+      <aliases>
+        <alias>WE-TVS-824014881</alias>
+        <alias>ESDLC5V0PB8</alias>
+        <alias>SP7538P</alias>
+        <alias>DT1240A-08LP3810</alias>
+      </aliases>
+      <description>Low Capacitance TVS Diode Array, 3.3V Standoff, 8 Channels, UDFN-9</description>
+      <docs>https://media.digikey.com/pdf/Data%20Sheets/Semtech%20PDFs/RCLAMP3328P.pdf</docs>
+      <footprints>
+        <fp>UDFN*1.0x3.8mm*P0.5mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">RCLAMP3328P</field>
+        <field name="Footprint">Package_DFN_QFN:UDFN-9_1.0x3.8mm_P0.5mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K1" type="passive"/>
+        <pin num="2" name="K2" type="passive"/>
+        <pin num="3" name="A" type="passive"/>
+        <pin num="4" name="K3" type="passive"/>
+        <pin num="5" name="K4" type="passive"/>
+        <pin num="6" name="K5" type="passive"/>
+        <pin num="7" name="K6" type="passive"/>
+        <pin num="8" name="K7" type="passive"/>
+        <pin num="9" name="K8" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Power_Protection" part="SP0503BAHT">
@@ -2806,6 +3282,9 @@
     <library logical="MK_Library">
       <uri>C:/Users/Michael/Git/MK_KiCAD/MK_Library.lib</uri>
     </library>
+    <library logical="Mechanical">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Mechanical.lib</uri>
+    </library>
     <library logical="Memory_EEPROM">
       <uri>C:\Program Files\KiCad\share\kicad\library/Memory_EEPROM.lib</uri>
     </library>
@@ -2820,917 +3299,969 @@
     </library>
   </libraries>
   <nets>
-    <net code="1" name="GND">
-      <node ref="FB4" pin="2"/>
-      <node ref="FB4" pin="1"/>
-      <node ref="J5" pin="4"/>
-      <node ref="FB8" pin="1"/>
-      <node ref="FB8" pin="2"/>
-      <node ref="J3" pin="6"/>
-      <node ref="RV1" pin="3"/>
-      <node ref="RV2" pin="3"/>
-      <node ref="RV3" pin="3"/>
-      <node ref="U8" pin="7"/>
-      <node ref="FB2" pin="1"/>
-      <node ref="FB2" pin="2"/>
-      <node ref="U8" pin="10"/>
-      <node ref="U8" pin="12"/>
-      <node ref="U8" pin="15"/>
-      <node ref="U8" pin="2"/>
-      <node ref="U8" pin="4"/>
-      <node ref="J7" pin="4"/>
-      <node ref="FB10" pin="1"/>
-      <node ref="FB10" pin="2"/>
-      <node ref="R43" pin="1"/>
-      <node ref="R44" pin="1"/>
-      <node ref="C27" pin="2"/>
-      <node ref="C28" pin="2"/>
-      <node ref="U4" pin="22"/>
-      <node ref="U4" pin="8"/>
-      <node ref="C11" pin="1"/>
-      <node ref="C9" pin="1"/>
-      <node ref="U5" pin="17"/>
-      <node ref="U5" pin="16"/>
-      <node ref="U5" pin="15"/>
-      <node ref="U5" pin="10"/>
-      <node ref="SW3" pin="1"/>
-      <node ref="SW3" pin="3"/>
-      <node ref="C10" pin="1"/>
-      <node ref="SW6" pin="3"/>
-      <node ref="SW6" pin="1"/>
-      <node ref="SW5" pin="3"/>
-      <node ref="SW5" pin="1"/>
-      <node ref="SW2" pin="3"/>
-      <node ref="SW2" pin="1"/>
-      <node ref="SW4" pin="3"/>
-      <node ref="SW4" pin="1"/>
-      <node ref="C7" pin="2"/>
-      <node ref="C8" pin="2"/>
-      <node ref="D1" pin="1"/>
-      <node ref="JP3" pin="2"/>
-      <node ref="C38" pin="2"/>
-      <node ref="C13" pin="2"/>
-      <node ref="C12" pin="2"/>
-      <node ref="C36" pin="2"/>
-      <node ref="C14" pin="2"/>
-      <node ref="SW8" pin="S2"/>
-      <node ref="C15" pin="2"/>
-      <node ref="C16" pin="2"/>
-      <node ref="C32" pin="2"/>
-      <node ref="C39" pin="2"/>
-      <node ref="C37" pin="2"/>
-      <node ref="C30" pin="2"/>
-      <node ref="U6" pin="PAD"/>
-      <node ref="J8" pin="4"/>
-      <node ref="J8" pin="5"/>
-      <node ref="J9" pin="5"/>
-      <node ref="J9" pin="4"/>
-      <node ref="C20" pin="2"/>
-      <node ref="SW10" pin="S2"/>
-      <node ref="C22" pin="2"/>
-      <node ref="C21" pin="2"/>
-      <node ref="C23" pin="2"/>
-      <node ref="SW11" pin="S2"/>
-      <node ref="C17" pin="2"/>
-      <node ref="SW9" pin="S2"/>
-      <node ref="C18" pin="2"/>
-      <node ref="C19" pin="2"/>
-      <node ref="J6" pin="4"/>
-      <node ref="J6" pin="5"/>
-      <node ref="C31" pin="2"/>
-      <node ref="C33" pin="2"/>
-      <node ref="FB6" pin="1"/>
-      <node ref="FB6" pin="2"/>
-      <node ref="R48" pin="2"/>
-      <node ref="U7" pin="1"/>
-      <node ref="U9" pin="12"/>
-      <node ref="C29" pin="1"/>
-      <node ref="D3" pin="1"/>
-      <node ref="D4" pin="1"/>
-      <node ref="U7" pin="2"/>
-      <node ref="U9" pin="3"/>
-      <node ref="R57" pin="2"/>
-      <node ref="C24" pin="2"/>
-      <node ref="C25" pin="2"/>
-      <node ref="D2" pin="1"/>
-      <node ref="C34" pin="1"/>
-      <node ref="C35" pin="1"/>
-      <node ref="R53" pin="1"/>
-      <node ref="U7" pin="3"/>
-      <node ref="U7" pin="4"/>
-      <node ref="U7" pin="7"/>
-      <node ref="C26" pin="1"/>
-      <node ref="C40" pin="1"/>
-      <node ref="SW7" pin="3"/>
-      <node ref="U3" pin="1"/>
-      <node ref="C3" pin="2"/>
-      <node ref="C6" pin="2"/>
-      <node ref="U3" pin="17"/>
-      <node ref="U1" pin="2"/>
-      <node ref="SW7" pin="1"/>
-      <node ref="C5" pin="2"/>
-      <node ref="SW12" pin="1"/>
-      <node ref="U2" pin="38"/>
-      <node ref="J2" pin="4"/>
-      <node ref="U2" pin="1"/>
-      <node ref="U2" pin="39"/>
-      <node ref="R3" pin="2"/>
-      <node ref="R2" pin="2"/>
-      <node ref="U2" pin="15"/>
-      <node ref="C4" pin="2"/>
-      <node ref="SW1" pin="2"/>
-      <node ref="C2" pin="2"/>
-      <node ref="J1" pin="2"/>
-      <node ref="C1" pin="2"/>
+    <net code="1" name="/Core/LED_PWM">
+      <node ref="U9" pin="29"/>
+      <node ref="R29" pin="2"/>
     </net>
-    <net code="2" name="Net-(J1-Pad3)">
-      <node ref="J1" pin="3"/>
-    </net>
-    <net code="3" name="/Core/SDA">
-      <node ref="U4" pin="27"/>
-      <node ref="U2" pin="36"/>
-      <node ref="U5" pin="13"/>
-    </net>
-    <net code="4" name="/Core/LED_PWM">
-      <node ref="U2" pin="24"/>
-    </net>
-    <net code="5" name="/Core/BTN_INT">
-      <node ref="U2" pin="11"/>
-      <node ref="U5" pin="20"/>
-    </net>
-    <net code="6" name="/Core/SCL">
-      <node ref="U2" pin="37"/>
-      <node ref="U5" pin="12"/>
-      <node ref="U4" pin="28"/>
-    </net>
-    <net code="7" name="/Core/SUSPEND_SENSE">
-      <node ref="U2" pin="10"/>
-      <node ref="U9" pin="14"/>
-      <node ref="R57" pin="1"/>
-    </net>
-    <net code="8" name="/Core/RXD0">
-      <node ref="J2" pin="3"/>
-      <node ref="U2" pin="34"/>
-      <node ref="U9" pin="18"/>
-    </net>
-    <net code="9" name="/USB Hub and Serial Converter/RXD">
-      <node ref="U9" pin="17"/>
-      <node ref="U2" pin="35"/>
-      <node ref="J2" pin="2"/>
-    </net>
-    <net code="10" name="+3V3">
-      <node ref="R7" pin="2"/>
-      <node ref="U5" pin="9"/>
-      <node ref="U2" pin="2"/>
-      <node ref="U3" pin="2"/>
-      <node ref="C26" pin="2"/>
-      <node ref="C4" pin="1"/>
-      <node ref="R6" pin="2"/>
-      <node ref="U6" pin="21"/>
-      <node ref="J3" pin="2"/>
-      <node ref="C35" pin="2"/>
-      <node ref="C34" pin="2"/>
-      <node ref="RV3" pin="1"/>
-      <node ref="U6" pin="14"/>
-      <node ref="RV2" pin="1"/>
-      <node ref="U5" pin="18"/>
-      <node ref="RV1" pin="1"/>
-      <node ref="U6" pin="28"/>
-      <node ref="U6" pin="5"/>
-      <node ref="U6" pin="9"/>
-      <node ref="R40" pin="1"/>
-      <node ref="J2" pin="1"/>
-      <node ref="R42" pin="1"/>
-      <node ref="R38" pin="1"/>
-      <node ref="R10" pin="2"/>
-      <node ref="R54" pin="2"/>
-      <node ref="R39" pin="1"/>
-      <node ref="R47" pin="2"/>
-      <node ref="R46" pin="1"/>
-      <node ref="R49" pin="1"/>
-      <node ref="R50" pin="1"/>
-      <node ref="R48" pin="1"/>
-      <node ref="R1" pin="1"/>
-      <node ref="C11" pin="2"/>
-      <node ref="U4" pin="20"/>
-      <node ref="U9" pin="6"/>
-      <node ref="R34" pin="1"/>
-      <node ref="R32" pin="1"/>
-      <node ref="R33" pin="1"/>
-      <node ref="R51" pin="1"/>
-      <node ref="R27" pin="1"/>
-      <node ref="R15" pin="2"/>
-      <node ref="U9" pin="7"/>
-      <node ref="U4" pin="7"/>
-      <node ref="U3" pin="16"/>
-      <node ref="R11" pin="2"/>
-      <node ref="R28" pin="1"/>
-      <node ref="R26" pin="1"/>
-      <node ref="U1" pin="3"/>
-      <node ref="C3" pin="1"/>
-      <node ref="U7" pin="8"/>
-      <node ref="R5" pin="1"/>
-      <node ref="R22" pin="1"/>
-      <node ref="R20" pin="1"/>
-      <node ref="R21" pin="1"/>
-      <node ref="C6" pin="1"/>
-      <node ref="R45" pin="2"/>
-      <node ref="JP1" pin="1"/>
-      <node ref="JP2" pin="1"/>
-      <node ref="C8" pin="1"/>
-      <node ref="R14" pin="2"/>
-    </net>
-    <net code="11" name="+5V">
-      <node ref="U8" pin="5"/>
-      <node ref="U8" pin="13"/>
-      <node ref="C29" pin="2"/>
-      <node ref="C1" pin="1"/>
-      <node ref="C2" pin="1"/>
-      <node ref="U1" pin="1"/>
-      <node ref="J1" pin="1"/>
-    </net>
-    <net code="12" name="Net-(U2-Pad19)">
-      <node ref="U2" pin="19"/>
-    </net>
-    <net code="13" name="Net-(U2-Pad20)">
-      <node ref="U2" pin="20"/>
-    </net>
-    <net code="14" name="Net-(U2-Pad18)">
-      <node ref="U2" pin="18"/>
-    </net>
-    <net code="15" name="Net-(U2-Pad17)">
-      <node ref="U2" pin="17"/>
-    </net>
-    <net code="16" name="Net-(U2-Pad22)">
-      <node ref="U2" pin="22"/>
-    </net>
-    <net code="17" name="Net-(U2-Pad21)">
-      <node ref="U2" pin="21"/>
-    </net>
-    <net code="18" name="/Core/OLED_EN">
-      <node ref="U3" pin="6"/>
-      <node ref="U2" pin="14"/>
-    </net>
-    <net code="19" name="/Core/OLED_D4">
-      <node ref="U2" pin="28"/>
-      <node ref="U3" pin="11"/>
-    </net>
-    <net code="20" name="/Core/OLED_D5">
-      <node ref="U2" pin="30"/>
-      <node ref="U3" pin="12"/>
-    </net>
-    <net code="21" name="/Core/OLED_D6">
-      <node ref="U2" pin="31"/>
-      <node ref="U3" pin="13"/>
-    </net>
-    <net code="22" name="/Core/OLED_D7">
-      <node ref="U3" pin="14"/>
-      <node ref="U2" pin="33"/>
-    </net>
-    <net code="23" name="/Core/OLED_RW">
-      <node ref="U3" pin="5"/>
-      <node ref="U2" pin="29"/>
-    </net>
-    <net code="24" name="/Core/OLED_DC">
-      <node ref="U3" pin="4"/>
-      <node ref="U2" pin="26"/>
-    </net>
-    <net code="25" name="/Core/OLED_D1">
-      <node ref="U3" pin="8"/>
-      <node ref="U2" pin="13"/>
-    </net>
-    <net code="26" name="/Core/OLED_D2">
-      <node ref="U2" pin="23"/>
-      <node ref="U3" pin="9"/>
-    </net>
-    <net code="27" name="/Core/OLED_D3">
-      <node ref="U2" pin="27"/>
-      <node ref="U3" pin="10"/>
-    </net>
-    <net code="28" name="Net-(U2-Pad12)">
+    <net code="2" name="/Core/SCL">
+      <node ref="U9" pin="37"/>
+      <node ref="U1" pin="28"/>
+      <node ref="R69" pin="2"/>
       <node ref="U2" pin="12"/>
     </net>
-    <net code="29" name="Net-(U2-Pad8)">
-      <node ref="U2" pin="8"/>
+    <net code="3" name="/Core/SDA">
+      <node ref="U1" pin="27"/>
+      <node ref="U2" pin="13"/>
+      <node ref="U9" pin="36"/>
+      <node ref="R68" pin="2"/>
     </net>
-    <net code="30" name="Net-(U2-Pad9)">
-      <node ref="U2" pin="9"/>
-    </net>
-    <net code="31" name="Net-(U2-Pad6)">
-      <node ref="U2" pin="6"/>
-    </net>
-    <net code="32" name="Net-(U2-Pad7)">
-      <node ref="U2" pin="7"/>
-    </net>
-    <net code="33" name="Net-(U2-Pad5)">
-      <node ref="U2" pin="5"/>
-    </net>
-    <net code="34" name="Net-(U2-Pad4)">
-      <node ref="U2" pin="4"/>
-    </net>
-    <net code="35" name="/Core/OLED_D0">
-      <node ref="U3" pin="7"/>
-      <node ref="U2" pin="16"/>
-    </net>
-    <net code="36" name="/Core/BOOT">
-      <node ref="C40" pin="2"/>
-      <node ref="U2" pin="25"/>
-      <node ref="SW1" pin="1"/>
-    </net>
-    <net code="37" name="/Core/EN">
-      <node ref="R1" pin="2"/>
-      <node ref="SW12" pin="2"/>
-      <node ref="C5" pin="1"/>
-      <node ref="U2" pin="3"/>
-    </net>
-    <net code="38" name="Net-(U3-Pad18)">
-      <node ref="U3" pin="18"/>
-    </net>
-    <net code="39" name="Net-(U3-Pad15)">
-      <node ref="U3" pin="15"/>
-    </net>
-    <net code="40" name="Net-(JP1-Pad2)">
-      <node ref="U3" pin="19"/>
-      <node ref="JP1" pin="2"/>
-      <node ref="R2" pin="1"/>
-    </net>
-    <net code="41" name="Net-(U3-Pad3)">
-      <node ref="U3" pin="3"/>
-    </net>
-    <net code="42" name="Net-(JP2-Pad2)">
-      <node ref="R3" pin="1"/>
-      <node ref="JP2" pin="2"/>
-      <node ref="U3" pin="20"/>
-    </net>
-    <net code="43" name="Net-(U2-Pad32)">
-      <node ref="U2" pin="32"/>
-    </net>
-    <net code="44" name="/Peripherals/XTAL1">
-      <node ref="Y1" pin="2"/>
-      <node ref="U4" pin="9"/>
-      <node ref="C9" pin="2"/>
-    </net>
-    <net code="45" name="/Peripherals/XTAL2">
-      <node ref="U4" pin="10"/>
-      <node ref="Y1" pin="1"/>
-      <node ref="C10" pin="2"/>
-    </net>
-    <net code="46" name="/Peripherals/SW_6">
-      <node ref="SW7" pin="2"/>
-      <node ref="U5" pin="6"/>
-      <node ref="R15" pin="1"/>
-    </net>
-    <net code="47" name="Net-(R17-Pad2)">
-      <node ref="R17" pin="2"/>
-      <node ref="SW7" pin="4"/>
-    </net>
-    <net code="48" name="LED_Power">
-      <node ref="R12" pin="1"/>
-      <node ref="R17" pin="1"/>
-      <node ref="R16" pin="1"/>
-      <node ref="R9" pin="1"/>
-      <node ref="R13" pin="1"/>
-      <node ref="R8" pin="1"/>
-    </net>
-    <net code="49" name="/Peripherals/ENC3_SW">
-      <node ref="R28" pin="2"/>
-      <node ref="C17" pin="1"/>
-      <node ref="U5" pin="23"/>
-      <node ref="R29" pin="1"/>
-    </net>
-    <net code="50" name="/Peripherals/ENC4_SW">
-      <node ref="R34" pin="2"/>
-      <node ref="R35" pin="1"/>
-      <node ref="C20" pin="1"/>
-      <node ref="U5" pin="24"/>
-    </net>
-    <net code="51" name="Net-(U5-Pad25)">
-      <node ref="U5" pin="25"/>
-    </net>
-    <net code="52" name="Net-(U5-Pad26)">
-      <node ref="U5" pin="26"/>
-    </net>
-    <net code="53" name="Net-(U5-Pad27)">
-      <node ref="U5" pin="27"/>
-    </net>
-    <net code="54" name="Net-(U5-Pad28)">
-      <node ref="U5" pin="28"/>
-    </net>
-    <net code="55" name="/Peripherals/ENC2_SW">
-      <node ref="U5" pin="22"/>
-      <node ref="R22" pin="2"/>
-      <node ref="C14" pin="1"/>
+    <net code="4" name="/Power/SELF_POWER">
+      <node ref="J8" pin="3"/>
+      <node ref="U3" pin="22"/>
+      <node ref="R21" pin="2"/>
       <node ref="R23" pin="1"/>
     </net>
-    <net code="56" name="Net-(U5-Pad7)">
-      <node ref="U5" pin="7"/>
-    </net>
-    <net code="57" name="Net-(U5-Pad8)">
-      <node ref="U5" pin="8"/>
-    </net>
-    <net code="58" name="/Peripherals/SLD1">
-      <node ref="RV1" pin="2"/>
-      <node ref="U4" pin="23"/>
-    </net>
-    <net code="59" name="/Peripherals/SLD2">
-      <node ref="U4" pin="24"/>
-      <node ref="RV2" pin="2"/>
-    </net>
-    <net code="60" name="Net-(U5-Pad19)">
-      <node ref="U5" pin="19"/>
-    </net>
-    <net code="61" name="Net-(U5-Pad14)">
-      <node ref="U5" pin="14"/>
-    </net>
-    <net code="62" name="Net-(U5-Pad11)">
-      <node ref="U5" pin="11"/>
-    </net>
-    <net code="63" name="/Peripherals/SW_4">
-      <node ref="U5" pin="4"/>
-      <node ref="SW3" pin="2"/>
-      <node ref="R7" pin="1"/>
-    </net>
-    <net code="64" name="Net-(R9-Pad2)">
-      <node ref="R9" pin="2"/>
-      <node ref="SW3" pin="4"/>
-    </net>
-    <net code="65" name="/Peripherals/SW_3">
-      <node ref="SW6" pin="2"/>
-      <node ref="R14" pin="1"/>
-      <node ref="U5" pin="3"/>
-    </net>
-    <net code="66" name="Net-(R16-Pad2)">
-      <node ref="R16" pin="2"/>
-      <node ref="SW6" pin="4"/>
-    </net>
-    <net code="67" name="Net-(R13-Pad2)">
-      <node ref="SW5" pin="4"/>
-      <node ref="R13" pin="2"/>
-    </net>
-    <net code="68" name="/Peripherals/SW_5">
-      <node ref="U5" pin="5"/>
-      <node ref="SW5" pin="2"/>
-      <node ref="R11" pin="1"/>
-    </net>
-    <net code="69" name="/Peripherals/CIDO">
-      <node ref="U4" pin="17"/>
-      <node ref="J3" pin="1"/>
-    </net>
-    <net code="70" name="/Peripherals/LED">
-      <node ref="R4" pin="1"/>
-      <node ref="U4" pin="16"/>
-    </net>
-    <net code="71" name="/Peripherals/TXD">
-      <node ref="U4" pin="15"/>
-      <node ref="J4" pin="1"/>
-    </net>
-    <net code="72" name="/Peripherals/RXD">
-      <node ref="U4" pin="14"/>
-      <node ref="J4" pin="2"/>
-    </net>
-    <net code="73" name="Net-(D8-Pad2)">
-      <node ref="D8" pin="2"/>
-    </net>
-    <net code="74" name="Net-(D5-Pad1)">
-      <node ref="D5" pin="1"/>
-    </net>
-    <net code="75" name="Net-(D7-Pad1)">
-      <node ref="D7" pin="1"/>
-    </net>
-    <net code="76" name="Net-(D9-Pad1)">
-      <node ref="D9" pin="1"/>
-    </net>
-    <net code="77" name="Net-(D9-Pad2)">
-      <node ref="D9" pin="2"/>
-    </net>
-    <net code="78" name="Net-(D7-Pad2)">
-      <node ref="D7" pin="2"/>
-    </net>
-    <net code="79" name="Net-(D5-Pad2)">
-      <node ref="D5" pin="2"/>
-    </net>
-    <net code="80" name="Net-(D6-Pad2)">
-      <node ref="D6" pin="2"/>
-    </net>
-    <net code="81" name="Net-(D6-Pad1)">
-      <node ref="D6" pin="1"/>
-    </net>
-    <net code="82" name="Net-(D8-Pad1)">
-      <node ref="D8" pin="1"/>
-    </net>
-    <net code="83" name="Net-(D10-Pad2)">
-      <node ref="D10" pin="2"/>
-    </net>
-    <net code="84" name="Net-(D10-Pad1)">
-      <node ref="D10" pin="1"/>
-    </net>
-    <net code="85" name="/Peripherals/SPARE">
-      <node ref="U4" pin="26"/>
-      <node ref="TP1" pin="1"/>
-    </net>
-    <net code="86" name="/Peripherals/ENC1_SW">
-      <node ref="U5" pin="21"/>
-      <node ref="C23" pin="1"/>
-      <node ref="R41" pin="1"/>
-      <node ref="R40" pin="2"/>
-    </net>
-    <net code="87" name="Net-(C7-Pad1)">
-      <node ref="C7" pin="1"/>
-      <node ref="U4" pin="21"/>
-    </net>
-    <net code="88" name="Net-(D1-Pad2)">
-      <node ref="D1" pin="2"/>
-      <node ref="R4" pin="2"/>
-    </net>
-    <net code="89" name="/Peripherals/ENC2_A">
-      <node ref="U4" pin="4"/>
-      <node ref="R18" pin="2"/>
-      <node ref="C13" pin="1"/>
-    </net>
-    <net code="90" name="/Peripherals/ENC2_B">
-      <node ref="U4" pin="5"/>
-      <node ref="C12" pin="1"/>
-      <node ref="R19" pin="2"/>
-    </net>
-    <net code="91" name="/Peripherals/ENC4_B">
-      <node ref="C18" pin="1"/>
-      <node ref="U4" pin="13"/>
-      <node ref="R31" pin="2"/>
-    </net>
-    <net code="92" name="/Peripherals/ENC3_A">
-      <node ref="C16" pin="1"/>
-      <node ref="U4" pin="6"/>
-      <node ref="R24" pin="2"/>
-    </net>
-    <net code="93" name="/Peripherals/ENC3_B">
-      <node ref="C15" pin="1"/>
-      <node ref="R25" pin="2"/>
-      <node ref="U4" pin="11"/>
-    </net>
-    <net code="94" name="/Peripherals/ENC4_A">
-      <node ref="C19" pin="1"/>
-      <node ref="U4" pin="12"/>
-      <node ref="R30" pin="2"/>
-    </net>
-    <net code="95" name="/Peripherals/ENC1_B">
-      <node ref="C21" pin="1"/>
-      <node ref="R37" pin="2"/>
-      <node ref="U4" pin="3"/>
-    </net>
-    <net code="96" name="/Peripherals/ENC1_A">
-      <node ref="C22" pin="1"/>
-      <node ref="R36" pin="2"/>
-      <node ref="U4" pin="2"/>
-    </net>
-    <net code="97" name="/Peripherals/~RESET">
-      <node ref="JP3" pin="1"/>
-      <node ref="R5" pin="2"/>
-      <node ref="U4" pin="1"/>
-      <node ref="J3" pin="5"/>
-    </net>
-    <net code="98" name="/Peripherals/SW_1">
-      <node ref="R6" pin="1"/>
-      <node ref="SW2" pin="2"/>
-      <node ref="U5" pin="1"/>
-    </net>
-    <net code="99" name="Net-(R8-Pad2)">
-      <node ref="SW2" pin="4"/>
-      <node ref="R8" pin="2"/>
-    </net>
-    <net code="100" name="/Peripherals/SW_2">
-      <node ref="U5" pin="2"/>
-      <node ref="R10" pin="1"/>
-      <node ref="SW4" pin="2"/>
-    </net>
-    <net code="101" name="Net-(R12-Pad2)">
-      <node ref="SW4" pin="4"/>
-      <node ref="R12" pin="2"/>
-    </net>
-    <net code="102" name="/Peripherals/CODI">
-      <node ref="U4" pin="18"/>
-      <node ref="J3" pin="4"/>
-    </net>
-    <net code="103" name="/Peripherals/SCLK">
-      <node ref="J3" pin="3"/>
-      <node ref="U4" pin="19"/>
-    </net>
-    <net code="104" name="/Peripherals/SLD3">
-      <node ref="U4" pin="25"/>
-      <node ref="RV3" pin="2"/>
-    </net>
-    <net code="105" name="Net-(FL1-Pad3)">
-      <node ref="FL1" pin="3"/>
-      <node ref="J5" pin="2"/>
-    </net>
-    <net code="106" name="Net-(FL1-Pad1)">
-      <node ref="FL1" pin="1"/>
-      <node ref="J5" pin="3"/>
-    </net>
-    <net code="107" name="/USB Hub and Serial Converter/DIN_N">
-      <node ref="FL1" pin="4"/>
-      <node ref="U6" pin="1"/>
-      <node ref="D2" pin="3"/>
-    </net>
-    <net code="108" name="Net-(R43-Pad2)">
-      <node ref="R43" pin="2"/>
-      <node ref="U6" pin="23"/>
-    </net>
-    <net code="109" name="Net-(R44-Pad2)">
-      <node ref="U6" pin="8"/>
-      <node ref="R44" pin="2"/>
-    </net>
-    <net code="110" name="Net-(U6-Pad27)">
-      <node ref="U6" pin="27"/>
-    </net>
-    <net code="111" name="Net-(J5-Pad5)">
-      <node ref="J5" pin="5"/>
-    </net>
-    <net code="112" name="VBUS">
-      <node ref="R52" pin="2"/>
-      <node ref="D2" pin="4"/>
-      <node ref="FB1" pin="1"/>
-      <node ref="C28" pin="1"/>
-    </net>
-    <net code="113" name="Net-(C27-Pad1)">
-      <node ref="C27" pin="1"/>
-      <node ref="FB1" pin="2"/>
-      <node ref="J5" pin="1"/>
-    </net>
-    <net code="114" name="/USB Hub and Serial Converter/VBUS_D">
-      <node ref="C36" pin="1"/>
-      <node ref="U8" pin="11"/>
-      <node ref="FB7" pin="2"/>
-    </net>
-    <net code="115" name="/USB Hub and Serial Converter/VBUS_B">
-      <node ref="FB3" pin="2"/>
-      <node ref="C30" pin="1"/>
-      <node ref="U8" pin="14"/>
-    </net>
-    <net code="116" name="/USB Hub and Serial Converter/VBUS_A">
-      <node ref="FB5" pin="2"/>
-      <node ref="U8" pin="3"/>
-      <node ref="C31" pin="1"/>
-    </net>
-    <net code="117" name="/USB Hub and Serial Converter/VBUS_C">
-      <node ref="U8" pin="6"/>
-      <node ref="C37" pin="1"/>
-      <node ref="FB9" pin="2"/>
-    </net>
-    <net code="118" name="Net-(R46-Pad2)">
-      <node ref="R46" pin="2"/>
-      <node ref="U8" pin="1"/>
-      <node ref="U6" pin="25"/>
-    </net>
-    <net code="119" name="Net-(R49-Pad2)">
-      <node ref="U6" pin="24"/>
-      <node ref="U8" pin="16"/>
-      <node ref="R49" pin="2"/>
-    </net>
-    <net code="120" name="/USB Hub and Serial Converter/D1P">
-      <node ref="FL2" pin="1"/>
-      <node ref="U6" pin="4"/>
-    </net>
-    <net code="121" name="/USB Hub and Serial Converter/D1N">
-      <node ref="FL2" pin="3"/>
-      <node ref="U6" pin="3"/>
-    </net>
-    <net code="122" name="Net-(R50-Pad2)">
-      <node ref="U6" pin="20"/>
-      <node ref="U8" pin="8"/>
-      <node ref="R50" pin="2"/>
-    </net>
-    <net code="123" name="Net-(FL3-Pad2)">
-      <node ref="FL3" pin="2"/>
-      <node ref="J7" pin="2"/>
-    </net>
-    <net code="124" name="Net-(FL3-Pad4)">
-      <node ref="J7" pin="3"/>
-      <node ref="FL3" pin="4"/>
-    </net>
-    <net code="125" name="/USB Hub and Serial Converter/D2P">
-      <node ref="U6" pin="7"/>
-      <node ref="FL3" pin="1"/>
-    </net>
-    <net code="126" name="/USB Hub and Serial Converter/D2N">
-      <node ref="FL3" pin="3"/>
-      <node ref="U6" pin="6"/>
-    </net>
-    <net code="127" name="/USB Hub and Serial Converter/D3P">
-      <node ref="FL4" pin="1"/>
-      <node ref="U6" pin="13"/>
-    </net>
-    <net code="128" name="/USB Hub and Serial Converter/D3N">
-      <node ref="FL4" pin="3"/>
-      <node ref="U6" pin="12"/>
-    </net>
-    <net code="129" name="/USB Hub and Serial Converter/D4P">
-      <node ref="U6" pin="16"/>
-      <node ref="FL5" pin="1"/>
-    </net>
-    <net code="130" name="/USB Hub and Serial Converter/D4N">
-      <node ref="U6" pin="15"/>
-      <node ref="FL5" pin="3"/>
-    </net>
-    <net code="131" name="Net-(R51-Pad2)">
-      <node ref="R51" pin="2"/>
-      <node ref="U8" pin="9"/>
-      <node ref="U6" pin="19"/>
-    </net>
-    <net code="132" name="Net-(D4-Pad2)">
-      <node ref="D4" pin="2"/>
-      <node ref="R55" pin="2"/>
-    </net>
-    <net code="133" name="Net-(R56-Pad1)">
-      <node ref="R56" pin="1"/>
-      <node ref="U9" pin="19"/>
-    </net>
-    <net code="134" name="Net-(R55-Pad1)">
-      <node ref="R55" pin="1"/>
-      <node ref="U9" pin="20"/>
-    </net>
-    <net code="135" name="Net-(D3-Pad2)">
-      <node ref="R56" pin="2"/>
-      <node ref="D3" pin="2"/>
-    </net>
-    <net code="136" name="Net-(U9-Pad11)">
-      <node ref="U9" pin="11"/>
-    </net>
-    <net code="137" name="Net-(U9-Pad13)">
-      <node ref="U9" pin="13"/>
-    </net>
-    <net code="138" name="Net-(U9-Pad15)">
-      <node ref="U9" pin="15"/>
-    </net>
-    <net code="139" name="Net-(U9-Pad16)">
+    <net code="5" name="/Core/BTN_INT">
+      <node ref="U2" pin="20"/>
+      <node ref="U9" pin="31"/>
+    </net>
+    <net code="6" name="/Core/RXD0">
+      <node ref="U6" pin="18"/>
+      <node ref="U9" pin="34"/>
+      <node ref="J9" pin="3"/>
+    </net>
+    <net code="7" name="/USB Hub and Serial Converter/RXD">
+      <node ref="U6" pin="17"/>
+      <node ref="U9" pin="35"/>
+      <node ref="J9" pin="2"/>
+    </net>
+    <net code="8" name="/Core/SUSPEND_SENSE">
+      <node ref="U6" pin="14"/>
+      <node ref="R20" pin="1"/>
+      <node ref="U9" pin="33"/>
+    </net>
+    <net code="9" name="/Core/OLED_EN">
+      <node ref="U10" pin="6"/>
+      <node ref="U9" pin="8"/>
+    </net>
+    <net code="10" name="/Core/OLED_D7">
+      <node ref="U9" pin="23"/>
+      <node ref="U10" pin="14"/>
+    </net>
+    <net code="11" name="/Core/OLED_D6">
+      <node ref="U10" pin="13"/>
       <node ref="U9" pin="16"/>
     </net>
-    <net code="140" name="Net-(U9-Pad2)">
-      <node ref="U9" pin="2"/>
+    <net code="12" name="/Core/OLED_D5">
+      <node ref="U9" pin="14"/>
+      <node ref="U10" pin="12"/>
     </net>
-    <net code="141" name="/USB Hub and Serial Converter/D_MLC_P">
-      <node ref="U9" pin="4"/>
-      <node ref="FL2" pin="2"/>
+    <net code="13" name="/Core/OLED_D4">
+      <node ref="U10" pin="11"/>
+      <node ref="U9" pin="13"/>
     </net>
-    <net code="142" name="/USB Hub and Serial Converter/D_MLC_N">
-      <node ref="FL2" pin="4"/>
-      <node ref="U9" pin="5"/>
+    <net code="14" name="/Core/OLED_D3">
+      <node ref="U10" pin="10"/>
+      <node ref="U9" pin="12"/>
     </net>
-    <net code="143" name="Net-(R54-Pad1)">
-      <node ref="U9" pin="9"/>
-      <node ref="R54" pin="1"/>
+    <net code="15" name="/Core/OLED_D2">
+      <node ref="U9" pin="11"/>
+      <node ref="U10" pin="9"/>
     </net>
-    <net code="144" name="Net-(U9-Pad1)">
-      <node ref="U9" pin="1"/>
-    </net>
-    <net code="145" name="/USB Hub and Serial Converter/VBUS_SENSE">
-      <node ref="U9" pin="8"/>
-      <node ref="R52" pin="1"/>
-      <node ref="R53" pin="2"/>
-    </net>
-    <net code="146" name="Net-(J6-Pad3)">
-      <node ref="J6" pin="3"/>
-    </net>
-    <net code="147" name="Net-(J6-Pad2)">
-      <node ref="J6" pin="2"/>
-    </net>
-    <net code="148" name="Net-(C32-Pad1)">
-      <node ref="C32" pin="1"/>
-      <node ref="J7" pin="1"/>
-      <node ref="FB3" pin="1"/>
-    </net>
-    <net code="149" name="Net-(U9-Pad10)">
+    <net code="16" name="/Core/OLED_D1">
+      <node ref="U10" pin="8"/>
       <node ref="U9" pin="10"/>
     </net>
-    <net code="150" name="Net-(C33-Pad1)">
-      <node ref="FB5" pin="1"/>
-      <node ref="C33" pin="1"/>
-      <node ref="J6" pin="1"/>
+    <net code="17" name="/Core/OLED_D0">
+      <node ref="U10" pin="7"/>
+      <node ref="U9" pin="9"/>
     </net>
-    <net code="151" name="Net-(R42-Pad2)">
-      <node ref="R42" pin="2"/>
-      <node ref="U6" pin="22"/>
-      <node ref="U6" pin="17"/>
+    <net code="18" name="/Core/OLED_RW">
+      <node ref="U9" pin="7"/>
+      <node ref="U10" pin="5"/>
     </net>
-    <net code="152" name="/USB Hub and Serial Converter/EEPROM_SDA">
-      <node ref="TP2" pin="1"/>
-      <node ref="U6" pin="26"/>
-      <node ref="R45" pin="1"/>
-      <node ref="U7" pin="5"/>
+    <net code="19" name="/Core/OLED_DC">
+      <node ref="U9" pin="6"/>
+      <node ref="U10" pin="4"/>
     </net>
-    <net code="153" name="/USB Hub and Serial Converter/EEPROM_SCL">
-      <node ref="R47" pin="1"/>
-      <node ref="TP3" pin="1"/>
-      <node ref="U6" pin="18"/>
-      <node ref="U7" pin="6"/>
-    </net>
-    <net code="154" name="/USB Hub and Serial Converter/DIN_P">
-      <node ref="D2" pin="2"/>
-      <node ref="FL1" pin="2"/>
-      <node ref="U6" pin="2"/>
-    </net>
-    <net code="155" name="/USB Hub and Serial Converter/XOUT">
+    <net code="20" name="GND">
+      <node ref="FB10" pin="2"/>
+      <node ref="C5" pin="1"/>
+      <node ref="C22" pin="2"/>
+      <node ref="FB8" pin="2"/>
+      <node ref="FB4" pin="2"/>
+      <node ref="SW6" pin="1"/>
+      <node ref="SW6" pin="3"/>
+      <node ref="C9" pin="2"/>
+      <node ref="C10" pin="2"/>
+      <node ref="U1" pin="22"/>
+      <node ref="SW8" pin="C"/>
+      <node ref="SW8" pin="S2"/>
+      <node ref="C11" pin="2"/>
+      <node ref="Y1" pin="2"/>
+      <node ref="C14" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="JP1" pin="2"/>
+      <node ref="SW9" pin="S2"/>
+      <node ref="U1" pin="8"/>
+      <node ref="SW9" pin="C"/>
+      <node ref="U2" pin="17"/>
+      <node ref="SW7" pin="C"/>
+      <node ref="C7" pin="2"/>
+      <node ref="C6" pin="2"/>
+      <node ref="U2" pin="10"/>
+      <node ref="U2" pin="15"/>
+      <node ref="U2" pin="16"/>
+      <node ref="SW7" pin="S2"/>
+      <node ref="SW4" pin="1"/>
+      <node ref="SW4" pin="3"/>
+      <node ref="C3" pin="1"/>
+      <node ref="C4" pin="1"/>
+      <node ref="C8" pin="2"/>
+      <node ref="C19" pin="2"/>
+      <node ref="R20" pin="2"/>
+      <node ref="C28" pin="1"/>
+      <node ref="C29" pin="1"/>
+      <node ref="C25" pin="2"/>
+      <node ref="C18" pin="2"/>
+      <node ref="D11" pin="1"/>
+      <node ref="R16" pin="1"/>
+      <node ref="C36" pin="2"/>
+      <node ref="U3" pin="PAD"/>
+      <node ref="D10" pin="1"/>
       <node ref="Y2" pin="2"/>
-      <node ref="C25" pin="1"/>
-      <node ref="U6" pin="11"/>
-    </net>
-    <net code="156" name="/USB Hub and Serial Converter/XIN">
-      <node ref="C24" pin="1"/>
-      <node ref="U6" pin="10"/>
-      <node ref="Y2" pin="1"/>
-    </net>
-    <net code="157" name="Net-(C39-Pad1)">
-      <node ref="J9" pin="1"/>
-      <node ref="C39" pin="1"/>
-      <node ref="FB9" pin="1"/>
-    </net>
-    <net code="158" name="Net-(FL4-Pad4)">
-      <node ref="J9" pin="2"/>
-      <node ref="FL4" pin="4"/>
-    </net>
-    <net code="159" name="Net-(FL5-Pad4)">
+      <node ref="FB6" pin="2"/>
+      <node ref="U6" pin="12"/>
+      <node ref="U6" pin="3"/>
+      <node ref="R32" pin="1"/>
+      <node ref="D9" pin="3"/>
+      <node ref="U5" pin="10"/>
+      <node ref="U5" pin="7"/>
+      <node ref="U5" pin="4"/>
+      <node ref="U5" pin="2"/>
+      <node ref="U5" pin="15"/>
+      <node ref="U5" pin="12"/>
+      <node ref="C30" pin="2"/>
+      <node ref="C24" pin="2"/>
+      <node ref="D8" pin="1"/>
+      <node ref="C31" pin="2"/>
+      <node ref="C35" pin="2"/>
+      <node ref="C38" pin="2"/>
+      <node ref="U8" pin="2"/>
+      <node ref="C20" pin="1"/>
+      <node ref="D14" pin="1"/>
+      <node ref="C23" pin="1"/>
+      <node ref="U4" pin="2"/>
+      <node ref="C37" pin="2"/>
+      <node ref="U4" pin="4"/>
+      <node ref="D16" pin="1"/>
+      <node ref="U4" pin="3"/>
+      <node ref="FB2" pin="1"/>
+      <node ref="U4" pin="1"/>
+      <node ref="D15" pin="1"/>
+      <node ref="R11" pin="1"/>
+      <node ref="U7" pin="3"/>
+      <node ref="D13" pin="1"/>
+      <node ref="R22" pin="2"/>
+      <node ref="C34" pin="2"/>
       <node ref="J8" pin="2"/>
-      <node ref="FL5" pin="4"/>
+      <node ref="R10" pin="1"/>
+      <node ref="Q2" pin="3"/>
+      <node ref="C42" pin="2"/>
+      <node ref="C41" pin="1"/>
+      <node ref="RV2" pin="3"/>
+      <node ref="J9" pin="4"/>
+      <node ref="D17" pin="1"/>
+      <node ref="C15" pin="2"/>
+      <node ref="SW12" pin="2"/>
+      <node ref="SW1" pin="1"/>
+      <node ref="C17" pin="2"/>
+      <node ref="U9" pin="15"/>
+      <node ref="RV1" pin="3"/>
+      <node ref="U9" pin="38"/>
+      <node ref="C16" pin="2"/>
+      <node ref="SW10" pin="C"/>
+      <node ref="SW3" pin="3"/>
+      <node ref="U9" pin="39"/>
+      <node ref="SW10" pin="S2"/>
+      <node ref="U9" pin="1"/>
+      <node ref="D1" pin="1"/>
+      <node ref="C13" pin="2"/>
+      <node ref="C40" pin="2"/>
+      <node ref="SW1" pin="3"/>
+      <node ref="SW5" pin="1"/>
+      <node ref="SW11" pin="1"/>
+      <node ref="J1" pin="6"/>
+      <node ref="SW3" pin="1"/>
+      <node ref="SW2" pin="3"/>
+      <node ref="SW2" pin="1"/>
+      <node ref="C39" pin="2"/>
+      <node ref="U10" pin="1"/>
+      <node ref="RV3" pin="3"/>
+      <node ref="SW5" pin="3"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C12" pin="2"/>
     </net>
-    <net code="160" name="Net-(FL5-Pad2)">
-      <node ref="J8" pin="3"/>
-      <node ref="FL5" pin="2"/>
+    <net code="21" name="Net-(U9-Pad21)">
+      <node ref="U9" pin="21"/>
     </net>
-    <net code="161" name="Net-(FL4-Pad2)">
-      <node ref="J9" pin="3"/>
-      <node ref="FL4" pin="2"/>
+    <net code="22" name="Net-(U9-Pad22)">
+      <node ref="U9" pin="22"/>
     </net>
-    <net code="162" name="Net-(C38-Pad1)">
+    <net code="23" name="Net-(U9-Pad17)">
+      <node ref="U9" pin="17"/>
+    </net>
+    <net code="24" name="Net-(U9-Pad18)">
+      <node ref="U9" pin="18"/>
+    </net>
+    <net code="25" name="Net-(U9-Pad20)">
+      <node ref="U9" pin="20"/>
+    </net>
+    <net code="26" name="Net-(U9-Pad19)">
+      <node ref="U9" pin="19"/>
+    </net>
+    <net code="27" name="Net-(U9-Pad32)">
+      <node ref="U9" pin="32"/>
+    </net>
+    <net code="28" name="Net-(U9-Pad4)">
+      <node ref="U9" pin="4"/>
+    </net>
+    <net code="29" name="Net-(U9-Pad5)">
+      <node ref="U9" pin="5"/>
+    </net>
+    <net code="30" name="Net-(U10-Pad18)">
+      <node ref="U10" pin="18"/>
+    </net>
+    <net code="31" name="/Core/OLED_BS1">
+      <node ref="U10" pin="19"/>
+      <node ref="U9" pin="27"/>
+    </net>
+    <net code="32" name="/Core/OLED_BS2">
+      <node ref="U9" pin="28"/>
+      <node ref="U10" pin="20"/>
+    </net>
+    <net code="33" name="Net-(U10-Pad3)">
+      <node ref="U10" pin="3"/>
+    </net>
+    <net code="34" name="/Core/OLED_~RESET">
+      <node ref="U10" pin="16"/>
+      <node ref="U9" pin="24"/>
+    </net>
+    <net code="35" name="Net-(U10-Pad15)">
+      <node ref="U10" pin="15"/>
+    </net>
+    <net code="36" name="Net-(D17-Pad2)">
+      <node ref="D17" pin="2"/>
+      <node ref="R33" pin="2"/>
+    </net>
+    <net code="37" name="/Core/LED">
+      <node ref="U9" pin="30"/>
+      <node ref="R33" pin="1"/>
+    </net>
+    <net code="38" name="/Core/OLED_~CS">
+      <node ref="U10" pin="17"/>
+      <node ref="U9" pin="26"/>
+    </net>
+    <net code="39" name="+3V3">
+      <node ref="R68" pin="1"/>
+      <node ref="R69" pin="1"/>
+      <node ref="RV3" pin="1"/>
+      <node ref="R14" pin="1"/>
+      <node ref="RV2" pin="1"/>
+      <node ref="R28" pin="2"/>
+      <node ref="U4" pin="8"/>
+      <node ref="R13" pin="2"/>
+      <node ref="U3" pin="21"/>
+      <node ref="U3" pin="28"/>
+      <node ref="U3" pin="9"/>
+      <node ref="U3" pin="5"/>
+      <node ref="R31" pin="1"/>
+      <node ref="U3" pin="14"/>
+      <node ref="U8" pin="3"/>
+      <node ref="C20" pin="2"/>
       <node ref="C38" pin="1"/>
-      <node ref="FB7" pin="1"/>
+      <node ref="RV1" pin="1"/>
+      <node ref="R12" pin="2"/>
+      <node ref="R24" pin="2"/>
+      <node ref="J9" pin="1"/>
+      <node ref="R63" pin="1"/>
+      <node ref="R48" pin="2"/>
+      <node ref="R51" pin="1"/>
+      <node ref="R49" pin="2"/>
+      <node ref="R60" pin="2"/>
+      <node ref="R35" pin="1"/>
+      <node ref="R61" pin="2"/>
+      <node ref="R37" pin="1"/>
+      <node ref="R39" pin="1"/>
+      <node ref="R38" pin="1"/>
+      <node ref="R36" pin="1"/>
+      <node ref="C28" pin="2"/>
+      <node ref="R34" pin="1"/>
+      <node ref="U9" pin="2"/>
+      <node ref="R67" pin="1"/>
+      <node ref="U1" pin="7"/>
+      <node ref="R54" pin="2"/>
+      <node ref="C2" pin="1"/>
+      <node ref="U1" pin="20"/>
+      <node ref="R2" pin="1"/>
+      <node ref="R64" pin="1"/>
+      <node ref="J1" pin="2"/>
+      <node ref="R9" pin="1"/>
+      <node ref="C39" pin="1"/>
+      <node ref="R65" pin="1"/>
+      <node ref="R57" pin="1"/>
+      <node ref="R55" pin="2"/>
+      <node ref="R66" pin="1"/>
+      <node ref="C29" pin="2"/>
+      <node ref="U10" pin="2"/>
+      <node ref="R17" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="U2" pin="9"/>
+      <node ref="U6" pin="7"/>
+      <node ref="U6" pin="6"/>
+      <node ref="U2" pin="18"/>
+      <node ref="C42" pin="1"/>
+      <node ref="R45" pin="1"/>
+      <node ref="R43" pin="2"/>
+      <node ref="R42" pin="2"/>
+    </net>
+    <net code="40" name="/Core/EN">
+      <node ref="R31" pin="2"/>
+      <node ref="SW11" pin="2"/>
+      <node ref="U9" pin="3"/>
+      <node ref="C40" pin="1"/>
+    </net>
+    <net code="41" name="/Core/BOOT">
+      <node ref="SW12" pin="1"/>
+      <node ref="U9" pin="25"/>
+      <node ref="C41" pin="2"/>
+    </net>
+    <net code="42" name="/Peripherals/SLD2">
+      <node ref="RV2" pin="2"/>
+      <node ref="U1" pin="24"/>
+    </net>
+    <net code="43" name="/Peripherals/SLD1">
+      <node ref="U1" pin="25"/>
+      <node ref="RV1" pin="2"/>
+    </net>
+    <net code="44" name="Net-(R3-Pad2)">
+      <node ref="R3" pin="2"/>
+      <node ref="SW1" pin="4"/>
+    </net>
+    <net code="45" name="/Peripherals/SW_1">
+      <node ref="SW1" pin="2"/>
+      <node ref="R34" pin="2"/>
+      <node ref="U2" pin="26"/>
+    </net>
+    <net code="46" name="/Peripherals/CODI">
+      <node ref="J1" pin="4"/>
+      <node ref="U1" pin="18"/>
+    </net>
+    <net code="47" name="/Peripherals/TXD">
+      <node ref="J2" pin="1"/>
+      <node ref="U1" pin="15"/>
+    </net>
+    <net code="48" name="/Peripherals/RXD">
+      <node ref="U1" pin="14"/>
+      <node ref="J2" pin="2"/>
+    </net>
+    <net code="49" name="/Peripherals/~RESET">
+      <node ref="R2" pin="2"/>
+      <node ref="J1" pin="5"/>
+      <node ref="JP1" pin="1"/>
+      <node ref="U1" pin="1"/>
+    </net>
+    <net code="50" name="/Peripherals/SLD3">
+      <node ref="RV3" pin="2"/>
+      <node ref="U1" pin="23"/>
+    </net>
+    <net code="51" name="Net-(R7-Pad2)">
+      <node ref="SW5" pin="4"/>
+      <node ref="R7" pin="2"/>
+    </net>
+    <net code="52" name="LED_Power">
+      <node ref="R5" pin="1"/>
+      <node ref="R8" pin="1"/>
+      <node ref="R6" pin="1"/>
+      <node ref="R4" pin="1"/>
+      <node ref="R7" pin="1"/>
+      <node ref="R3" pin="1"/>
+      <node ref="Q3" pin="3"/>
+    </net>
+    <net code="53" name="/Peripherals/SW_2">
+      <node ref="R35" pin="2"/>
+      <node ref="U2" pin="25"/>
+      <node ref="SW2" pin="2"/>
+    </net>
+    <net code="54" name="Net-(R4-Pad2)">
+      <node ref="SW2" pin="4"/>
+      <node ref="R4" pin="2"/>
+    </net>
+    <net code="55" name="/Peripherals/SW_3">
+      <node ref="R36" pin="2"/>
+      <node ref="SW3" pin="2"/>
+      <node ref="U2" pin="24"/>
+    </net>
+    <net code="56" name="Net-(R5-Pad2)">
+      <node ref="SW3" pin="4"/>
+      <node ref="R5" pin="2"/>
+    </net>
+    <net code="57" name="/Peripherals/SCLK">
+      <node ref="U1" pin="19"/>
+      <node ref="J1" pin="3"/>
+    </net>
+    <net code="58" name="/Peripherals/ENC3_SW">
+      <node ref="C11" pin="1"/>
+      <node ref="R50" pin="2"/>
+      <node ref="R51" pin="2"/>
+      <node ref="U2" pin="2"/>
+    </net>
+    <net code="59" name="/Peripherals/ENC4_SW">
+      <node ref="C14" pin="1"/>
+      <node ref="U2" pin="1"/>
+      <node ref="R56" pin="2"/>
+      <node ref="R57" pin="2"/>
+    </net>
+    <net code="60" name="/Peripherals/ENC4_B">
+      <node ref="U1" pin="2"/>
+      <node ref="C12" pin="1"/>
+      <node ref="R53" pin="2"/>
+    </net>
+    <net code="61" name="/Peripherals/ENC1_SW">
+      <node ref="C17" pin="1"/>
+      <node ref="R62" pin="2"/>
+      <node ref="R63" pin="2"/>
+      <node ref="U2" pin="4"/>
+    </net>
+    <net code="62" name="/Peripherals/ENC1_B">
+      <node ref="R59" pin="2"/>
+      <node ref="C15" pin="1"/>
+      <node ref="U1" pin="12"/>
+    </net>
+    <net code="63" name="/Peripherals/ENC1_A">
+      <node ref="R58" pin="2"/>
+      <node ref="U1" pin="13"/>
+      <node ref="C16" pin="1"/>
+    </net>
+    <net code="64" name="/Peripherals/ENC4_A">
+      <node ref="C13" pin="1"/>
+      <node ref="U1" pin="3"/>
+      <node ref="R52" pin="2"/>
+    </net>
+    <net code="65" name="/Peripherals/ENC2_B">
+      <node ref="U1" pin="6"/>
+      <node ref="C6" pin="1"/>
+      <node ref="R41" pin="2"/>
+    </net>
+    <net code="66" name="/Peripherals/ENC3_B">
+      <node ref="C9" pin="1"/>
+      <node ref="U1" pin="4"/>
+      <node ref="R47" pin="2"/>
+    </net>
+    <net code="67" name="/Peripherals/ENC3_A">
+      <node ref="U1" pin="5"/>
+      <node ref="R46" pin="2"/>
+      <node ref="C10" pin="1"/>
+    </net>
+    <net code="68" name="/Peripherals/ENC2_SW">
+      <node ref="U2" pin="3"/>
+      <node ref="R45" pin="2"/>
+      <node ref="C8" pin="1"/>
+      <node ref="R44" pin="2"/>
+    </net>
+    <net code="69" name="/Peripherals/ENC2_A">
+      <node ref="R40" pin="2"/>
+      <node ref="U1" pin="11"/>
+      <node ref="C7" pin="1"/>
+    </net>
+    <net code="70" name="/Peripherals/LED">
+      <node ref="U1" pin="16"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="71" name="Net-(D1-Pad2)">
+      <node ref="R1" pin="2"/>
+      <node ref="D1" pin="2"/>
+    </net>
+    <net code="72" name="/Peripherals/CIDO">
+      <node ref="J1" pin="1"/>
+      <node ref="U1" pin="17"/>
+    </net>
+    <net code="73" name="Net-(C1-Pad1)">
+      <node ref="C1" pin="1"/>
+      <node ref="U1" pin="21"/>
+    </net>
+    <net code="74" name="/Peripherals/SPARE">
+      <node ref="TP1" pin="1"/>
+      <node ref="U1" pin="26"/>
+    </net>
+    <net code="75" name="/Peripherals/XTAL1">
+      <node ref="C3" pin="2"/>
+      <node ref="Y1" pin="1"/>
+      <node ref="U1" pin="9"/>
+    </net>
+    <net code="76" name="Net-(D2-Pad1)">
+      <node ref="D2" pin="1"/>
+    </net>
+    <net code="77" name="Net-(D2-Pad2)">
+      <node ref="D2" pin="2"/>
+    </net>
+    <net code="78" name="Net-(D4-Pad1)">
+      <node ref="D4" pin="1"/>
+    </net>
+    <net code="79" name="Net-(D4-Pad2)">
+      <node ref="D4" pin="2"/>
+    </net>
+    <net code="80" name="Net-(U2-Pad28)">
+      <node ref="U2" pin="28"/>
+    </net>
+    <net code="81" name="Net-(U2-Pad7)">
+      <node ref="U2" pin="7"/>
+    </net>
+    <net code="82" name="Net-(U2-Pad8)">
+      <node ref="U2" pin="8"/>
+    </net>
+    <net code="83" name="Net-(U2-Pad27)">
+      <node ref="U2" pin="27"/>
+    </net>
+    <net code="84" name="Net-(D6-Pad1)">
+      <node ref="D6" pin="1"/>
+    </net>
+    <net code="85" name="Net-(U2-Pad19)">
+      <node ref="U2" pin="19"/>
+    </net>
+    <net code="86" name="/Peripherals/XTAL2">
+      <node ref="C4" pin="2"/>
+      <node ref="Y1" pin="3"/>
+      <node ref="U1" pin="10"/>
+    </net>
+    <net code="87" name="/Peripherals/SW_4">
+      <node ref="SW4" pin="2"/>
+      <node ref="U2" pin="21"/>
+      <node ref="R37" pin="2"/>
+    </net>
+    <net code="88" name="Net-(U2-Pad5)">
+      <node ref="U2" pin="5"/>
+    </net>
+    <net code="89" name="Net-(U2-Pad6)">
+      <node ref="U2" pin="6"/>
+    </net>
+    <net code="90" name="Net-(D6-Pad2)">
+      <node ref="D6" pin="2"/>
+    </net>
+    <net code="91" name="Net-(D3-Pad1)">
+      <node ref="D3" pin="1"/>
+    </net>
+    <net code="92" name="Net-(D3-Pad2)">
+      <node ref="D3" pin="2"/>
+    </net>
+    <net code="93" name="Net-(D5-Pad1)">
+      <node ref="D5" pin="1"/>
+    </net>
+    <net code="94" name="Net-(D5-Pad2)">
+      <node ref="D5" pin="2"/>
+    </net>
+    <net code="95" name="Net-(D7-Pad1)">
+      <node ref="D7" pin="1"/>
+    </net>
+    <net code="96" name="Net-(D7-Pad2)">
+      <node ref="D7" pin="2"/>
+    </net>
+    <net code="97" name="Net-(U2-Pad11)">
+      <node ref="U2" pin="11"/>
+    </net>
+    <net code="98" name="/Peripherals/SW_5">
+      <node ref="SW5" pin="2"/>
+      <node ref="R38" pin="2"/>
+      <node ref="U2" pin="22"/>
+    </net>
+    <net code="99" name="Net-(R8-Pad2)">
+      <node ref="SW6" pin="4"/>
+      <node ref="R8" pin="2"/>
+    </net>
+    <net code="100" name="Net-(U2-Pad14)">
+      <node ref="U2" pin="14"/>
+    </net>
+    <net code="101" name="Net-(R6-Pad2)">
+      <node ref="SW4" pin="4"/>
+      <node ref="R6" pin="2"/>
+    </net>
+    <net code="102" name="/Peripherals/SW_6">
+      <node ref="U2" pin="23"/>
+      <node ref="SW6" pin="2"/>
+      <node ref="R39" pin="2"/>
+    </net>
+    <net code="103" name="Net-(D12-Pad2)">
+      <node ref="D14" pin="3"/>
+      <node ref="R22" pin="1"/>
+      <node ref="D12" pin="2"/>
+    </net>
+    <net code="104" name="VBUS">
+      <node ref="R26" pin="2"/>
+      <node ref="D8" pin="4"/>
+      <node ref="Q1" pin="3"/>
+      <node ref="FB1" pin="1"/>
+      <node ref="R15" pin="2"/>
+      <node ref="C22" pin="1"/>
+    </net>
+    <net code="105" name="+5V">
+      <node ref="C37" pin="1"/>
+      <node ref="R25" pin="2"/>
+      <node ref="R27" pin="2"/>
+      <node ref="U7" pin="6"/>
+      <node ref="U7" pin="5"/>
+      <node ref="U7" pin="2"/>
+      <node ref="U7" pin="1"/>
+      <node ref="C23" pin="2"/>
+      <node ref="C36" pin="1"/>
+      <node ref="Q1" pin="2"/>
+      <node ref="C35" pin="1"/>
+      <node ref="U8" pin="1"/>
+      <node ref="U5" pin="5"/>
+      <node ref="U5" pin="13"/>
+    </net>
+    <net code="106" name="/Power/VCC_IN">
+      <node ref="U7" pin="4"/>
       <node ref="J8" pin="1"/>
+      <node ref="C34" pin="1"/>
+      <node ref="D12" pin="1"/>
+      <node ref="R21" pin="1"/>
+      <node ref="D14" pin="2"/>
     </net>
-    <net code="163" name="Net-(R18-Pad1)">
-      <node ref="R21" pin="2"/>
-      <node ref="R18" pin="1"/>
-      <node ref="SW8" pin="A"/>
-    </net>
-    <net code="164" name="Net-(R23-Pad2)">
-      <node ref="SW8" pin="S1"/>
+    <net code="107" name="Net-(Q1-Pad1)">
+      <node ref="Q1" pin="1"/>
       <node ref="R23" pin="2"/>
     </net>
-    <net code="165" name="Net-(SW8-PadC)">
-      <node ref="SW8" pin="C"/>
-    </net>
-    <net code="166" name="Net-(R19-Pad1)">
-      <node ref="SW8" pin="B"/>
-      <node ref="R19" pin="1"/>
-      <node ref="R20" pin="2"/>
-    </net>
-    <net code="167" name="Net-(R24-Pad1)">
-      <node ref="SW9" pin="A"/>
+    <net code="108" name="Net-(D13-Pad2)">
       <node ref="R24" pin="1"/>
-      <node ref="R27" pin="2"/>
+      <node ref="D13" pin="2"/>
     </net>
-    <net code="168" name="Net-(R25-Pad1)">
-      <node ref="R26" pin="2"/>
-      <node ref="SW9" pin="B"/>
+    <net code="109" name="Net-(D15-Pad2)">
       <node ref="R25" pin="1"/>
+      <node ref="D15" pin="2"/>
     </net>
-    <net code="169" name="Net-(R29-Pad2)">
-      <node ref="R29" pin="2"/>
-      <node ref="SW9" pin="S1"/>
+    <net code="110" name="Net-(D16-Pad2)">
+      <node ref="D16" pin="2"/>
+      <node ref="R26" pin="1"/>
     </net>
-    <net code="170" name="Net-(SW9-PadC)">
-      <node ref="SW9" pin="C"/>
+    <net code="111" name="Net-(Q3-Pad2)">
+      <node ref="R30" pin="2"/>
+      <node ref="R28" pin="1"/>
+      <node ref="R27" pin="1"/>
+      <node ref="Q3" pin="2"/>
     </net>
-    <net code="171" name="Net-(SW10-PadC)">
-      <node ref="SW10" pin="C"/>
+    <net code="112" name="Net-(Q2-Pad1)">
+      <node ref="R29" pin="1"/>
+      <node ref="Q2" pin="1"/>
     </net>
-    <net code="172" name="Net-(R30-Pad1)">
+    <net code="113" name="Net-(Q2-Pad2)">
       <node ref="R30" pin="1"/>
-      <node ref="R33" pin="2"/>
-      <node ref="SW10" pin="A"/>
+      <node ref="Q2" pin="2"/>
+      <node ref="Q3" pin="1"/>
     </net>
-    <net code="173" name="Net-(R31-Pad1)">
+    <net code="114" name="Net-(R18-Pad1)">
+      <node ref="R18" pin="1"/>
+      <node ref="U6" pin="20"/>
+    </net>
+    <net code="115" name="Net-(D11-Pad2)">
+      <node ref="D11" pin="2"/>
+      <node ref="R18" pin="2"/>
+    </net>
+    <net code="116" name="Net-(R19-Pad1)">
+      <node ref="R19" pin="1"/>
+      <node ref="U6" pin="19"/>
+    </net>
+    <net code="117" name="Net-(D10-Pad2)">
+      <node ref="R19" pin="2"/>
+      <node ref="D10" pin="2"/>
+    </net>
+    <net code="118" name="Net-(U6-Pad2)">
+      <node ref="U6" pin="2"/>
+    </net>
+    <net code="119" name="Net-(U6-Pad1)">
+      <node ref="U6" pin="1"/>
+    </net>
+    <net code="120" name="Net-(R17-Pad1)">
+      <node ref="U6" pin="9"/>
+      <node ref="R17" pin="1"/>
+    </net>
+    <net code="121" name="/USB Hub and Serial Converter/VBUS_SENSE">
+      <node ref="U6" pin="8"/>
+      <node ref="R15" pin="1"/>
+      <node ref="R16" pin="2"/>
+    </net>
+    <net code="122" name="/USB Hub and Serial Converter/EEPROM_SDA">
+      <node ref="R12" pin="1"/>
+      <node ref="U3" pin="26"/>
+      <node ref="U4" pin="5"/>
+      <node ref="TP2" pin="1"/>
+    </net>
+    <net code="123" name="Net-(C27-Pad2)">
+      <node ref="FB6" pin="1"/>
+      <node ref="J4" pin="5"/>
+      <node ref="J4" pin="4"/>
+      <node ref="C27" pin="2"/>
+    </net>
+    <net code="124" name="Net-(J4-Pad3)">
+      <node ref="J4" pin="3"/>
+    </net>
+    <net code="125" name="Net-(J4-Pad2)">
+      <node ref="J4" pin="2"/>
+    </net>
+    <net code="126" name="Net-(R9-Pad2)">
+      <node ref="U3" pin="17"/>
+      <node ref="R9" pin="2"/>
+    </net>
+    <net code="127" name="Net-(R10-Pad2)">
+      <node ref="U3" pin="23"/>
+      <node ref="R10" pin="2"/>
+    </net>
+    <net code="128" name="Net-(U6-Pad11)">
+      <node ref="U6" pin="11"/>
+    </net>
+    <net code="129" name="Net-(U6-Pad16)">
+      <node ref="U6" pin="16"/>
+    </net>
+    <net code="130" name="Net-(U6-Pad15)">
+      <node ref="U6" pin="15"/>
+    </net>
+    <net code="131" name="Net-(U6-Pad13)">
+      <node ref="U6" pin="13"/>
+    </net>
+    <net code="132" name="Net-(U6-Pad10)">
+      <node ref="U6" pin="10"/>
+    </net>
+    <net code="133" name="/USB Hub and Serial Converter/D4N">
+      <node ref="J7" pin="2"/>
+      <node ref="D9" pin="7"/>
+      <node ref="U3" pin="15"/>
+    </net>
+    <net code="134" name="/USB Hub and Serial Converter/D4P">
+      <node ref="D9" pin="6"/>
+      <node ref="U3" pin="16"/>
+      <node ref="J7" pin="3"/>
+    </net>
+    <net code="135" name="/USB Hub and Serial Converter/D3N">
+      <node ref="D9" pin="9"/>
+      <node ref="J6" pin="2"/>
+      <node ref="U3" pin="12"/>
+    </net>
+    <net code="136" name="/USB Hub and Serial Converter/D3P">
+      <node ref="D9" pin="8"/>
+      <node ref="U3" pin="13"/>
+      <node ref="J6" pin="3"/>
+    </net>
+    <net code="137" name="Net-(D9-Pad5)">
+      <node ref="D9" pin="5"/>
+    </net>
+    <net code="138" name="Net-(D9-Pad4)">
+      <node ref="D9" pin="4"/>
+    </net>
+    <net code="139" name="Net-(D9-Pad2)">
+      <node ref="D9" pin="2"/>
+    </net>
+    <net code="140" name="Net-(D9-Pad1)">
+      <node ref="D9" pin="1"/>
+    </net>
+    <net code="141" name="Net-(R14-Pad2)">
+      <node ref="U4" pin="7"/>
       <node ref="R32" pin="2"/>
+      <node ref="R14" pin="2"/>
+    </net>
+    <net code="142" name="/USB Hub and Serial Converter/~OVR4">
+      <node ref="R67" pin="2"/>
+      <node ref="U3" pin="19"/>
+      <node ref="U5" pin="9"/>
+    </net>
+    <net code="143" name="/USB Hub and Serial Converter/~OVR3">
+      <node ref="U5" pin="8"/>
+      <node ref="R66" pin="2"/>
+      <node ref="U3" pin="20"/>
+    </net>
+    <net code="144" name="/USB Hub and Serial Converter/~OVR2">
+      <node ref="U3" pin="24"/>
+      <node ref="R65" pin="2"/>
+      <node ref="U5" pin="16"/>
+    </net>
+    <net code="145" name="/USB Hub and Serial Converter/~OVR1">
+      <node ref="U3" pin="25"/>
+      <node ref="R64" pin="2"/>
+      <node ref="U5" pin="1"/>
+    </net>
+    <net code="146" name="Net-(J3-Pad5)">
+      <node ref="J3" pin="5"/>
+    </net>
+    <net code="147" name="Net-(C27-Pad1)">
+      <node ref="C27" pin="1"/>
+      <node ref="J4" pin="1"/>
+      <node ref="FB5" pin="1"/>
+    </net>
+    <net code="148" name="/USB Hub and Serial Converter/VBUS_A">
+      <node ref="U5" pin="3"/>
+      <node ref="FB5" pin="2"/>
+      <node ref="C25" pin="1"/>
+    </net>
+    <net code="149" name="/USB Hub and Serial Converter/D2N">
+      <node ref="J5" pin="2"/>
+      <node ref="U3" pin="6"/>
+    </net>
+    <net code="150" name="/USB Hub and Serial Converter/D2P">
+      <node ref="U3" pin="7"/>
+      <node ref="J5" pin="3"/>
+    </net>
+    <net code="151" name="Net-(C26-Pad2)">
+      <node ref="J5" pin="4"/>
+      <node ref="C26" pin="2"/>
+      <node ref="J5" pin="5"/>
+      <node ref="FB4" pin="1"/>
+    </net>
+    <net code="152" name="/USB Hub and Serial Converter/D1P">
+      <node ref="U3" pin="4"/>
+      <node ref="U6" pin="4"/>
+    </net>
+    <net code="153" name="/USB Hub and Serial Converter/DIN_P">
+      <node ref="D8" pin="2"/>
+      <node ref="J3" pin="3"/>
+      <node ref="U3" pin="2"/>
+    </net>
+    <net code="154" name="/USB Hub and Serial Converter/DIN_N">
+      <node ref="U3" pin="1"/>
+      <node ref="J3" pin="2"/>
+      <node ref="D8" pin="3"/>
+    </net>
+    <net code="155" name="/USB Hub and Serial Converter/XIN">
+      <node ref="U3" pin="10"/>
+      <node ref="C18" pin="1"/>
+      <node ref="Y2" pin="1"/>
+    </net>
+    <net code="156" name="/USB Hub and Serial Converter/XOUT">
+      <node ref="U3" pin="11"/>
+      <node ref="Y2" pin="3"/>
+      <node ref="C19" pin="1"/>
+    </net>
+    <net code="157" name="Net-(U3-Pad27)">
+      <node ref="U3" pin="27"/>
+    </net>
+    <net code="158" name="/USB Hub and Serial Converter/EEPROM_SCL">
+      <node ref="U3" pin="18"/>
+      <node ref="TP3" pin="1"/>
+      <node ref="R13" pin="1"/>
+      <node ref="U4" pin="6"/>
+    </net>
+    <net code="159" name="Net-(R11-Pad2)">
+      <node ref="U3" pin="8"/>
+      <node ref="R11" pin="2"/>
+    </net>
+    <net code="160" name="Net-(C21-Pad1)">
+      <node ref="FB1" pin="2"/>
+      <node ref="J3" pin="1"/>
+      <node ref="C21" pin="1"/>
+    </net>
+    <net code="161" name="Net-(C21-Pad2)">
+      <node ref="J3" pin="4"/>
+      <node ref="C21" pin="2"/>
+      <node ref="FB2" pin="2"/>
+    </net>
+    <net code="162" name="/USB Hub and Serial Converter/D1N">
+      <node ref="U6" pin="5"/>
+      <node ref="U3" pin="3"/>
+    </net>
+    <net code="163" name="Net-(C32-Pad1)">
+      <node ref="C32" pin="1"/>
+      <node ref="FB7" pin="1"/>
+      <node ref="J6" pin="1"/>
+    </net>
+    <net code="164" name="/USB Hub and Serial Converter/VBUS_C">
+      <node ref="U5" pin="6"/>
+      <node ref="FB7" pin="2"/>
+      <node ref="C30" pin="1"/>
+    </net>
+    <net code="165" name="Net-(C33-Pad1)">
+      <node ref="J7" pin="1"/>
+      <node ref="FB9" pin="1"/>
+      <node ref="C33" pin="1"/>
+    </net>
+    <net code="166" name="/USB Hub and Serial Converter/VBUS_D">
+      <node ref="C31" pin="1"/>
+      <node ref="FB9" pin="2"/>
+      <node ref="U5" pin="11"/>
+    </net>
+    <net code="167" name="Net-(C26-Pad1)">
+      <node ref="FB3" pin="1"/>
+      <node ref="C26" pin="1"/>
+      <node ref="J5" pin="1"/>
+    </net>
+    <net code="168" name="/USB Hub and Serial Converter/VBUS_B">
+      <node ref="C24" pin="1"/>
+      <node ref="FB3" pin="2"/>
+      <node ref="U5" pin="14"/>
+    </net>
+    <net code="169" name="Net-(C32-Pad2)">
+      <node ref="J6" pin="4"/>
+      <node ref="FB8" pin="1"/>
+      <node ref="C32" pin="2"/>
+      <node ref="J6" pin="5"/>
+    </net>
+    <net code="170" name="Net-(C33-Pad2)">
+      <node ref="J7" pin="5"/>
+      <node ref="J7" pin="4"/>
+      <node ref="FB10" pin="1"/>
+      <node ref="C33" pin="2"/>
+    </net>
+    <net code="171" name="Net-(R40-Pad1)">
+      <node ref="R40" pin="1"/>
+      <node ref="R43" pin="1"/>
+      <node ref="SW7" pin="A"/>
+    </net>
+    <net code="172" name="Net-(R41-Pad1)">
+      <node ref="R42" pin="1"/>
+      <node ref="R41" pin="1"/>
+      <node ref="SW7" pin="B"/>
+    </net>
+    <net code="173" name="Net-(R44-Pad1)">
+      <node ref="SW7" pin="S1"/>
+      <node ref="R44" pin="1"/>
+    </net>
+    <net code="174" name="Net-(R50-Pad1)">
+      <node ref="R50" pin="1"/>
+      <node ref="SW8" pin="S1"/>
+    </net>
+    <net code="175" name="Net-(R46-Pad1)">
+      <node ref="R49" pin="1"/>
+      <node ref="SW8" pin="A"/>
+      <node ref="R46" pin="1"/>
+    </net>
+    <net code="176" name="Net-(R47-Pad1)">
+      <node ref="R47" pin="1"/>
+      <node ref="R48" pin="1"/>
+      <node ref="SW8" pin="B"/>
+    </net>
+    <net code="177" name="Net-(R56-Pad1)">
+      <node ref="SW9" pin="S1"/>
+      <node ref="R56" pin="1"/>
+    </net>
+    <net code="178" name="Net-(R52-Pad1)">
+      <node ref="SW9" pin="A"/>
+      <node ref="R52" pin="1"/>
+      <node ref="R55" pin="1"/>
+    </net>
+    <net code="179" name="Net-(R53-Pad1)">
+      <node ref="SW9" pin="B"/>
+      <node ref="R53" pin="1"/>
+      <node ref="R54" pin="1"/>
+    </net>
+    <net code="180" name="Net-(R59-Pad1)">
       <node ref="SW10" pin="B"/>
-      <node ref="R31" pin="1"/>
+      <node ref="R60" pin="1"/>
+      <node ref="R59" pin="1"/>
     </net>
-    <net code="174" name="Net-(R35-Pad2)">
-      <node ref="R35" pin="2"/>
+    <net code="181" name="Net-(R62-Pad1)">
       <node ref="SW10" pin="S1"/>
+      <node ref="R62" pin="1"/>
     </net>
-    <net code="175" name="Net-(R36-Pad1)">
-      <node ref="R39" pin="2"/>
-      <node ref="SW11" pin="A"/>
-      <node ref="R36" pin="1"/>
-    </net>
-    <net code="176" name="Net-(R41-Pad2)">
-      <node ref="R41" pin="2"/>
-      <node ref="SW11" pin="S1"/>
-    </net>
-    <net code="177" name="Net-(SW11-PadC)">
-      <node ref="SW11" pin="C"/>
-    </net>
-    <net code="178" name="Net-(R37-Pad1)">
-      <node ref="R37" pin="1"/>
-      <node ref="R38" pin="2"/>
-      <node ref="SW11" pin="B"/>
+    <net code="182" name="Net-(R58-Pad1)">
+      <node ref="R58" pin="1"/>
+      <node ref="R61" pin="1"/>
+      <node ref="SW10" pin="A"/>
     </net>
   </nets>
 </export>
