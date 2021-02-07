@@ -1,15 +1,19 @@
 #include <Arduino.h>
 
 #include "button.hpp"
+#include "pins.hpp"
 
-// NOTE: Assumes buttons ACTIVE HIGH
+bool newState;
+void IRAM_ATTR BtnIntISR(){
+    newState = true;
+}
 
-Button::Button(){
-    
-    pinMode(PIN_ENCBTN1, INPUT);
-    pinMode(PIN_ENCBTN2, INPUT);
-    pinMode(PIN_ENCBTN3, INPUT);
-    pinMode(PIN_ENCBTN4, INPUT);
+
+
+
+
+Button::Button() : ioxp(0x20) {
+    newState = false;
 
     for(int i = 0; i < NUM_BUTTONS; i++){
         btnStatus[i].btn = (ButtonEnum)i;
@@ -18,18 +22,38 @@ Button::Button(){
         btnStatus[i].timeSwitched = 0;
         btnStatus[i].holdLock = false;
     }
+}
 
+bool Button::newData(){
+    return newState;
+}
+
+void Button::init(){
+    ioxp.connectInterrupts(true);
+    ioxp.setInterruptPolarityHigh(false);
+    ioxp.enableInterrupt(0xFFFF);    // Bitmask for GPIOA 0-6 and GPIOB 0-3
+    ioxp.getPinStates();
+    attachInterrupt(PIN_BTN_INT, BtnIntISR, FALLING);
 }
 
 void Button::tick(){
-    long now = millis();
+    uint16_t pinStates;
+    static int tick = 0;
+    if(newState || tick % 50 == 0){
+        pinStates = ioxp.getPinStates();
+        newState = false;
+    } else {
+        return;
+    }
     
+
+    long now = millis();
+
     // Poll the states of each button in the button list
     for(int i = 0; i < NUM_BUTTONS; i++){
-        
     
-        int buttonPin = getPin((ButtonEnum)i);
-        bool currentButtonState = digitalRead(buttonPin);
+    int buttonPin = getPin((ButtonEnum)i);
+    bool currentButtonState = (((~pinStates) & (1 << buttonPin)) > 0) ? true : false;
         
         // Check for state changes
         if(currentButtonState != btnStatus[i].lastState){
@@ -37,35 +61,42 @@ void Button::tick(){
             
             if((now - btnStatus[i].timeSwitched) > DEBOUNCE_TIME_MIN_MS){
                 // State change probably wasn't a bounce
+                Serial.print(F("Button "));
+                Serial.print(i);
+                Serial.print(": ");
                 
                 if(currentButtonState == LOW){
                     // Button has been released
                     btnStatus[i].holdLock = false;
+                    Serial.print(F("Released"));
                     
                     if((now - btnStatus[i].timeSwitched) < CLICK_TIME_MAX_MS){
                         // Button was clicked
+                        Serial.print(F(" (clicked)"));
                         btnStatus[i].clicked = true;
                     } else {
-                        //Serial.print(F("(held "));
-                        //Serial.print(now - btnStatus[i].timeSwitched);
-                        //Serial.print(F(" ms)"));
+                        Serial.print(F(" (held "));
+                        Serial.print(now - btnStatus[i].timeSwitched);
+                        Serial.print(F(" ms)"));
                     }
                 } else {
                     // Button has been pressed
+                    Serial.print(F("Pressed"));
                     btnStatus[i].clicked = false;
                 }
 
                 // Store this state change information
                 btnStatus[i].lastState = currentButtonState;
                 btnStatus[i].timeSwitched = now;
+                Serial.println();
             }
+            
         }
-
-       
     }
-
-
+    tick++;
 }
+
+
 
 bool Button::buttonHeld(ButtonEnum btn, int delay){
     long now = millis();

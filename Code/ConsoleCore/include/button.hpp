@@ -1,10 +1,8 @@
 #ifndef IO_HPP
 #define IO_HPP
 
-// Adapted from HapticEye IO class, check it out! 
-// https://github.com/Aliasmk/HapticEye-Clock
 
-#include "pins.hpp"
+#include "mcp23017.hpp"
 
 #define BTN_ACTIVE_HIGH
 
@@ -12,6 +10,12 @@
 #define CLICK_TIME_MAX_MS 750
 
 typedef enum ButtonEnum{
+    BTN_A1,
+    BTN_A2,
+    BTN_A3,
+    BTN_B1,
+    BTN_B2,
+    BTN_B3,
     BTN_ENC1,
     BTN_ENC2,
     BTN_ENC3,
@@ -21,7 +25,7 @@ typedef enum ButtonEnum{
 
 typedef struct ButtonMap{
     ButtonEnum btn;
-    uint8_t pin;
+    uint16_t pin;
 } ButtonMap;
 
 typedef struct ButtonStatus{
@@ -35,8 +39,11 @@ typedef struct ButtonStatus{
 class Button{
 public:
     Button();
-    
     void tick();
+    uint16_t pinStates;
+    bool newData();
+
+    void init();
 
     bool buttonHeld(ButtonEnum btn, int delay);
     bool buttonClicked(ButtonEnum btn);
@@ -44,19 +51,28 @@ public:
     bool buttonUp(ButtonEnum btn);
 
 private:
+    MCP23017 ioxp;
+
     ButtonStatus btnStatus[NUM_BUTTONS];
     ButtonStatus* getButtonStatus(ButtonEnum btn);
     
-    const ButtonMap btnMap[4] = {
-        {BTN_ENC1, PIN_ENCBTN1},
-        {BTN_ENC2, PIN_ENCBTN2},
-        {BTN_ENC3, PIN_ENCBTN3},
-        {BTN_ENC4, PIN_ENCBTN4}
+    const ButtonMap btnMap[10] = {
+        {BTN_B1,   0},
+        {BTN_B2,   1},
+        {BTN_B3,   2},
+        {BTN_A3,   3},
+        {BTN_A2,   4},
+        {BTN_A1,   5},
+        {BTN_ENC4, 8},
+        {BTN_ENC3, 9},
+        {BTN_ENC2, 10},
+        {BTN_ENC1, 11}
     };
     uint8_t getPin(ButtonEnum btn);
 
     bool pressedValue;
-};
 
+
+};
 
 #endif

@@ -23,9 +23,44 @@ MainScreen::MainScreen() : params{0} {
 
 void MainScreen::update(){
     if(OSC::oscState.status != CONNECTED){
-        return; // Nothing to do if we aren't connected to EOS
+        return; // Nothing else to do if we aren't connected to EOS
     }
     
+    if(btn.buttonClicked(BTN_A1)){
+        groupNumber = INTENS;
+        pageNumber = 1;
+        setAllWheelsCoarse();
+    }
+
+    if(btn.buttonClicked(BTN_A2)){
+        groupNumber = FOCUS;
+        pageNumber = 1;
+        setAllWheelsCoarse();
+    }
+
+    if(btn.buttonClicked(BTN_A3)){
+        groupNumber = COLOR;
+        pageNumber = 1;
+        setAllWheelsCoarse();
+    }
+
+    if(btn.buttonClicked(BTN_B1)){
+        groupNumber = IMAGE;
+        pageNumber = 1;
+        setAllWheelsCoarse();
+    }
+
+    if(btn.buttonClicked(BTN_B2)){
+        groupNumber = FORM;
+        pageNumber = 1;
+        setAllWheelsCoarse();
+    }
+
+    
+
+
+
+    /*
     if(btn.buttonClicked(BTN_ENC2)){
         activeParameter = 0;
         nextGroup();
@@ -41,7 +76,7 @@ void MainScreen::update(){
 
     if(btn.buttonClicked(BTN_ENC4)){
         params[activeParameter].coarse = !params[activeParameter].coarse;
-    }
+    }*/
 
     int enc = 0;//encoder.getEncoderDelta(ENC4);
     if(enc != 0){

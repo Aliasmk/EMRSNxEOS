@@ -3,22 +3,32 @@
 
 #define UNDEFINED_PIN 99
 
-#define PIN_OLED_CS 17
-#define PIN_OLED_DC 2
-#define PIN_OLED_RESET 32
+#define PIN_OLED_DC     17
+#define PIN_OLED_RW     16
+#define PIN_OLED_EN     32
+#define PIN_OLED_D0     33
+#define PIN_OLED_D1     25
+#define PIN_OLED_D2     26
+#define PIN_OLED_D3     27
+#define PIN_OLED_D4     14
+#define PIN_OLED_D5     12
+#define PIN_OLED_D6     13
+#define PIN_OLED_D7     15
+#define PIN_OLED_RESET  2
+#define PIN_OLED_CS     4
 
-#define PIN_ENCBTN1 UNDEFINED_PIN
-#define PIN_ENCBTN2 22
-#define PIN_ENCBTN3 21
-#define PIN_ENCBTN4 19
+/*
+#define PIN_OLED_BS1    16
+#define PIN_OLED_BS2    17
+*/
 
-#define PIN_ENC1A UNDEFINED_PIN
-#define PIN_ENC1B UNDEFINED_PIN
-#define PIN_ENC2A UNDEFINED_PIN
-#define PIN_ENC2B UNDEFINED_PIN
-#define PIN_ENC3A UNDEFINED_PIN
-#define PIN_ENC3B UNDEFINED_PIN
-#define PIN_ENC4A 4
-#define PIN_ENC4B 15
+#define PIN_LED         18
+#define PIN_LED_PWM     5
+#define PIN_BTN_INT     19
+#define PIN_SUSP_SENSE  21
+
+#define PIN_SDA         22
+#define PIN_SCL         23
+
 
 #endif
