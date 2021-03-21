@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name EMRSNxEOS)(type KiCad)(uri ${KIPRJMOD}/EMRSNxEOS.pretty)(options "")(descr ""))
+)

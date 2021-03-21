@@ -1,0 +1,3 @@
+Digikey:
+Parts total with screen/encoder/sliders: $126.30 qty 1, $110.17 qty 10
+Parts total without screen/encoder/sliders: $63.41 qty 1, $50.43 qty 10
