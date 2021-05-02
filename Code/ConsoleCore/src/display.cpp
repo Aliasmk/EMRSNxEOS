@@ -9,8 +9,7 @@
 
 DisplayState Display::displayState = {0}; // Initialize static displayState object to zero
 
-//U8G2_SSD1322_NHD_256X64_F_4W_HW_SPI u8g2(U8G2_R0, PIN_OLED_CS, PIN_OLED_DC, PIN_OLED_RESET);    // Enable U8G2_16BIT in u8g2.h
-U8G2_SSD1322_NHD_256X64_F_3W_HW_SPI u8g2(U8G2_R0, PIN_OLED_CS, PIN_OLED_RESET);
+U8G2_SSD1322_NHD_256X64_F_3W_HW_SPI u8g2(U8G2_R0, PIN_OLED_CS, PIN_OLED_RESET); // Remember to enable U8G2_16BIT in u8g2.h
 
 
 Display::Display() : 
@@ -22,25 +21,6 @@ Display::Display() :
 
 void Display::init(){
     displayState.tickNum = 0;
-    // These are needed for the circuit rewiring.
-    pinMode(PIN_OLED_EN, OUTPUT);
-    pinMode(PIN_OLED_D7, OUTPUT);
-    pinMode(PIN_OLED_D6, OUTPUT);
-    pinMode(PIN_OLED_D5, OUTPUT);
-    pinMode(PIN_OLED_D4, OUTPUT);
-    pinMode(PIN_OLED_D3, OUTPUT);
-    pinMode(PIN_OLED_D2, INPUT);
-    pinMode(PIN_OLED_EN, OUTPUT);
-    pinMode(PIN_OLED_RW, OUTPUT);
-    pinMode(PIN_OLED_DC, OUTPUT);
-    digitalWrite(PIN_OLED_EN, LOW);
-    digitalWrite(PIN_OLED_RW, LOW);
-    digitalWrite(PIN_OLED_DC, LOW);
-    digitalWrite(PIN_OLED_D7, LOW);
-    digitalWrite(PIN_OLED_D6, LOW);
-    digitalWrite(PIN_OLED_D5, LOW);
-    digitalWrite(PIN_OLED_D4, LOW);
-    digitalWrite(PIN_OLED_D3, LOW);
     u8g2.setBusClock(10000000);
     u8g2.begin();
    
