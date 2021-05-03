@@ -6,7 +6,7 @@
 
 #define ENC_INVALID 99
 
-#define MIN_ENC_PERIOD_MILLIS 4
+#define MIN_ENC_PERIOD_MILLIS 1
 
 // Note: this class does not handle encoder pushbuttons, only the quadrature sampling and decoding.
 
@@ -37,7 +37,7 @@ typedef struct EncoderState{
 class Encoder{
 public:
     Encoder();
-
+    void init();
     void tick();
     int getEncoderDelta(EncoderEnum encoderIndex);
 
@@ -50,10 +50,10 @@ private:
     uint8_t stateToValue(bool channelA, bool channelB);
 
     EncoderMapItem encoderMap[NUM_ENCODERS] = {
-        {ENC1, PIN_ENC1A, PIN_ENC1B},
-        {ENC2, PIN_ENC2A, PIN_ENC2B},
-        {ENC3, PIN_ENC3A, PIN_ENC3B},
-        {ENC4, PIN_ENC4A, PIN_ENC4B}
+        {ENC1, PIN_ENC1_A, PIN_ENC1_B},
+        {ENC2, PIN_ENC2_A, PIN_ENC2_B},
+        {ENC3, PIN_ENC3_A, PIN_ENC3_B},
+        {ENC4, PIN_ENC4_A, PIN_ENC4_B}
     };
 
     const int encoderMatrix[4][4] = {

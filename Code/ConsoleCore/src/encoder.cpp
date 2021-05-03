@@ -5,15 +5,18 @@
 // Note: Clockwise = +'ve delta
 
 Encoder::Encoder(){
+    lastCheckTimeMillis = 0;
+}
+
+void Encoder::init(){
     // Initialize each encoder in our list
     for(int i = 0; i < NUM_ENCODERS; i++){
-        EncoderState* thisEnc = &encStates[i]; // For readability
-
-        // Set the encoder pins to input. Redundant because pins are inputs by default, but assert anyways.
-        pinMode(encoderMap[thisEnc->enc].pinA, INPUT);
-        pinMode(encoderMap[thisEnc->enc].pinB, INPUT);
+        // Set the encoder pins to input. Redundant because pins are usually inputs by default, but assert anyways.
+        pinMode(encoderMap[i].pinA, INPUT);
+        pinMode(encoderMap[i].pinB, INPUT);
         
         // Set encoder object details to initial values
+        EncoderState* thisEnc = &encStates[i]; // For readability
         thisEnc->enc = (EncoderEnum)i;
         thisEnc->currentStateA = true;
         thisEnc->currentStateB = true;
@@ -22,8 +25,6 @@ Encoder::Encoder(){
         thisEnc->delta = 0;
         
     }
-
-    lastCheckTimeMillis = 0;
 }
 
 void Encoder::tick(){
@@ -41,14 +42,14 @@ void Encoder::tick(){
     for(int i = 0; i < NUM_ENCODERS; i++){
         EncoderState* thisEnc = &encStates[i];  // For readability, store the address of the current encoder state object.
 
-        // Because the encoder changes state four times per 'click', we only care about picking up one of the transitions.
-        // Check for a transition of A from high to low. 
-        if(thisEnc->lastStateA != thisEnc->currentStateA && thisEnc->currentStateA == false){
-            // If during the transition, B is low, we've turned clockwise, otherwise we've turned counterclockwise.
-            if(thisEnc->currentStateB == false){
+        if((thisEnc->currentStateA != thisEnc->lastStateA || thisEnc->currentStateB != thisEnc->lastStateB) && (thisEnc->currentStateA != thisEnc->currentStateB)){
+            // Only evaluate when the encoder A and B states change and become different values
+            if(thisEnc->currentStateA != thisEnc->lastStateA){
+                // A is the leader, move one way
                 thisEnc->delta += 1;
-            } else {
-                thisEnc->delta += -1;
+            } else if(thisEnc->currentStateB != thisEnc->lastStateB){
+                // B is the leader, move the other way
+                thisEnc->delta -= 1;
             }
         }
     }
@@ -72,7 +73,8 @@ void Encoder::getEncoderStates(){
         thisEnc->lastStateA = thisEnc->currentStateA;
         thisEnc->lastStateB = thisEnc->currentStateB;
         thisEnc->currentStateA = digitalRead(encoderMap[thisEnc->enc].pinA);
-        thisEnc->currentStateB = digitalRead(encoderMap[thisEnc->enc].pinB);
+        thisEnc->currentStateB = digitalRead(encoderMap[thisEnc->enc].pinB);        
     }
+    
 
 }

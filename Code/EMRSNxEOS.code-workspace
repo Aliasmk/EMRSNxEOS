@@ -2,13 +2,6 @@
 	"folders": [
 		{
 			"path": "ConsoleCore"
-		},
-		{
-			"path": "Modules\\QuadEncoder"
-		},
-		{
-			"name": "devtest",
-			"path": "..\\..\\..\\Documents\\PlatformIO\\Projects\\devtest"
 		}
 	],
 	"settings": {
