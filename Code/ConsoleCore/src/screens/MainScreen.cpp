@@ -3,9 +3,11 @@
 #include <screens/MainScreen.hpp>
 #include <osc.hpp>
 #include <button.hpp>
+#include <encoder.hpp>
 
 extern U8G2_SSD1322_NHD_256X64_F_4W_HW_SPI u8g2;
 extern Button btn;
+extern Encoder encoder;
 extern OSC osc;
 
 // TODO: The display doesn't need to be constantly redraw. If this object can accept event notifications such as when parameters get update or the syntax line is changed, we only need to redraw in those cases.
@@ -27,63 +29,111 @@ void MainScreen::update(){
     }
     
     if(btn.buttonClicked(BTN_A1)){
-        groupNumber = INTENS;
-        pageNumber = 1;
-        setAllWheelsCoarse();
+        if(groupNumber == INTENS){
+            nextPage();
+        } else {
+            groupNumber = INTENS;
+            pageNumber = 1;
+            setAllWheelsCoarse();
+        }   
     }
 
     if(btn.buttonClicked(BTN_A2)){
-        groupNumber = FOCUS;
-        pageNumber = 1;
-        setAllWheelsCoarse();
+        if(groupNumber == FOCUS){
+            nextPage();
+        } else {
+            groupNumber = FOCUS;
+            pageNumber = 1;
+            setAllWheelsCoarse();
+        }
     }
 
     if(btn.buttonClicked(BTN_A3)){
-        groupNumber = COLOR;
-        pageNumber = 1;
-        setAllWheelsCoarse();
+        if(groupNumber == COLOR){
+            nextPage();
+        } else {
+            groupNumber = COLOR;
+            pageNumber = 1;
+            setAllWheelsCoarse();
+        }
     }
 
     if(btn.buttonClicked(BTN_B1)){
-        groupNumber = IMAGE;
-        pageNumber = 1;
-        setAllWheelsCoarse();
+        if(groupNumber == IMAGE){
+            nextPage();
+        } else {
+            groupNumber = IMAGE;
+            pageNumber = 1;
+            setAllWheelsCoarse();
+        }
     }
 
     if(btn.buttonClicked(BTN_B2)){
-        groupNumber = FORM;
-        pageNumber = 1;
-        setAllWheelsCoarse();
+        if(groupNumber == FORM){
+            nextPage();
+        } else {
+            groupNumber = FORM;
+            pageNumber = 1;
+            setAllWheelsCoarse();
+        }
     }
 
-    
-
-
-
-    /*
-    if(btn.buttonClicked(BTN_ENC2)){
+    if(btn.buttonClicked(BTN_ENC1)){
         activeParameter = 0;
-        nextGroup();
+        params[0].coarse = !params[0].coarse;
+    }
+    
+    if(btn.buttonClicked(BTN_ENC2)){
+        activeParameter = 1;
+        params[1].coarse = !params[1].coarse;
     }
     
     if(btn.buttonClicked(BTN_ENC3)){
-        activeParameter++;
-        if(activeParameter+1 >= itemsOnPage){
-            activeParameter = 0;
-            nextPage();
-        } 
+        activeParameter = 3;
+        params[2].coarse = !params[2].coarse;
     }
 
+    
     if(btn.buttonClicked(BTN_ENC4)){
-        params[activeParameter].coarse = !params[activeParameter].coarse;
-    }*/
-
-    int enc = 0;//encoder.getEncoderDelta(ENC4);
+        activeParameter = 4;
+        params[3].coarse = !params[3].coarse;
+    }
+    
+    int enc = 0;
+    enc = encoder.getEncoderDelta(ENC1);
     if(enc != 0){
-        if(params[activeParameter].coarse){
+        activeParameter = 0;
+        if(params[0].coarse){
             enc *= 4;
         }
-        osc.sendWheelMove(params[activeParameter].index, enc);
+        osc.sendWheelMove(params[0].index, enc);
+    }
+
+    enc = encoder.getEncoderDelta(ENC2);
+    if(enc != 0){
+        activeParameter = 1;
+        if(params[1].coarse){
+            enc *= 4;
+        }
+        osc.sendWheelMove(params[1].index, enc);
+    }
+
+    enc = encoder.getEncoderDelta(ENC3);
+    if(enc != 0){
+        activeParameter = 2;
+        if(params[2].coarse){
+            enc *= 4;
+        }
+        osc.sendWheelMove(params[2].index, enc);
+    }
+    
+    enc = encoder.getEncoderDelta(ENC4);
+    if(enc != 0){
+        activeParameter = 3;
+        if(params[3].coarse){
+            enc *= 4;
+        }
+        osc.sendWheelMove(params[3].index, enc);
     }
     
 

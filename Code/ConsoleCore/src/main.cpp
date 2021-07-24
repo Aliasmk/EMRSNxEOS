@@ -9,7 +9,7 @@
 #include <encoder.hpp>
 #include <fader.hpp>
 #include <driver/dac.h>
-//#include <console_wifi.hpp>
+#include <console_wifi.hpp>
 
 //#include <U8g2lib.h>
 
@@ -18,21 +18,25 @@ Fader fader;
 Button btn;
 OSC osc;
 Display display;
-//ConsoleWiFi wifi;
+ConsoleWiFi wifi;
 
 #include <pins.hpp>
 
 void setup() {
-  pinMode(12, OUTPUT);
+  pinMode(PIN_LED, OUTPUT);
   osc.init();
   display.init();
   btn.init();
   encoder.init();
-  //wifi.initHotspot();*/
+  wifi.initHotspot();
 
+  // Enable MVC keypad backlight
   ledcSetup(0, 5000, 8);
   ledcAttachPin(PIN_LED_PWM, 0);
-  ledcWrite(0, 1);
+  for(int i = 0; i <= 8; i++){
+    ledcWrite(0, pow(2,i));
+    delay(35);
+  }
 }
 
 
